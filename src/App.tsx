@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-
+import MatchHistory from "./MatchHistory";
 
 const DEFAULT_PLAYERS = [
   "LionFr0mZion",
@@ -31,6 +31,9 @@ function chunkRoundRobin<T>(items: T[], teamCount: number) {
 }
 
 export default function App() {
+  const [page, setPage] = useState<"teams" | "history">("teams");
+
+  // --- Teams state
   const [players, setPlayers] = useState<string[]>(DEFAULT_PLAYERS);
   const [selected, setSelected] = useState<Set<string>>(() => new Set(DEFAULT_PLAYERS));
   const [teamCount, setTeamCount] = useState<number>(2);
@@ -55,6 +58,7 @@ export default function App() {
     const name = newPlayer.trim();
     if (!name) return;
     if (players.includes(name)) return;
+
     setPlayers((p) => [...p, name]);
     setSelected((prev) => new Set(prev).add(name));
     setNewPlayer("");
@@ -93,169 +97,206 @@ export default function App() {
   }
 
   return (
-    <div style={{ maxWidth: 900, margin: "24px auto", padding: 16, fontFamily: "system-ui" }}>
-      <h1 style={{ marginBottom: 6 }}>CS2 Team Divider</h1>
-      <p style={{ marginTop: 0, opacity: 0.75 }}>Select players → divide into teams → adjust if needed.</p>
+    <div style={{ maxWidth: 1000, margin: "24px auto", padding: 16, fontFamily: "system-ui" }}>
+      {/* Top nav */}
+      <div style={{ display: "flex", gap: 8, marginBottom: 14 }}>
+        <button
+          onClick={() => setPage("teams")}
+          style={{
+            padding: "10px 12px",
+            borderRadius: 10,
+            border: "1px solid #ccc",
+            cursor: "pointer",
+            fontWeight: page === "teams" ? 700 : 400,
+          }}
+        >
+          Teams
+        </button>
+        <button
+          onClick={() => setPage("history")}
+          style={{
+            padding: "10px 12px",
+            borderRadius: 10,
+            border: "1px solid #ccc",
+            cursor: "pointer",
+            fontWeight: page === "history" ? 700 : 400,
+          }}
+        >
+          Match History
+        </button>
+      </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
-        <div style={{ border: "1px solid #ddd", borderRadius: 12, padding: 16 }}>
-          <h2 style={{ marginTop: 0 }}>Players</h2>
+      {/* Pages */}
+      {page === "history" ? (
+        <MatchHistory />
+      ) : (
+        <>
+          <h1 style={{ marginBottom: 6 }}>CS2 Team Divider</h1>
+          <p style={{ marginTop: 0, opacity: 0.75 }}>Select players → divide into teams → adjust if needed.</p>
 
-          <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
-            <input
-              value={newPlayer}
-              onChange={(e) => setNewPlayer(e.target.value)}
-              placeholder="Add player…"
-              style={{ flex: 1, padding: 10, borderRadius: 10, border: "1px solid #ccc" }}
-              onKeyDown={(e) => e.key === "Enter" && addPlayer()}
-            />
-            <button
-              onClick={addPlayer}
-              style={{ padding: "10px 12px", borderRadius: 10, border: "1px solid #ccc", cursor: "pointer" }}
-            >
-              Add
-            </button>
-          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+            {/* Players panel */}
+            <div style={{ border: "1px solid #ddd", borderRadius: 12, padding: 16 }}>
+              <h2 style={{ marginTop: 0 }}>Players</h2>
 
-          <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
-            <button
-              onClick={() => setSelected(new Set(players))}
-              style={{ padding: "8px 10px", borderRadius: 10, border: "1px solid #ccc", cursor: "pointer" }}
-            >
-              Select all
-            </button>
-            <button
-              onClick={() => setSelected(new Set())}
-              style={{ padding: "8px 10px", borderRadius: 10, border: "1px solid #ccc", cursor: "pointer" }}
-            >
-              Clear
-            </button>
-          </div>
+              <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
+                <input
+                  value={newPlayer}
+                  onChange={(e) => setNewPlayer(e.target.value)}
+                  placeholder="Add player…"
+                  style={{ flex: 1, padding: 10, borderRadius: 10, border: "1px solid #ccc" }}
+                  onKeyDown={(e) => e.key === "Enter" && addPlayer()}
+                />
+                <button
+                  onClick={addPlayer}
+                  style={{ padding: "10px 12px", borderRadius: 10, border: "1px solid #ccc", cursor: "pointer" }}
+                >
+                  Add
+                </button>
+              </div>
 
-          <div style={{ display: "grid", gap: 8 }}>
-            {players.map((p) => (
-              <label
-                key={p}
+              <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
+                <button
+                  onClick={() => setSelected(new Set(players))}
+                  style={{ padding: "8px 10px", borderRadius: 10, border: "1px solid #ccc", cursor: "pointer" }}
+                >
+                  Select all
+                </button>
+                <button
+                  onClick={() => setSelected(new Set())}
+                  style={{ padding: "8px 10px", borderRadius: 10, border: "1px solid #ccc", cursor: "pointer" }}
+                >
+                  Clear
+                </button>
+              </div>
+
+              <div style={{ display: "grid", gap: 8 }}>
+                {players.map((p) => (
+                  <label
+                    key={p}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                      padding: 10,
+                      borderRadius: 10,
+                      border: "1px solid #eee",
+                    }}
+                  >
+                    <span style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                      <input type="checkbox" checked={selected.has(p)} onChange={() => togglePlayer(p)} />
+                      {p}
+                    </span>
+                    <button
+                      onClick={() => removePlayer(p)}
+                      title="Remove"
+                      style={{
+                        border: "1px solid #ccc",
+                        borderRadius: 10,
+                        padding: "6px 10px",
+                        cursor: "pointer",
+                        opacity: 0.8,
+                      }}
+                    >
+                      ✕
+                    </button>
+                  </label>
+                ))}
+              </div>
+            </div>
+
+            {/* Teams panel */}
+            <div style={{ border: "1px solid #ddd", borderRadius: 12, padding: 16 }}>
+              <h2 style={{ marginTop: 0 }}>Teams</h2>
+
+              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
+                <span>Teams:</span>
+                <input
+                  type="number"
+                  min={2}
+                  max={10}
+                  value={teamCount}
+                  onChange={(e) => setTeamCount(Number(e.target.value))}
+                  style={{ width: 80, padding: 8, borderRadius: 10, border: "1px solid #ccc" }}
+                />
+                <button
+                  onClick={generateTeams}
+                  disabled={selectedPlayers.length < 2}
+                  style={{ padding: "10px 12px", borderRadius: 10, border: "1px solid #ccc", cursor: "pointer" }}
+                >
+                  Divide 🎲
+                </button>
+                <button
+                  onClick={() => setTeams(Array.from({ length: teamCount }, () => []))}
+                  style={{ padding: "10px 12px", borderRadius: 10, border: "1px solid #ccc", cursor: "pointer" }}
+                >
+                  Reset
+                </button>
+              </div>
+
+              <div style={{ marginBottom: 10, opacity: 0.75 }}>
+                Selected: <b>{selectedPlayers.length}</b>
+              </div>
+
+              <div style={{ display: "grid", gap: 12 }}>
+                {teams.map((team, teamIdx) => (
+                  <div key={teamIdx} style={{ border: "1px solid #eee", borderRadius: 12, padding: 12 }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
+                      <b>Team {teamIdx + 1}</b>
+                      <span style={{ opacity: 0.7 }}>{team.length} players</span>
+                    </div>
+
+                    {team.length === 0 ? (
+                      <div style={{ paddingTop: 8, opacity: 0.6 }}>Empty</div>
+                    ) : (
+                      <ul style={{ margin: "10px 0 0", paddingLeft: 18 }}>
+                        {team.map((p) => (
+                          <li key={p} style={{ marginBottom: 6 }}>
+                            {p}{" "}
+                            <span style={{ display: "inline-flex", gap: 6, marginLeft: 8 }}>
+                              {teams.map((_, toIdx) =>
+                                toIdx === teamIdx ? null : (
+                                  <button
+                                    key={toIdx}
+                                    onClick={() => movePlayer(p, teamIdx, toIdx)}
+                                    style={{
+                                      border: "1px solid #ccc",
+                                      borderRadius: 10,
+                                      padding: "2px 8px",
+                                      cursor: "pointer",
+                                      fontSize: 12,
+                                    }}
+                                  >
+                                    → Team {toIdx + 1}
+                                  </button>
+                                )
+                              )}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              <button
+                onClick={copyTeams}
                 style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  padding: 10,
+                  marginTop: 12,
+                  padding: "10px 12px",
                   borderRadius: 10,
-                  border: "1px solid #eee",
+                  border: "1px solid #ccc",
+                  cursor: "pointer",
+                  width: "100%",
                 }}
               >
-                <span style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                  <input type="checkbox" checked={selected.has(p)} onChange={() => togglePlayer(p)} />
-                  {p}
-                </span>
-                <button
-                  onClick={() => removePlayer(p)}
-                  title="Remove"
-                  style={{
-                    border: "1px solid #ccc",
-                    borderRadius: 10,
-                    padding: "6px 10px",
-                    cursor: "pointer",
-                    opacity: 0.8,
-                  }}
-                >
-                  ✕
-                </button>
-              </label>
-            ))}
+                Copy teams to clipboard
+              </button>
+            </div>
           </div>
-        </div>
-
-        <div style={{ border: "1px solid #ddd", borderRadius: 12, padding: 16 }}>
-          <h2 style={{ marginTop: 0 }}>Teams</h2>
-
-          <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
-            <span>Teams:</span>
-            <input
-              type="number"
-              min={2}
-              max={10}
-              value={teamCount}
-              onChange={(e) => setTeamCount(Number(e.target.value))}
-              style={{ width: 80, padding: 8, borderRadius: 10, border: "1px solid #ccc" }}
-            />
-            <button
-              onClick={generateTeams}
-              disabled={selectedPlayers.length < 2}
-              style={{ padding: "10px 12px", borderRadius: 10, border: "1px solid #ccc", cursor: "pointer" }}
-            >
-              Divide 🎲
-            </button>
-            <button
-              onClick={() => setTeams(Array.from({ length: teamCount }, () => []))}
-              style={{ padding: "10px 12px", borderRadius: 10, border: "1px solid #ccc", cursor: "pointer" }}
-            >
-              Reset
-            </button>
-          </div>
-
-          <div style={{ marginBottom: 10, opacity: 0.75 }}>
-            Selected: <b>{selectedPlayers.length}</b>
-          </div>
-
-          <div style={{ display: "grid", gap: 12 }}>
-            {teams.map((team, teamIdx) => (
-              <div key={teamIdx} style={{ border: "1px solid #eee", borderRadius: 12, padding: 12 }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
-                  <b>Team {teamIdx + 1}</b>
-                  <span style={{ opacity: 0.7 }}>{team.length} players</span>
-                </div>
-
-                {team.length === 0 ? (
-                  <div style={{ paddingTop: 8, opacity: 0.6 }}>Empty</div>
-                ) : (
-                  <ul style={{ margin: "10px 0 0", paddingLeft: 18 }}>
-                    {team.map((p) => (
-                      <li key={p} style={{ marginBottom: 6 }}>
-                        {p}{" "}
-                        <span style={{ display: "inline-flex", gap: 6, marginLeft: 8 }}>
-                          {teams.map((_, toIdx) =>
-                            toIdx === teamIdx ? null : (
-                              <button
-                                key={toIdx}
-                                onClick={() => movePlayer(p, teamIdx, toIdx)}
-                                style={{
-                                  border: "1px solid #ccc",
-                                  borderRadius: 10,
-                                  padding: "2px 8px",
-                                  cursor: "pointer",
-                                  fontSize: 12,
-                                }}
-                              >
-                                → Team {toIdx + 1}
-                              </button>
-                            )
-                          )}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            ))}
-          </div>
-
-          <button
-            onClick={copyTeams}
-            style={{
-              marginTop: 12,
-              padding: "10px 12px",
-              borderRadius: 10,
-              border: "1px solid #ccc",
-              cursor: "pointer",
-              width: "100%",
-            }}
-          >
-            Copy teams to clipboard
-          </button>
-        </div>
-      </div>
+        </>
+      )}
     </div>
   );
 }
