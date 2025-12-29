@@ -2,6 +2,10 @@
   "name": "cs2-teams",
   "private": true,
   "version": "0.0.0",
+  "engines": {
+    "node": "20.x"
+  },
+  "packageManager": "npm@10.8.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
