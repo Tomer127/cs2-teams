@@ -1,5 +1,9 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useRef, useEffect } from "react";
 import MatchHistory from "./MatchHistory";
+import { MAPS } from "./maps";
+import MVP from "./MVP";
+import Testing from "./Testing";
+
 
 const DEFAULT_PLAYERS = [
   "LionFr0mZion",
@@ -14,6 +18,9 @@ const DEFAULT_PLAYERS = [
   "AzureBat",
   "Q-wade",
 ];
+
+// Removed local MAPS constant
+
 
 function shuffle<T>(arr: T[]) {
   const a = [...arr];
@@ -31,7 +38,7 @@ function chunkRoundRobin<T>(items: T[], teamCount: number) {
 }
 
 export default function App() {
-  const [page, setPage] = useState<"teams" | "history">("teams");
+  const [page, setPage] = useState<"teams" | "history" | "mvp" | "testing">("teams");
 
   // --- Teams state
   const [players, setPlayers] = useState<string[]>(DEFAULT_PLAYERS);
@@ -39,6 +46,9 @@ export default function App() {
   const [teamCount, setTeamCount] = useState<number>(2);
   const [teams, setTeams] = useState<string[][]>([[], []]);
   const [newPlayer, setNewPlayer] = useState<string>("");
+  const [randomMap, setRandomMap] = useState<string | null>(null);
+  const mapTimerRef = useRef<number | null>(null);
+
 
   const selectedPlayers = useMemo(
     () => players.filter((p) => selected.has(p)),
@@ -62,6 +72,42 @@ export default function App() {
     setPlayers((p) => [...p, name]);
     setSelected((prev) => new Set(prev).add(name));
     setNewPlayer("");
+  }
+
+  
+  
+  useEffect(() => {
+    return () => {
+      if (mapTimerRef.current) {
+        clearInterval(mapTimerRef.current);
+        mapTimerRef.current = null;
+      }
+    };
+  }, []);
+
+  function rollMap() {
+    if (MAPS.length === 0) return;
+    if (mapTimerRef.current) {
+      clearInterval(mapTimerRef.current);
+      mapTimerRef.current = null;
+    }
+
+    const duration = 1500;
+    const intervalMs = 80;
+    let elapsed = 0;
+
+    const id = window.setInterval(() => {
+      setRandomMap(MAPS[Math.floor(Math.random() * MAPS.length)]);
+      elapsed += intervalMs;
+      if (elapsed >= duration) {
+        clearInterval(id);
+        mapTimerRef.current = null;
+        const final = MAPS[Math.floor(Math.random() * MAPS.length)];
+        setRandomMap(final);
+      }
+    }, intervalMs);
+
+    mapTimerRef.current = id;
   }
 
   function removePlayer(name: string) {
@@ -124,11 +170,41 @@ export default function App() {
         >
           Match History
         </button>
+        <button
+          onClick={() => setPage("mvp")}
+          style={{
+            padding: "10px 12px",
+            borderRadius: 10,
+            border: "1px solid #ccc",
+            cursor: "pointer",
+            fontWeight: page === "mvp" ? 700 : 400,
+          }}
+        >
+          MVP
+        </button>
+        <button
+          onClick={() => setPage("testing")}
+          style={{
+            padding: "10px 12px",
+            borderRadius: 10,
+            border: "1px solid #ccc",
+            cursor: "pointer",
+            fontWeight: page === "testing" ? 700 : 400,
+          }}
+        >
+          Testing
+        </button>
       </div>
+
+      
 
       {/* Pages */}
       {page === "history" ? (
         <MatchHistory />
+      ) : page === "mvp" ? (
+        <MVP />
+      ) : page === "testing" ? (
+        <Testing />
       ) : (
         <>
           <h1 style={{ marginBottom: 6 }}>CS2 Team Divider</h1>
@@ -232,6 +308,12 @@ export default function App() {
                 >
                   Reset
                 </button>
+                <button
+                  onClick={rollMap}
+                  style={{ padding: "10px 12px", borderRadius: 10, border: "1px solid #ccc", cursor: "pointer" }}
+                >
+                  Map Roulette 🎰
+                </button>
               </div>
 
               <div style={{ marginBottom: 10, opacity: 0.75 }}>
@@ -293,6 +375,19 @@ export default function App() {
               >
                 Copy teams to clipboard
               </button>
+              {randomMap ? (
+                <div style={{ marginTop: 12, padding: 12, border: "1px solid #ddd", borderRadius: 8, textAlign: "center" }}>
+                  <div style={{ fontSize: 18, fontWeight: 700 }}>{randomMap}</div>
+                  <div style={{ marginTop: 8 }}>
+                    <button
+                      onClick={() => setRandomMap(null)}
+                      style={{ padding: "6px 10px", borderRadius: 8, border: "1px solid #ccc", cursor: "pointer" }}
+                    >
+                      Clear
+                    </button>
+                  </div>
+                </div>
+              ) : null}
             </div>
           </div>
         </>
