@@ -1,109 +1,201 @@
+// api/dathost/server.ts
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 
-type Action = "change_map" | "pause" | "unpause" | "restart";
+/**
+ * This endpoint runs on Vercel (server-side) and proxies safe CS2 admin actions to DatHost.
+ *
+ * Env vars (set in Vercel Project Settings -> Environment Variables):
+ *  - DATHOST_EMAIL
+ *  - DATHOST_PASSWORD
+ *    OR
+ *  - DATHOST_API_KEY
+ *
+ * Optional:
+ *  - ADMIN_SECRET  (if set, request must include x-admin-secret header OR adminSecret in JSON body)
+ *  - DATHOST_API_BASE (default: https://dathost.net)
+ *
+ * Request body (JSON):
+ *  {
+ *    "action": "restart" | "change_map" | "pause" | "unpause",
+ *    "serverId": "<dathost server id>",
+ *    "map": "de_mirage",            // required for change_map
+ *    "adminSecret": "..."           // optional (alternative to header)
+ *  }
+ */
+
+// ---- helpers -------------------------------------------------------------
+
+function getApiBase(): string {
+  return (process.env.DATHOST_API_BASE || "https://dathost.net").replace(/\/+$/, "");
+}
 
 function getAuthHeaders(): Record<string, string> {
-  const apiKey = process.env.DATHOST_API_KEY || "";
-  const email = process.env.DATHOST_EMAIL || "";
-  const password = process.env.DATHOST_PASSWORD || "";
+  const apiKey = process.env.DATHOST_API_KEY;
+  if (apiKey) {
+    return { Authorization: `Bearer ${apiKey}` };
+  }
 
-  // DatHost historically supported HTTP Basic (email/password) for many endpoints.
-  // Some accounts also use API keys.
-  if (apiKey) return { authorization: `Bearer ${apiKey}` };
+  const email = process.env.DATHOST_EMAIL;
+  const password = process.env.DATHOST_PASSWORD;
   if (email && password) {
     const token = Buffer.from(`${email}:${password}`).toString("base64");
-    return { authorization: `Basic ${token}` };
+    return { Authorization: `Basic ${token}` };
   }
+
   return {};
 }
 
+async function fetchText(url: string, init: RequestInit) {
+  const resp = await fetch(url, init);
+  const text = await resp.text();
+  return { ok: resp.ok, status: resp.status, text };
+}
+
 async function postJson(url: string, headers: Record<string, string>, body: any) {
-  const r = await fetch(url, {
+  return fetchText(url, {
     method: "POST",
     headers: {
       ...headers,
       "content-type": "application/json",
+      accept: "application/json, text/plain, */*",
     },
-    body: body == null ? undefined : JSON.stringify(body),
+    body: JSON.stringify(body),
   });
-  const text = await r.text();
-  return { ok: r.ok, status: r.status, text };
 }
 
-async function post(url: string, headers: Record<string, string>) {
-  const r = await fetch(url, {
+async function postForm(url: string, headers: Record<string, string>, form: Record<string, string>) {
+  return fetchText(url, {
     method: "POST",
-    headers,
+    headers: {
+      ...headers,
+      "content-type": "application/x-www-form-urlencoded",
+      accept: "application/json, text/plain, */*",
+    },
+    body: new URLSearchParams(form).toString(),
   });
-  const text = await r.text();
-  return { ok: r.ok, status: r.status, text };
 }
+
+async function sendConsole(serverId: string, cmd: string, authHeaders: Record<string, string>) {
+  const base = getApiBase();
+
+  // DatHost console endpoint (commonly):
+  // POST https://dathost.net/api/0.1/game-servers/{server_id}/console  (form: line=...)
+  const consoleUrl = `${base}/api/0.1/game-servers/${encodeURIComponent(serverId)}/console`;
+
+  // Use form-encoded for best compatibility
+  const r = await postForm(consoleUrl, authHeaders, { line: cmd });
+
+  if (!r.ok) {
+    return {
+      ok: false,
+      status: r.status,
+      error: `DatHost console call failed (${r.status})`,
+      details: r.text,
+      consoleUrl,
+      cmd,
+    };
+  }
+
+  return { ok: true, status: r.status, details: r.text, consoleUrl, cmd };
+}
+
+async function stopServer(serverId: string, authHeaders: Record<string, string>) {
+  const base = getApiBase();
+  const url = `${base}/api/0.1/game-servers/${encodeURIComponent(serverId)}/stop`;
+  const r = await postJson(url, authHeaders, {});
+  return { ...r, url };
+}
+
+async function startServer(serverId: string, authHeaders: Record<string, string>) {
+  const base = getApiBase();
+  const url = `${base}/api/0.1/game-servers/${encodeURIComponent(serverId)}/start`;
+  const r = await postJson(url, authHeaders, {});
+  return { ...r, url };
+}
+
+// ---- handler -------------------------------------------------------------
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-  if (req.method !== "POST") return res.status(405).send("Method Not Allowed");
-
-  const { action, serverId, payload } = (req.body || {}) as {
-    action?: Action;
-    serverId?: string;
-    payload?: any;
-  };
-
-  const adminSecret = process.env.ADMIN_SECRET || "";
-  if (adminSecret) {
-    const got = (req.headers["x-admin-secret"] as string) || "";
-    if (got !== adminSecret) return res.status(401).send("Unauthorized");
+  // Safe debug: does NOT expose secret values, only booleans + key names.
+  if (req.query?.debug === "1") {
+    return res.status(200).json({
+      hasApiKey: Boolean(process.env.DATHOST_API_KEY),
+      hasEmail: Boolean(process.env.DATHOST_EMAIL),
+      hasPassword: Boolean(process.env.DATHOST_PASSWORD),
+      hasAdminSecret: Boolean(process.env.ADMIN_SECRET),
+      keys: Object.keys(process.env).filter((k) => k.startsWith("DATHOST_") || k === "ADMIN_SECRET"),
+    });
   }
 
-  if (!action) return res.status(400).send("Missing action");
-  if (!serverId) return res.status(400).send("Missing serverId");
+  if (req.method !== "POST") {
+    return res.status(405).send("Method Not Allowed");
+  }
 
-  const base = (process.env.DATHOST_API_BASE || "https://dathost.net").replace(/\/$/, "");
+  // optional endpoint protection
+  const requiredSecret = process.env.ADMIN_SECRET;
+  const headerSecret = req.headers["x-admin-secret"];
+  const body: any = req.body || {};
+  const bodySecret = body.adminSecret;
+
+  if (requiredSecret) {
+    const provided = (typeof headerSecret === "string" ? headerSecret : "") || (typeof bodySecret === "string" ? bodySecret : "");
+    if (!provided || provided !== requiredSecret) {
+      return res.status(401).send("Unauthorized (missing/invalid admin secret)");
+    }
+  }
+
   const authHeaders = getAuthHeaders();
-
-  if (!authHeaders.authorization) {
-    return res.status(500).send("Missing DatHost credentials (set DATHOST_API_KEY or DATHOST_EMAIL+DATHOST_PASSWORD)");
+  if (!authHeaders.Authorization) {
+    return res
+      .status(500)
+      .send("Missing DatHost credentials (set DATHOST_API_KEY or DATHOST_EMAIL+DATHOST_PASSWORD)");
   }
+
+  const action = body.action as string | undefined;
+  const serverId = body.serverId as string | undefined;
+  const map = body.map as string | undefined;
+
+  if (!action) return res.status(400).send("Missing 'action'");
+  if (!serverId) return res.status(400).send("Missing 'serverId'");
 
   try {
-    const id = encodeURIComponent(serverId);
-
-    // NOTE: DatHost documents server start/stop endpoints under /api/0.1/game-servers/{server_id}/start|stop.
-    const startUrl = `${base}/api/0.1/game-servers/${id}/start`;
-    const stopUrl = `${base}/api/0.1/game-servers/${id}/stop`;
-
-    // Console endpoint naming varies in examples across unofficial wrappers.
-    // We allow overriding via env var if needed.
-    const consolePath = process.env.DATHOST_CONSOLE_PATH || `/api/0.1/game-servers/${id}/console`;
-    const consoleUrl = consolePath.startsWith("http") ? consolePath : `${base}${consolePath}`;
-
     if (action === "restart") {
-      const s1 = await post(stopUrl, authHeaders);
-      if (!s1.ok) return res.status(s1.status).send(s1.text || "Failed stopping server");
-      const s2 = await post(startUrl, authHeaders);
-      if (!s2.ok) return res.status(s2.status).send(s2.text || "Failed starting server");
-      return res.status(200).send(s2.text || "Restarted");
+      const stop = await stopServer(serverId, authHeaders);
+      // even if stop fails, try start; but report both
+      const start = await startServer(serverId, authHeaders);
+
+      return res.status(200).json({
+        ok: stop.ok && start.ok,
+        stop,
+        start,
+      });
     }
 
     if (action === "change_map") {
-      const map = String(payload?.map || "").trim();
-      if (!map) return res.status(400).send("Missing payload.map");
-      // CS2: changelevel <map>
-      const cmd = `changelevel ${map}`;
-      const r = await postJson(consoleUrl, authHeaders, { line: cmd });
-      if (!r.ok) return res.status(r.status).send(r.text || "Failed changing map");
-      return res.status(200).send(r.text || "OK");
+      if (!map) return res.status(400).send("Missing 'map' for change_map");
+      const r = await sendConsole(serverId, `changelevel ${map}`, authHeaders);
+      if (!r.ok) return res.status(502).json(r);
+      return res.status(200).json(r);
     }
 
-    if (action === "pause" || action === "unpause") {
-      // CS2/CS:GO server commands
-      const cmd = action === "pause" ? "mp_pause_match" : "mp_unpause_match";
-      const r = await postJson(consoleUrl, authHeaders, { line: cmd });
-      if (!r.ok) return res.status(r.status).send(r.text || "Failed sending pause command");
-      return res.status(200).send(r.text || "OK");
+    if (action === "pause") {
+      const r = await sendConsole(serverId, `mp_pause_match`, authHeaders);
+      if (!r.ok) return res.status(502).json(r);
+      return res.status(200).json(r);
     }
 
-    return res.status(400).send("Unknown action");
+    if (action === "unpause") {
+      const r = await sendConsole(serverId, `mp_unpause_match`, authHeaders);
+      if (!r.ok) return res.status(502).json(r);
+      return res.status(200).json(r);
+    }
+
+    return res.status(400).send(`Unknown action: ${action}`);
   } catch (err: any) {
-    return res.status(500).json({ error: String(err?.message ?? err) });
+    return res.status(500).json({
+      ok: false,
+      error: "Server error",
+      message: err?.message || String(err),
+    });
   }
 }
