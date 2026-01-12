@@ -3,6 +3,7 @@ import MatchHistory from "./MatchHistory";
 import { MAPS } from "./maps";
 import MVP from "./MVP";
 import Testing from "./Testing";
+import ServerControl from "./ServerControl";
 
 
 const DEFAULT_PLAYERS = [
@@ -38,7 +39,7 @@ function chunkRoundRobin<T>(items: T[], teamCount: number) {
 }
 
 export default function App() {
-  const [page, setPage] = useState<"teams" | "history" | "mvp" | "testing">("teams");
+  const [page, setPage] = useState<"teams" | "history" | "mvp" | "testing" | "server">("teams");
 
   // --- Teams state
   const [players, setPlayers] = useState<string[]>(DEFAULT_PLAYERS);
@@ -194,6 +195,18 @@ export default function App() {
         >
           Testing
         </button>
+        <button
+          onClick={() => setPage("server")}
+          style={{
+            padding: "10px 12px",
+            borderRadius: 10,
+            border: "1px solid #ccc",
+            cursor: "pointer",
+            fontWeight: page === "server" ? 700 : 400,
+          }}
+        >
+          Server
+        </button>
       </div>
 
       
@@ -205,6 +218,8 @@ export default function App() {
         <MVP />
       ) : page === "testing" ? (
         <Testing />
+      ) : page === "server" ? (
+        <ServerControl />
       ) : (
         <>
           <h1 style={{ marginBottom: 6 }}>CS2 Team Divider</h1>
