@@ -1,6 +1,992 @@
 [
   {
-    "id": "2026_01_11_194700_001.log-1768164844845-e21c9c6bd243f",
+    "id": "2026_01_14_192226_001.log-1768583194911-27727d5bf100b",
+    "file": "2026_01_14_192226_001.log",
+    "map": "aim_deagle",
+    "server": "SheepClan",
+    "roundsPlayed": 16,
+    "scoreT": 3,
+    "scoreCT": 12,
+    "startedAt": "01/14/2026 19:24:41",
+    "endedAt": "01/15/2026 19:44:15",
+    "players": [
+      {
+        "accountId": "861271567",
+        "name": "kAyA",
+        "team": "CT",
+        "kills": 15,
+        "deaths": 7,
+        "assists": 4,
+        "dmg": 1491,
+        "hsp": 73.33,
+        "fireDamage": 0,
+        "kdr": 2.14,
+        "adr": 93.2
+      },
+      {
+        "accountId": "876450482",
+        "name": "slavaKra",
+        "team": "T",
+        "kills": 13,
+        "deaths": 13,
+        "assists": 2,
+        "dmg": 1430,
+        "hsp": 15.38,
+        "fireDamage": 0,
+        "kdr": 1,
+        "adr": 89.4
+      },
+      {
+        "accountId": "220179415",
+        "name": "VisherRR",
+        "team": "CT",
+        "kills": 11,
+        "deaths": 11,
+        "assists": 4,
+        "dmg": 1301,
+        "hsp": 72.73,
+        "fireDamage": 0,
+        "kdr": 1,
+        "adr": 81.3
+      },
+      {
+        "accountId": "1281214748",
+        "name": "eliyahudanel",
+        "team": "CT",
+        "kills": 11,
+        "deaths": 6,
+        "assists": 3,
+        "dmg": 1162,
+        "hsp": 63.64,
+        "fireDamage": 0,
+        "kdr": 1.83,
+        "adr": 72.6
+      },
+      {
+        "accountId": "1906894947",
+        "name": "Lemon",
+        "team": "T",
+        "kills": 7,
+        "deaths": 13,
+        "assists": 3,
+        "dmg": 910,
+        "hsp": 85.71,
+        "fireDamage": 0,
+        "kdr": 0.54,
+        "adr": 56.9
+      },
+      {
+        "accountId": "1044985494",
+        "name": "AlonRaz9",
+        "team": "T",
+        "kills": 3,
+        "deaths": 12,
+        "assists": 4,
+        "dmg": 453,
+        "hsp": 66.67,
+        "fireDamage": 0,
+        "kdr": 0.25,
+        "adr": 28.3
+      }
+    ],
+    "teams": {
+      "T": [
+        {
+          "accountId": "876450482",
+          "name": "slavaKra",
+          "team": "T",
+          "kills": 13,
+          "deaths": 13,
+          "assists": 2,
+          "dmg": 1430,
+          "hsp": 15.38,
+          "fireDamage": 0,
+          "kdr": 1,
+          "adr": 89.4
+        },
+        {
+          "accountId": "1906894947",
+          "name": "Lemon",
+          "team": "T",
+          "kills": 7,
+          "deaths": 13,
+          "assists": 3,
+          "dmg": 910,
+          "hsp": 85.71,
+          "fireDamage": 0,
+          "kdr": 0.54,
+          "adr": 56.9
+        },
+        {
+          "accountId": "1044985494",
+          "name": "AlonRaz9",
+          "team": "T",
+          "kills": 3,
+          "deaths": 12,
+          "assists": 4,
+          "dmg": 453,
+          "hsp": 66.67,
+          "fireDamage": 0,
+          "kdr": 0.25,
+          "adr": 28.3
+        }
+      ],
+      "CT": [
+        {
+          "accountId": "861271567",
+          "name": "kAyA",
+          "team": "CT",
+          "kills": 15,
+          "deaths": 7,
+          "assists": 4,
+          "dmg": 1491,
+          "hsp": 73.33,
+          "fireDamage": 0,
+          "kdr": 2.14,
+          "adr": 93.2
+        },
+        {
+          "accountId": "220179415",
+          "name": "VisherRR",
+          "team": "CT",
+          "kills": 11,
+          "deaths": 11,
+          "assists": 4,
+          "dmg": 1301,
+          "hsp": 72.73,
+          "fireDamage": 0,
+          "kdr": 1,
+          "adr": 81.3
+        },
+        {
+          "accountId": "1281214748",
+          "name": "eliyahudanel",
+          "team": "CT",
+          "kills": 11,
+          "deaths": 6,
+          "assists": 3,
+          "dmg": 1162,
+          "hsp": 63.64,
+          "fireDamage": 0,
+          "kdr": 1.83,
+          "adr": 72.6
+        }
+      ],
+      "Unassigned": []
+    },
+    "topT": {
+      "accountId": "876450482",
+      "name": "slavaKra",
+      "dmg": 1430,
+      "kills": 13
+    },
+    "topCT": {
+      "accountId": "861271567",
+      "name": "kAyA",
+      "dmg": 1491,
+      "kills": 15
+    }
+  },
+  {
+    "id": "2026_01_12_210747_001.log-1768583194902-b9d6b1ae53033",
+    "file": "2026_01_12_210747_001.log",
+    "map": "de_inferno",
+    "server": "SheepClan",
+    "roundsPlayed": 36,
+    "scoreT": 18,
+    "scoreCT": 17,
+    "startedAt": "01/12/2026 21:09:01",
+    "endedAt": "01/12/2026 22:15:05",
+    "players": [
+      {
+        "accountId": "131318498",
+        "name": "RAMP",
+        "team": "CT",
+        "kills": 38,
+        "deaths": 25,
+        "assists": 8,
+        "dmg": 3824,
+        "hsp": 39.47,
+        "fireDamage": 213,
+        "kdr": 1.52,
+        "adr": 106.2
+      },
+      {
+        "accountId": "36898525",
+        "name": "ehey",
+        "team": "T",
+        "kills": 36,
+        "deaths": 22,
+        "assists": 8,
+        "dmg": 3670,
+        "hsp": 33.33,
+        "fireDamage": 310,
+        "kdr": 1.64,
+        "adr": 101.9
+      },
+      {
+        "accountId": "1281214748",
+        "name": "eliyahudanel",
+        "team": "T",
+        "kills": 34,
+        "deaths": 25,
+        "assists": 10,
+        "dmg": 3409,
+        "hsp": 58.82,
+        "fireDamage": 361,
+        "kdr": 1.36,
+        "adr": 94.7
+      },
+      {
+        "accountId": "220179415",
+        "name": "VisherRR",
+        "team": "CT",
+        "kills": 32,
+        "deaths": 27,
+        "assists": 5,
+        "dmg": 3312,
+        "hsp": 37.5,
+        "fireDamage": 156,
+        "kdr": 1.19,
+        "adr": 92
+      },
+      {
+        "accountId": "861271567",
+        "name": "kAyA",
+        "team": "T",
+        "kills": 23,
+        "deaths": 27,
+        "assists": 9,
+        "dmg": 3091,
+        "hsp": 52.17,
+        "fireDamage": 226,
+        "kdr": 0.85,
+        "adr": 85.9
+      },
+      {
+        "accountId": "1566048620",
+        "name": "Xrang",
+        "team": "CT",
+        "kills": 24,
+        "deaths": 24,
+        "assists": 10,
+        "dmg": 2768,
+        "hsp": 45.83,
+        "fireDamage": 295,
+        "kdr": 1,
+        "adr": 76.9
+      },
+      {
+        "accountId": "1906894947",
+        "name": "Lemon",
+        "team": "CT",
+        "kills": 20,
+        "deaths": 26,
+        "assists": 5,
+        "dmg": 2290,
+        "hsp": 20,
+        "fireDamage": 169,
+        "kdr": 0.77,
+        "adr": 63.6
+      },
+      {
+        "accountId": "1044985494",
+        "name": "AlonRaz9",
+        "team": "T",
+        "kills": 18,
+        "deaths": 25,
+        "assists": 6,
+        "dmg": 2161,
+        "hsp": 11.11,
+        "fireDamage": 251,
+        "kdr": 0.72,
+        "adr": 60
+      },
+      {
+        "accountId": "175169925",
+        "name": "BachduT",
+        "team": "T",
+        "kills": 16,
+        "deaths": 28,
+        "assists": 11,
+        "dmg": 1976,
+        "hsp": 37.5,
+        "fireDamage": 109,
+        "kdr": 0.57,
+        "adr": 54.9
+      },
+      {
+        "accountId": "876450482",
+        "name": "slavaKra",
+        "team": "CT",
+        "kills": 12,
+        "deaths": 26,
+        "assists": 10,
+        "dmg": 1437,
+        "hsp": 41.67,
+        "fireDamage": 176,
+        "kdr": 0.46,
+        "adr": 39.9
+      }
+    ],
+    "teams": {
+      "T": [
+        {
+          "accountId": "36898525",
+          "name": "ehey",
+          "team": "T",
+          "kills": 36,
+          "deaths": 22,
+          "assists": 8,
+          "dmg": 3670,
+          "hsp": 33.33,
+          "fireDamage": 310,
+          "kdr": 1.64,
+          "adr": 101.9
+        },
+        {
+          "accountId": "1281214748",
+          "name": "eliyahudanel",
+          "team": "T",
+          "kills": 34,
+          "deaths": 25,
+          "assists": 10,
+          "dmg": 3409,
+          "hsp": 58.82,
+          "fireDamage": 361,
+          "kdr": 1.36,
+          "adr": 94.7
+        },
+        {
+          "accountId": "861271567",
+          "name": "kAyA",
+          "team": "T",
+          "kills": 23,
+          "deaths": 27,
+          "assists": 9,
+          "dmg": 3091,
+          "hsp": 52.17,
+          "fireDamage": 226,
+          "kdr": 0.85,
+          "adr": 85.9
+        },
+        {
+          "accountId": "1044985494",
+          "name": "AlonRaz9",
+          "team": "T",
+          "kills": 18,
+          "deaths": 25,
+          "assists": 6,
+          "dmg": 2161,
+          "hsp": 11.11,
+          "fireDamage": 251,
+          "kdr": 0.72,
+          "adr": 60
+        },
+        {
+          "accountId": "175169925",
+          "name": "BachduT",
+          "team": "T",
+          "kills": 16,
+          "deaths": 28,
+          "assists": 11,
+          "dmg": 1976,
+          "hsp": 37.5,
+          "fireDamage": 109,
+          "kdr": 0.57,
+          "adr": 54.9
+        }
+      ],
+      "CT": [
+        {
+          "accountId": "131318498",
+          "name": "RAMP",
+          "team": "CT",
+          "kills": 38,
+          "deaths": 25,
+          "assists": 8,
+          "dmg": 3824,
+          "hsp": 39.47,
+          "fireDamage": 213,
+          "kdr": 1.52,
+          "adr": 106.2
+        },
+        {
+          "accountId": "220179415",
+          "name": "VisherRR",
+          "team": "CT",
+          "kills": 32,
+          "deaths": 27,
+          "assists": 5,
+          "dmg": 3312,
+          "hsp": 37.5,
+          "fireDamage": 156,
+          "kdr": 1.19,
+          "adr": 92
+        },
+        {
+          "accountId": "1566048620",
+          "name": "Xrang",
+          "team": "CT",
+          "kills": 24,
+          "deaths": 24,
+          "assists": 10,
+          "dmg": 2768,
+          "hsp": 45.83,
+          "fireDamage": 295,
+          "kdr": 1,
+          "adr": 76.9
+        },
+        {
+          "accountId": "1906894947",
+          "name": "Lemon",
+          "team": "CT",
+          "kills": 20,
+          "deaths": 26,
+          "assists": 5,
+          "dmg": 2290,
+          "hsp": 20,
+          "fireDamage": 169,
+          "kdr": 0.77,
+          "adr": 63.6
+        },
+        {
+          "accountId": "876450482",
+          "name": "slavaKra",
+          "team": "CT",
+          "kills": 12,
+          "deaths": 26,
+          "assists": 10,
+          "dmg": 1437,
+          "hsp": 41.67,
+          "fireDamage": 176,
+          "kdr": 0.46,
+          "adr": 39.9
+        }
+      ],
+      "Unassigned": []
+    },
+    "topT": {
+      "accountId": "36898525",
+      "name": "ehey",
+      "dmg": 3670,
+      "kills": 36
+    },
+    "topCT": {
+      "accountId": "131318498",
+      "name": "RAMP",
+      "dmg": 3824,
+      "kills": 38
+    }
+  },
+  {
+    "id": "2026_01_12_194348_001.log-1768583194885-335c09c5a2af9",
+    "file": "2026_01_12_194348_001.log",
+    "map": "aim_deagle",
+    "server": "SheepClan",
+    "roundsPlayed": 17,
+    "scoreT": 12,
+    "scoreCT": 4,
+    "startedAt": "01/12/2026 19:45:59",
+    "endedAt": "01/12/2026 19:52:53",
+    "players": [
+      {
+        "accountId": "220179415",
+        "name": "VisherRR",
+        "team": "CT",
+        "kills": 13,
+        "deaths": 13,
+        "assists": 2,
+        "dmg": 1737,
+        "hsp": 38.46,
+        "fireDamage": 0,
+        "kdr": 1,
+        "adr": 102.2
+      },
+      {
+        "accountId": "1281214748",
+        "name": "eliyahudanel",
+        "team": "T",
+        "kills": 16,
+        "deaths": 9,
+        "assists": 4,
+        "dmg": 1504,
+        "hsp": 75,
+        "fireDamage": 0,
+        "kdr": 1.78,
+        "adr": 88.5
+      },
+      {
+        "accountId": "131318498",
+        "name": "RAMP",
+        "team": "CT",
+        "kills": 10,
+        "deaths": 12,
+        "assists": 3,
+        "dmg": 1104,
+        "hsp": 90,
+        "fireDamage": 0,
+        "kdr": 0.83,
+        "adr": 64.9
+      },
+      {
+        "accountId": "861271567",
+        "name": "kAyA",
+        "team": "T",
+        "kills": 10,
+        "deaths": 6,
+        "assists": 3,
+        "dmg": 1061,
+        "hsp": 70,
+        "fireDamage": 0,
+        "kdr": 1.67,
+        "adr": 62.4
+      },
+      {
+        "accountId": "1566048620",
+        "name": "Xrang",
+        "team": "T",
+        "kills": 9,
+        "deaths": 6,
+        "assists": 6,
+        "dmg": 1045,
+        "hsp": 44.44,
+        "fireDamage": 0,
+        "kdr": 1.5,
+        "adr": 61.5
+      },
+      {
+        "accountId": "876450482",
+        "name": "slavaKra",
+        "team": "CT",
+        "kills": 10,
+        "deaths": 8,
+        "assists": 4,
+        "dmg": 911,
+        "hsp": 50,
+        "fireDamage": 0,
+        "kdr": 1.25,
+        "adr": 53.6
+      },
+      {
+        "accountId": "1044985494",
+        "name": "AlonRaz9",
+        "team": "CT",
+        "kills": 1,
+        "deaths": 15,
+        "assists": 1,
+        "dmg": 314,
+        "hsp": 0,
+        "fireDamage": 0,
+        "kdr": 0.07,
+        "adr": 18.5
+      }
+    ],
+    "teams": {
+      "T": [
+        {
+          "accountId": "1281214748",
+          "name": "eliyahudanel",
+          "team": "T",
+          "kills": 16,
+          "deaths": 9,
+          "assists": 4,
+          "dmg": 1504,
+          "hsp": 75,
+          "fireDamage": 0,
+          "kdr": 1.78,
+          "adr": 88.5
+        },
+        {
+          "accountId": "861271567",
+          "name": "kAyA",
+          "team": "T",
+          "kills": 10,
+          "deaths": 6,
+          "assists": 3,
+          "dmg": 1061,
+          "hsp": 70,
+          "fireDamage": 0,
+          "kdr": 1.67,
+          "adr": 62.4
+        },
+        {
+          "accountId": "1566048620",
+          "name": "Xrang",
+          "team": "T",
+          "kills": 9,
+          "deaths": 6,
+          "assists": 6,
+          "dmg": 1045,
+          "hsp": 44.44,
+          "fireDamage": 0,
+          "kdr": 1.5,
+          "adr": 61.5
+        }
+      ],
+      "CT": [
+        {
+          "accountId": "220179415",
+          "name": "VisherRR",
+          "team": "CT",
+          "kills": 13,
+          "deaths": 13,
+          "assists": 2,
+          "dmg": 1737,
+          "hsp": 38.46,
+          "fireDamage": 0,
+          "kdr": 1,
+          "adr": 102.2
+        },
+        {
+          "accountId": "131318498",
+          "name": "RAMP",
+          "team": "CT",
+          "kills": 10,
+          "deaths": 12,
+          "assists": 3,
+          "dmg": 1104,
+          "hsp": 90,
+          "fireDamage": 0,
+          "kdr": 0.83,
+          "adr": 64.9
+        },
+        {
+          "accountId": "876450482",
+          "name": "slavaKra",
+          "team": "CT",
+          "kills": 10,
+          "deaths": 8,
+          "assists": 4,
+          "dmg": 911,
+          "hsp": 50,
+          "fireDamage": 0,
+          "kdr": 1.25,
+          "adr": 53.6
+        },
+        {
+          "accountId": "1044985494",
+          "name": "AlonRaz9",
+          "team": "CT",
+          "kills": 1,
+          "deaths": 15,
+          "assists": 1,
+          "dmg": 314,
+          "hsp": 0,
+          "fireDamage": 0,
+          "kdr": 0.07,
+          "adr": 18.5
+        }
+      ],
+      "Unassigned": []
+    },
+    "topT": {
+      "accountId": "1281214748",
+      "name": "eliyahudanel",
+      "dmg": 1504,
+      "kills": 16
+    },
+    "topCT": {
+      "accountId": "220179415",
+      "name": "VisherRR",
+      "dmg": 1737,
+      "kills": 13
+    }
+  },
+  {
+    "id": "2026_01_11_205428_001.log-1768583194882-5da30e84d5b7c",
+    "file": "2026_01_11_205428_001.log",
+    "map": "de_dust2",
+    "server": "SheepClan",
+    "roundsPlayed": 24,
+    "scoreT": 11,
+    "scoreCT": 12,
+    "startedAt": "01/11/2026 20:55:26",
+    "endedAt": "01/11/2026 21:34:41",
+    "players": [
+      {
+        "accountId": "131318498",
+        "name": "RAMP",
+        "team": "CT",
+        "kills": 29,
+        "deaths": 15,
+        "assists": 4,
+        "dmg": 2704,
+        "hsp": 37.93,
+        "fireDamage": 35,
+        "kdr": 1.93,
+        "adr": 112.7
+      },
+      {
+        "accountId": "36898525",
+        "name": "ehey",
+        "team": "T",
+        "kills": 19,
+        "deaths": 14,
+        "assists": 7,
+        "dmg": 2047,
+        "hsp": 47.37,
+        "fireDamage": 184,
+        "kdr": 1.36,
+        "adr": 85.3
+      },
+      {
+        "accountId": "40296679",
+        "name": "OutOfControl",
+        "team": "T",
+        "kills": 16,
+        "deaths": 18,
+        "assists": 7,
+        "dmg": 1953,
+        "hsp": 31.25,
+        "fireDamage": 234,
+        "kdr": 0.89,
+        "adr": 81.4
+      },
+      {
+        "accountId": "1281214748",
+        "name": "eliyahudanel",
+        "team": "T",
+        "kills": 16,
+        "deaths": 17,
+        "assists": 6,
+        "dmg": 1898,
+        "hsp": 81.25,
+        "fireDamage": 63,
+        "kdr": 0.94,
+        "adr": 79.1
+      },
+      {
+        "accountId": "220179415",
+        "name": "VisherRR",
+        "team": "CT",
+        "kills": 16,
+        "deaths": 18,
+        "assists": 5,
+        "dmg": 1777,
+        "hsp": 31.25,
+        "fireDamage": 161,
+        "kdr": 0.89,
+        "adr": 74
+      },
+      {
+        "accountId": "876450482",
+        "name": "slavaKra",
+        "team": "T",
+        "kills": 14,
+        "deaths": 16,
+        "assists": 4,
+        "dmg": 1723,
+        "hsp": 28.57,
+        "fireDamage": 173,
+        "kdr": 0.88,
+        "adr": 71.8
+      },
+      {
+        "accountId": "175169925",
+        "name": "BachduT",
+        "team": "T",
+        "kills": 17,
+        "deaths": 19,
+        "assists": 6,
+        "dmg": 1683,
+        "hsp": 35.29,
+        "fireDamage": 38,
+        "kdr": 0.89,
+        "adr": 70.1
+      },
+      {
+        "accountId": "1044985494",
+        "name": "AlonRaz9",
+        "team": "CT",
+        "kills": 18,
+        "deaths": 16,
+        "assists": 3,
+        "dmg": 1637,
+        "hsp": 11.11,
+        "fireDamage": 127,
+        "kdr": 1.13,
+        "adr": 68.2
+      },
+      {
+        "accountId": "1906894947",
+        "name": "Lemon",
+        "team": "CT",
+        "kills": 12,
+        "deaths": 17,
+        "assists": 5,
+        "dmg": 1525,
+        "hsp": 25,
+        "fireDamage": 44,
+        "kdr": 0.71,
+        "adr": 63.5
+      },
+      {
+        "accountId": "1566048620",
+        "name": "Xrang",
+        "team": "CT",
+        "kills": 9,
+        "deaths": 16,
+        "assists": 6,
+        "dmg": 1361,
+        "hsp": 66.67,
+        "fireDamage": 9,
+        "kdr": 0.56,
+        "adr": 56.7
+      }
+    ],
+    "teams": {
+      "T": [
+        {
+          "accountId": "36898525",
+          "name": "ehey",
+          "team": "T",
+          "kills": 19,
+          "deaths": 14,
+          "assists": 7,
+          "dmg": 2047,
+          "hsp": 47.37,
+          "fireDamage": 184,
+          "kdr": 1.36,
+          "adr": 85.3
+        },
+        {
+          "accountId": "40296679",
+          "name": "OutOfControl",
+          "team": "T",
+          "kills": 16,
+          "deaths": 18,
+          "assists": 7,
+          "dmg": 1953,
+          "hsp": 31.25,
+          "fireDamage": 234,
+          "kdr": 0.89,
+          "adr": 81.4
+        },
+        {
+          "accountId": "1281214748",
+          "name": "eliyahudanel",
+          "team": "T",
+          "kills": 16,
+          "deaths": 17,
+          "assists": 6,
+          "dmg": 1898,
+          "hsp": 81.25,
+          "fireDamage": 63,
+          "kdr": 0.94,
+          "adr": 79.1
+        },
+        {
+          "accountId": "876450482",
+          "name": "slavaKra",
+          "team": "T",
+          "kills": 14,
+          "deaths": 16,
+          "assists": 4,
+          "dmg": 1723,
+          "hsp": 28.57,
+          "fireDamage": 173,
+          "kdr": 0.88,
+          "adr": 71.8
+        },
+        {
+          "accountId": "175169925",
+          "name": "BachduT",
+          "team": "T",
+          "kills": 17,
+          "deaths": 19,
+          "assists": 6,
+          "dmg": 1683,
+          "hsp": 35.29,
+          "fireDamage": 38,
+          "kdr": 0.89,
+          "adr": 70.1
+        }
+      ],
+      "CT": [
+        {
+          "accountId": "131318498",
+          "name": "RAMP",
+          "team": "CT",
+          "kills": 29,
+          "deaths": 15,
+          "assists": 4,
+          "dmg": 2704,
+          "hsp": 37.93,
+          "fireDamage": 35,
+          "kdr": 1.93,
+          "adr": 112.7
+        },
+        {
+          "accountId": "220179415",
+          "name": "VisherRR",
+          "team": "CT",
+          "kills": 16,
+          "deaths": 18,
+          "assists": 5,
+          "dmg": 1777,
+          "hsp": 31.25,
+          "fireDamage": 161,
+          "kdr": 0.89,
+          "adr": 74
+        },
+        {
+          "accountId": "1044985494",
+          "name": "AlonRaz9",
+          "team": "CT",
+          "kills": 18,
+          "deaths": 16,
+          "assists": 3,
+          "dmg": 1637,
+          "hsp": 11.11,
+          "fireDamage": 127,
+          "kdr": 1.13,
+          "adr": 68.2
+        },
+        {
+          "accountId": "1906894947",
+          "name": "Lemon",
+          "team": "CT",
+          "kills": 12,
+          "deaths": 17,
+          "assists": 5,
+          "dmg": 1525,
+          "hsp": 25,
+          "fireDamage": 44,
+          "kdr": 0.71,
+          "adr": 63.5
+        },
+        {
+          "accountId": "1566048620",
+          "name": "Xrang",
+          "team": "CT",
+          "kills": 9,
+          "deaths": 16,
+          "assists": 6,
+          "dmg": 1361,
+          "hsp": 66.67,
+          "fireDamage": 9,
+          "kdr": 0.56,
+          "adr": 56.7
+        }
+      ],
+      "Unassigned": []
+    },
+    "topT": {
+      "accountId": "36898525",
+      "name": "ehey",
+      "dmg": 2047,
+      "kills": 19
+    },
+    "topCT": {
+      "accountId": "131318498",
+      "name": "RAMP",
+      "dmg": 2704,
+      "kills": 29
+    }
+  },
+  {
+    "id": "2026_01_11_194700_001.log-1768583194877-8c2e385cba5f2",
     "file": "2026_01_11_194700_001.log",
     "map": "de_inferno",
     "server": "SheepClan",
@@ -8,7 +994,7 @@
     "scoreT": 18,
     "scoreCT": 17,
     "startedAt": "01/11/2026 19:47:36",
-    "endedAt": "01/11/2026 20:52:18",
+    "endedAt": "01/11/2026 20:53:58",
     "players": [
       {
         "accountId": "131318498",
@@ -292,7 +1278,7 @@
     }
   },
   {
-    "id": "2026_01_11_185811_001.log-1768164844839-000c6782d9e45",
+    "id": "2026_01_11_185811_001.log-1768583194872-93e7e2f95bd7f",
     "file": "2026_01_11_185811_001.log",
     "map": "de_nuke",
     "server": "SheepClan",
@@ -584,7 +1570,7 @@
     }
   },
   {
-    "id": "2026_01_09_211951_001.log-1768164844835-d7f9b1e84cf66",
+    "id": "2026_01_09_211951_001.log-1768583194868-3194a428dd161",
     "file": "2026_01_09_211951_001.log",
     "map": "de_inferno",
     "server": "SheepClan",
@@ -824,7 +1810,7 @@
     }
   },
   {
-    "id": "2026_01_09_205551_001.log-1768164844816-169944c6ddabd",
+    "id": "2026_01_09_205551_001.log-1768583194853-dededa85c66ad",
     "file": "2026_01_09_205551_001.log",
     "map": "de_nuke",
     "server": "SheepClan",
@@ -1064,7 +2050,7 @@
     }
   },
   {
-    "id": "2026_01_07_204516_001.log-1768164844812-35469ff4df60a",
+    "id": "2026_01_07_204516_001.log-1768583194850-fb24e768c859b",
     "file": "2026_01_07_204516_001.log",
     "map": "de_inferno",
     "server": "SheepClan",
@@ -1356,7 +2342,7 @@
     }
   },
   {
-    "id": "2026_01_07_195920_001.log-1768164844796-40b134291a792",
+    "id": "2026_01_07_195920_001.log-1768583194840-671946a4ccfca",
     "file": "2026_01_07_195920_001.log",
     "map": "de_dust2",
     "server": "SheepClan",
@@ -1648,7 +2634,7 @@
     }
   },
   {
-    "id": "2026_01_07_192141_001.log-1768164844791-8f987c0c54047",
+    "id": "2026_01_07_192141_001.log-1768583194836-2859aaa8152e",
     "file": "2026_01_07_192141_001.log",
     "map": "de_mirage",
     "server": "SheepClan",
@@ -1940,7 +2926,7 @@
     }
   },
   {
-    "id": "2026_01_05_212532_001.log-1768164844785-dba45e89963e4",
+    "id": "2026_01_05_212532_001.log-1768583194832-1d2688ee9e418",
     "file": "2026_01_05_212532_001.log",
     "map": "de_mirage",
     "server": "SheepClan",
@@ -2232,7 +3218,7 @@
     }
   },
   {
-    "id": "2026_01_05_204557_001.log-1768164844767-521664565fb59",
+    "id": "2026_01_05_204557_001.log-1768583194820-61758b682c198",
     "file": "2026_01_05_204557_001.log",
     "map": "de_nuke",
     "server": "SheepClan",
@@ -2524,7 +3510,7 @@
     }
   },
   {
-    "id": "2026_01_05_195619_001.log-1768164844762-cd796a5809c47",
+    "id": "2026_01_05_195619_001.log-1768583194817-0b1c1668db2ce",
     "file": "2026_01_05_195619_001.log",
     "map": "de_inferno",
     "server": "SheepClan",
@@ -2816,7 +3802,7 @@
     }
   },
   {
-    "id": "2026_01_05_192922_001.log-1768164844757-b440e86faa676",
+    "id": "2026_01_05_192922_001.log-1768583194812-de7ffb75fbe7e",
     "file": "2026_01_05_192922_001.log",
     "map": "de_dust2",
     "server": "SheepClan",
@@ -3056,7 +4042,7 @@
     }
   },
   {
-    "id": "2025_12_29_204305_001.log-1768164844753-553d1098ebab4",
+    "id": "2025_12_29_204305_001.log-1768583194809-e10e64e402ba8",
     "file": "2025_12_29_204305_001.log",
     "map": "de_inferno_night",
     "server": "SheepClan",
@@ -3348,7 +4334,7 @@
     }
   },
   {
-    "id": "2025_12_29_200744_001.log-1768164844747-d6a88a99ae677",
+    "id": "2025_12_29_200744_001.log-1768583194805-858c5e1cd6049",
     "file": "2025_12_29_200744_001.log",
     "map": "de_dust2",
     "server": "SheepClan",
@@ -3640,7 +4626,7 @@
     }
   },
   {
-    "id": "2025_12_29_192034_001.log-1768164844741-cfe04335d8704",
+    "id": "2025_12_29_192034_001.log-1768583194802-16832e1b2a791",
     "file": "2025_12_29_192034_001.log",
     "map": "de_cbble_d",
     "server": "SheepClan",
@@ -3880,7 +4866,7 @@
     }
   },
   {
-    "id": "2025_12_28_210910_001.log-1768164844733-559fb71e8e144",
+    "id": "2025_12_28_210910_001.log-1768583194797-9d6437b8c29cf",
     "file": "2025_12_28_210910_001.log",
     "map": "de_inferno",
     "server": "SheepClan",
@@ -4172,7 +5158,7 @@
     }
   },
   {
-    "id": "2025_12_28_202230_001.log-1768164844727-0093e69f1a80a",
+    "id": "2025_12_28_202230_001.log-1768583194793-86722880fda23",
     "file": "2025_12_28_202230_001.log",
     "map": "de_mirage",
     "server": "SheepClan",
@@ -4464,7 +5450,7 @@
     }
   },
   {
-    "id": "2025_12_28_194528_001.log-1768164844720-da4b36ce2673e",
+    "id": "2025_12_28_194528_001.log-1768583194787-c77771e78e56c",
     "file": "2025_12_28_194528_001.log",
     "map": "de_nuke",
     "server": "SheepClan",
@@ -4756,7 +5742,7 @@
     }
   },
   {
-    "id": "2025_12_26_220400_001.log-1768164844714-9555b7bc4edb2",
+    "id": "2025_12_26_220400_001.log-1768583194784-017beb4fc0e77",
     "file": "2025_12_26_220400_001.log",
     "map": "de_dust2",
     "server": "SheepClan",
@@ -5048,7 +6034,7 @@
     }
   },
   {
-    "id": "2025_12_26_211618_001.log-1768164844699-280de60e0758a",
+    "id": "2025_12_26_211618_001.log-1768583194772-35cbab97468b1",
     "file": "2025_12_26_211618_001.log",
     "map": "de_mirage",
     "server": "SheepClan",
@@ -5340,7 +6326,7 @@
     }
   },
   {
-    "id": "2025_12_26_203108_001.log-1768164844692-637f19932ded2",
+    "id": "2025_12_26_203108_001.log-1768583194768-93506027487ed",
     "file": "2025_12_26_203108_001.log",
     "map": "de_nuke",
     "server": "SheepClan",
@@ -5632,7 +6618,7 @@
     }
   },
   {
-    "id": "2025_12_23_225213_001.log-1768164844658-4c714454b25fd",
+    "id": "2025_12_23_225213_001.log-1768583194743-6d38f12c2b602",
     "file": "2025_12_23_225213_001.log",
     "map": "surf_ski_2_classic",
     "server": "SheepClan",
@@ -5794,7 +6780,7 @@
     }
   },
   {
-    "id": "2025_12_21_212953_001.log-1768164844634-e698fe34ea603",
+    "id": "2025_12_21_212953_001.log-1768583194724-edccee0705879",
     "file": "2025_12_21_212953_001.log",
     "map": "de_dust2",
     "server": "SheepClan",
@@ -6034,7 +7020,7 @@
     }
   },
   {
-    "id": "2025_12_21_204054_001.log-1768164844617-80b0a6a4045ed",
+    "id": "2025_12_21_204054_001.log-1768583194711-16e1d29397409",
     "file": "2025_12_21_204054_001.log",
     "map": "de_nuke",
     "server": "SheepClan",
@@ -6274,7 +7260,7 @@
     }
   },
   {
-    "id": "2025_12_21_195758_001.log-1768164844612-7c5d16dd1980a",
+    "id": "2025_12_21_195758_001.log-1768583194707-f8af88780bd73",
     "file": "2025_12_21_195758_001.log",
     "map": "de_mirage",
     "server": "SheepClan",
@@ -6514,7 +7500,7 @@
     }
   },
   {
-    "id": "2025_12_21_183957_001.log-1768164844606-aeeff65457fc4",
+    "id": "2025_12_21_183957_001.log-1768583194702-a785d50b6b198",
     "file": "2025_12_21_183957_001.log",
     "map": "aim_deagle",
     "server": "SheepClan",
