@@ -18,6 +18,7 @@ const DEFAULT_PLAYERS = [
   "alonraz9",
   "AzureBat",
   "Q-wade",
+  "Tampon",
 ];
 
 // Removed local MAPS constant
