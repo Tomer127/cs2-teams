@@ -79,6 +79,19 @@ const RE_SUICIDE =
 const RE_PLAYER_TOKEN =
   /"(?<name>[^<"]+)<\d+><\[U:1:(?<accountId>\d+)\]><(?<team>CT|TERRORIST)>"/i;
 
+// Round end marker (we’ll use it to separate rounds)
+const RE_ROUND_END = /World triggered\s+"Round_End"/i;
+
+// Utility usage (thrown grenades)
+const RE_THROW =
+  /"(?<name>[^<"]+)<\d+><\[U:1:(?<id>\d+)\]><(?<team>CT|TERRORIST)>"\s+threw\s+(?<util>smokegrenade|flashbang|hegrenade|molotov|incgrenade|decoy)/i;
+
+// Damage line (raw) — used to compute utility damage
+// Example:
+// "A<...><[U:1:123]><CT>" attacked "B<...><[U:1:456]><TERRORIST>" with "hegrenade" (damage "38") ...
+const RE_DAMAGE =
+  /"(?<aName>[^<"]+)<\d+><\[U:1:(?<aId>\d+)\]><(?<aTeam>CT|TERRORIST)>".*?attacked\s+"(?<vName>[^<"]+)<\d+><\[U:1:(?<vId>\d+)\]><(?<vTeam>CT|TERRORIST)>".*?with\s+"(?<weapon>[^"]+)".*?damage\s+"(?<dmg>\d+)"/i;
+
 // ---------------- Stores ----------------
 
 const nameByAccount = new Map(); // accountId -> last seen name
@@ -90,13 +103,25 @@ function ensurePlayer(store, accountId, name, team) {
       accountId: id,
       name: name || nameByAccount.get(id) || `account_${id}`,
       team: team ? teamNorm(team) : undefined,
+
       kills: 0,
       deaths: 0,
       assists: 0,
       headshotKills: 0,
+
+      // Enriched later from round_stats
       dmg: 0,
       adr: 0,
       fireDamage: 0,
+
+      // From raw lines
+      utilityThrows: 0,
+      knifeKills: 0,
+      firstKills: 0,
+      lastAliveRounds: 0,
+
+      // NEW: Utility damage from damage lines
+      utilityDamage: 0,
     });
   } else {
     const p = store.get(id);
@@ -112,11 +137,7 @@ function isFullMatch(scoreA, scoreB) {
 }
 
 // ---------------- Match boundary detection ----------------
-//
-// From a Game Over line index, we go backwards until we find a true start boundary.
-// Best anchor is: MatchStatus Score 0:0 RoundsPlayed 0 on same map.
-// Then hop slightly back to the nearest Match_Start for same map (if present).
-//
+
 function findMatchStartIndex(lines, gameOverIdx, mapName) {
   let zeroIdx = -1;
 
@@ -152,20 +173,6 @@ function findMatchStartIndex(lines, gameOverIdx, mapName) {
 // ---------------- round_stats enrichment (DMG/ADR/FireDamage only) ----------------
 
 function extractLastRoundStatsExtras(lines, startIdx, endIdx) {
-  // Parse the LAST round_stats JSON block inside match window.
-  // We DO NOT JSON.parse because log output can wrap lines and break valid JSON.
-  //
-  // We ONLY use this for: dmg / adr / firedmg
-  //
-  // row format inside round_stats block:
-  // "player_0": "accountid,team,money,kills,deaths,assists,dmg,hsp,kdr,adr,...,firedmg,..."
-  //
-  // Indices used:
-  // 0 accountid
-  // 1 team (2=T, 3=CT)
-  // 6 dmg
-  // 9 adr
-  // 22 firedmg
   const IDX = { accountId: 0, team: 1, dmg: 6, adr: 9, firedmg: 22 };
 
   let inJson = false;
@@ -239,10 +246,8 @@ function extractLastRoundStatsExtras(lines, startIdx, endIdx) {
     }
   }
 
-  // In case file ended while still inJson (rare)
   commitIfBest();
-
-  return best; // accountId -> extras
+  return best;
 }
 
 // ---------------- Main parsing ----------------
@@ -310,8 +315,33 @@ for (const file of files) {
     // Parse raw events inside [startIdx..endIdx]
     const players = new Map();
 
+    // Round tracking (best-effort using Round_End)
+    let roundHadFirstKill = false;
+
+    // Last death per team in current round (victim ids)
+    let lastDeathCT = null;
+    let lastDeathT = null;
+
+    // Kill pairs for head-to-head table
+    const killEvents = []; // { killerId, victimId }
+
     for (let k = startIdx; k <= endIdx; k++) {
       const p = stripPrefix(rawLines[k]);
+
+      // Round boundary: award last-alive and reset flags
+      if (RE_ROUND_END.test(p)) {
+        if (lastDeathCT && players.get(String(lastDeathCT))) {
+          players.get(String(lastDeathCT)).lastAliveRounds += 1;
+        }
+        if (lastDeathT && players.get(String(lastDeathT))) {
+          players.get(String(lastDeathT)).lastAliveRounds += 1;
+        }
+
+        roundHadFirstKill = false;
+        lastDeathCT = null;
+        lastDeathT = null;
+        continue;
+      }
 
       // keep names/team fresh
       const tok = p.match(RE_PLAYER_TOKEN);
@@ -319,6 +349,36 @@ for (const file of files) {
         ensurePlayer(players, tok.groups.accountId, tok.groups.name, tok.groups.team);
       }
 
+      // Utility throws
+      const th = p.match(RE_THROW);
+      if (th?.groups) {
+        const id = th.groups.id;
+        ensurePlayer(players, id, th.groups.name, th.groups.team);
+        players.get(String(id)).utilityThrows += 1;
+        continue;
+      }
+
+      // Utility damage (Molotov/Incendiary/HE)
+      const dm = p.match(RE_DAMAGE);
+      if (dm?.groups) {
+        const aId = dm.groups.aId;
+        const dmg = Number(dm.groups.dmg) || 0;
+        const weapon = (dm.groups.weapon || "").toLowerCase();
+
+        // Count only HE and fire utility
+        const isHE = weapon.includes("hegrenade");
+        const isDirectMolotov = weapon.includes("molotov");
+        const isDirectInc = weapon.includes("incgrenade");
+        const isFireTick = weapon.includes("inferno"); // burn damage ticks
+
+        if (isHE || isDirectMolotov || isDirectInc || isFireTick) {
+          ensurePlayer(players, aId, dm.groups.aName, dm.groups.aTeam);
+          players.get(String(aId)).utilityDamage += dmg;
+        }
+        continue;
+      }
+
+      // Kills
       const km = p.match(RE_KILL);
       if (km?.groups) {
         const aId = km.groups.aId;
@@ -332,13 +392,35 @@ for (const file of files) {
         players.get(String(aId)).kills += 1;
         players.get(String(vId)).deaths += 1;
 
+        // Headshot
         const rest = km.groups.rest || "";
         if (/headshot/i.test(rest)) {
           players.get(String(aId)).headshotKills += 1;
         }
+
+        // First kill in round
+        if (!roundHadFirstKill) {
+          players.get(String(aId)).firstKills += 1;
+          roundHadFirstKill = true;
+        }
+
+        // Knife kills
+        const weapon = (km.groups.weapon || "").toLowerCase();
+        if (weapon.includes("knife")) {
+          players.get(String(aId)).knifeKills += 1;
+        }
+
+        // Track last death per team in this round (victim)
+        if (vTeam === "CT") lastDeathCT = vId;
+        if (vTeam === "T") lastDeathT = vId;
+
+        // Store kill pair for head-to-head table
+        killEvents.push({ killerId: String(aId), victimId: String(vId) });
+
         continue;
       }
 
+      // Assists
       const am = p.match(RE_ASSIST);
       if (am?.groups) {
         const aId = am.groups.aId;
@@ -347,11 +429,17 @@ for (const file of files) {
         continue;
       }
 
+      // Suicides
       const sm = p.match(RE_SUICIDE);
       if (sm?.groups) {
         const id = sm.groups.id;
         ensurePlayer(players, id, sm.groups.name, sm.groups.team);
         players.get(String(id)).deaths += 1;
+
+        const t = teamNorm(sm.groups.team);
+        if (t === "CT") lastDeathCT = id;
+        if (t === "T") lastDeathT = id;
+
         continue;
       }
     }
@@ -361,34 +449,44 @@ for (const file of files) {
     for (const [accountId, ex] of extras.entries()) {
       ensurePlayer(players, accountId, nameByAccount.get(accountId), ex.team);
 
-      const p = players.get(String(accountId));
-      p.dmg = safeNum(ex.dmg);
-      p.adr = safeNum(ex.adr);
-      p.fireDamage = safeNum(ex.fireDamage);
+      const pl = players.get(String(accountId));
+      pl.dmg = safeNum(ex.dmg);
+      pl.adr = safeNum(ex.adr);
+      pl.fireDamage = safeNum(ex.fireDamage);
 
-      if (!p.team && ex.team) p.team = ex.team;
+      if (!pl.team && ex.team) pl.team = ex.team;
     }
 
     // Build match players array for UI
-    const matchPlayers = [...players.values()].map((p) => {
-      const kills = p.kills || 0;
-      const deaths = p.deaths || 0;
-      const assists = p.assists || 0;
-      const hs = p.headshotKills || 0;
+    const matchPlayers = [...players.values()].map((pl) => {
+      const kills = pl.kills || 0;
+      const deaths = pl.deaths || 0;
+      const assists = pl.assists || 0;
+      const hs = pl.headshotKills || 0;
       const hsp = kills > 0 ? +(((hs / kills) * 100).toFixed(1)) : 0;
 
       return {
-        accountId: p.accountId,
-        name: p.name,
-        team: p.team || "Unassigned",
+        accountId: pl.accountId,
+        name: pl.name,
+        team: pl.team || "Unassigned",
         kills,
         deaths,
         assists,
-        dmg: safeNum(p.dmg),
+
+        dmg: safeNum(pl.dmg),
+        adr: safeNum(pl.adr),
+        fireDamage: safeNum(pl.fireDamage),
+
         hsp,
-        fireDamage: safeNum(p.fireDamage),
         kdr: +(kills / Math.max(1, deaths)).toFixed(2),
-        adr: safeNum(p.adr),
+
+        utilityThrows: safeNum(pl.utilityThrows),
+        knifeKills: safeNum(pl.knifeKills),
+        firstKills: safeNum(pl.firstKills),
+        lastAliveRounds: safeNum(pl.lastAliveRounds),
+
+        // NEW
+        utilityDamage: safeNum(pl.utilityDamage),
       };
     });
 
@@ -397,21 +495,21 @@ for (const file of files) {
 
     // teams grouping
     const teams = { T: [], CT: [], Unassigned: [] };
-    for (const p of matchPlayers) {
-      if (p.team === "T") teams.T.push(p);
-      else if (p.team === "CT") teams.CT.push(p);
-      else teams.Unassigned.push(p);
+    for (const pl of matchPlayers) {
+      if (pl.team === "T") teams.T.push(pl);
+      else if (pl.team === "CT") teams.CT.push(pl);
+      else teams.Unassigned.push(pl);
     }
 
     // Assign unassigned to balance
     const unassigned = teams.Unassigned.splice(0);
-    for (const p of unassigned) {
+    for (const pl of unassigned) {
       if (teams.T.length <= teams.CT.length) {
-        p.team = "T";
-        teams.T.push(p);
+        pl.team = "T";
+        teams.T.push(pl);
       } else {
-        p.team = "CT";
-        teams.CT.push(p);
+        pl.team = "CT";
+        teams.CT.push(pl);
       }
     }
 
@@ -431,13 +529,13 @@ for (const file of files) {
       endedAt,
       players: matchPlayers,
       teams,
+      killEvents,
     });
   }
 }
 
 // Sort newest first (last match at top)
 matches.sort((a, b) => {
-  // Use endedAt first; fallback to startedAt; fallback to file
   const aKey = a.endedAt || a.startedAt || "";
   const bKey = b.endedAt || b.startedAt || "";
   if (aKey !== bKey) return aKey < bKey ? 1 : -1;
@@ -461,6 +559,14 @@ function getTotal(accountId) {
       totalAdrSum: 0,
       totalHspSum: 0,
       totalFireDamage: 0,
+
+      totalUtility: 0,
+      totalKnifeKills: 0,
+      totalFirstKills: 0,
+      totalLastAliveRounds: 0,
+
+      // NEW
+      totalUtilityDamage: 0,
     });
   }
   return totals.get(id);
@@ -477,6 +583,14 @@ for (const m of matches) {
     t.totalAdrSum += safeNum(p.adr);
     t.totalHspSum += safeNum(p.hsp);
     t.totalFireDamage += safeNum(p.fireDamage);
+
+    t.totalUtility += safeNum(p.utilityThrows);
+    t.totalKnifeKills += safeNum(p.knifeKills);
+    t.totalFirstKills += safeNum(p.firstKills);
+    t.totalLastAliveRounds += safeNum(p.lastAliveRounds);
+
+    // NEW
+    t.totalUtilityDamage += safeNum(p.utilityDamage);
   }
 }
 
@@ -491,11 +605,20 @@ const playerStats = Array.from(totals.values())
       adr: t.matchesPlayed ? Math.round(t.totalAdrSum / t.matchesPlayed) : 0,
       kdr: +(t.totalKills / Math.max(1, t.totalDeaths)).toFixed(2),
       avgHsp: t.matchesPlayed ? +(t.totalHspSum / t.matchesPlayed).toFixed(1) : 0,
+
       kills: t.totalKills,
       deaths: t.totalDeaths,
       assists: t.totalAssists,
       totalDamage: t.totalDamage,
       fireDamage: t.totalFireDamage,
+
+      utilityThrows: t.totalUtility,
+      knifeKills: t.totalKnifeKills,
+      firstKills: t.totalFirstKills,
+      lastAliveRounds: t.totalLastAliveRounds,
+
+      // NEW
+      utilityDamage: t.totalUtilityDamage,
     };
   })
   .sort((a, b) => b.kills - a.kills);

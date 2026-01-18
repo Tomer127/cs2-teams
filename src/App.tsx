@@ -2,9 +2,9 @@ import { useMemo, useState, useRef, useEffect } from "react";
 import MatchHistory from "./MatchHistory";
 import { MAPS } from "./maps";
 import MVP from "./MVP";
+import Statistics from "./Statistics";
 import Testing from "./Testing";
 import ServerControl from "./ServerControl";
-
 
 const DEFAULT_PLAYERS = [
   "LionFr0mZion",
@@ -20,9 +20,6 @@ const DEFAULT_PLAYERS = [
   "Q-wade",
   "Tampon",
 ];
-
-// Removed local MAPS constant
-
 
 function shuffle<T>(arr: T[]) {
   const a = [...arr];
@@ -40,17 +37,20 @@ function chunkRoundRobin<T>(items: T[], teamCount: number) {
 }
 
 export default function App() {
-  const [page, setPage] = useState<"teams" | "history" | "mvp" | "testing" | "server">("teams");
+  const [page, setPage] = useState<
+    "teams" | "history" | "mvp" | "stats" | "testing" | "server"
+  >("teams");
 
   // --- Teams state
   const [players, setPlayers] = useState<string[]>(DEFAULT_PLAYERS);
-  const [selected, setSelected] = useState<Set<string>>(() => new Set(DEFAULT_PLAYERS));
+  const [selected, setSelected] = useState<Set<string>>(
+    () => new Set(DEFAULT_PLAYERS)
+  );
   const [teamCount, setTeamCount] = useState<number>(2);
   const [teams, setTeams] = useState<string[][]>([[], []]);
   const [newPlayer, setNewPlayer] = useState<string>("");
   const [randomMap, setRandomMap] = useState<string | null>(null);
   const mapTimerRef = useRef<number | null>(null);
-
 
   const selectedPlayers = useMemo(
     () => players.filter((p) => selected.has(p)),
@@ -76,8 +76,6 @@ export default function App() {
     setNewPlayer("");
   }
 
-  
-  
   useEffect(() => {
     return () => {
       if (mapTimerRef.current) {
@@ -145,7 +143,14 @@ export default function App() {
   }
 
   return (
-    <div style={{ maxWidth: 1000, margin: "24px auto", padding: 16, fontFamily: "system-ui" }}>
+    <div
+      style={{
+        maxWidth: 1000,
+        margin: "24px auto",
+        padding: 16,
+        fontFamily: "system-ui",
+      }}
+    >
       {/* Top nav */}
       <div style={{ display: "flex", gap: 8, marginBottom: 14 }}>
         <button
@@ -160,6 +165,7 @@ export default function App() {
         >
           Teams
         </button>
+
         <button
           onClick={() => setPage("history")}
           style={{
@@ -172,6 +178,7 @@ export default function App() {
         >
           Match History
         </button>
+
         <button
           onClick={() => setPage("mvp")}
           style={{
@@ -184,6 +191,21 @@ export default function App() {
         >
           MVP
         </button>
+
+        {/* ✅ NEW TAB right after MVP */}
+        <button
+          onClick={() => setPage("stats")}
+          style={{
+            padding: "10px 12px",
+            borderRadius: 10,
+            border: "1px solid #ccc",
+            cursor: "pointer",
+            fontWeight: page === "stats" ? 700 : 400,
+          }}
+        >
+          Statistics
+        </button>
+
         <button
           onClick={() => setPage("testing")}
           style={{
@@ -196,6 +218,7 @@ export default function App() {
         >
           Testing
         </button>
+
         <button
           onClick={() => setPage("server")}
           style={{
@@ -210,13 +233,13 @@ export default function App() {
         </button>
       </div>
 
-      
-
       {/* Pages */}
       {page === "history" ? (
         <MatchHistory />
       ) : page === "mvp" ? (
         <MVP />
+      ) : page === "stats" ? (
+        <Statistics />
       ) : page === "testing" ? (
         <Testing />
       ) : page === "server" ? (
@@ -224,7 +247,9 @@ export default function App() {
       ) : (
         <>
           <h1 style={{ marginBottom: 6 }}>CS2 Team Divider</h1>
-          <p style={{ marginTop: 0, opacity: 0.75 }}>Select players → divide into teams → adjust if needed.</p>
+          <p style={{ marginTop: 0, opacity: 0.75 }}>
+            Select players → divide into teams → adjust if needed.
+          </p>
 
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
             {/* Players panel */}
@@ -241,7 +266,12 @@ export default function App() {
                 />
                 <button
                   onClick={addPlayer}
-                  style={{ padding: "10px 12px", borderRadius: 10, border: "1px solid #ccc", cursor: "pointer" }}
+                  style={{
+                    padding: "10px 12px",
+                    borderRadius: 10,
+                    border: "1px solid #ccc",
+                    cursor: "pointer",
+                  }}
                 >
                   Add
                 </button>
@@ -250,13 +280,23 @@ export default function App() {
               <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
                 <button
                   onClick={() => setSelected(new Set(players))}
-                  style={{ padding: "8px 10px", borderRadius: 10, border: "1px solid #ccc", cursor: "pointer" }}
+                  style={{
+                    padding: "8px 10px",
+                    borderRadius: 10,
+                    border: "1px solid #ccc",
+                    cursor: "pointer",
+                  }}
                 >
                   Select all
                 </button>
                 <button
                   onClick={() => setSelected(new Set())}
-                  style={{ padding: "8px 10px", borderRadius: 10, border: "1px solid #ccc", cursor: "pointer" }}
+                  style={{
+                    padding: "8px 10px",
+                    borderRadius: 10,
+                    border: "1px solid #ccc",
+                    cursor: "pointer",
+                  }}
                 >
                   Clear
                 </button>
@@ -276,7 +316,11 @@ export default function App() {
                     }}
                   >
                     <span style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                      <input type="checkbox" checked={selected.has(p)} onChange={() => togglePlayer(p)} />
+                      <input
+                        type="checkbox"
+                        checked={selected.has(p)}
+                        onChange={() => togglePlayer(p)}
+                      />
                       {p}
                     </span>
                     <button
@@ -314,19 +358,34 @@ export default function App() {
                 <button
                   onClick={generateTeams}
                   disabled={selectedPlayers.length < 2}
-                  style={{ padding: "10px 12px", borderRadius: 10, border: "1px solid #ccc", cursor: "pointer" }}
+                  style={{
+                    padding: "10px 12px",
+                    borderRadius: 10,
+                    border: "1px solid #ccc",
+                    cursor: "pointer",
+                  }}
                 >
                   Divide 🎲
                 </button>
                 <button
                   onClick={() => setTeams(Array.from({ length: teamCount }, () => []))}
-                  style={{ padding: "10px 12px", borderRadius: 10, border: "1px solid #ccc", cursor: "pointer" }}
+                  style={{
+                    padding: "10px 12px",
+                    borderRadius: 10,
+                    border: "1px solid #ccc",
+                    cursor: "pointer",
+                  }}
                 >
                   Reset
                 </button>
                 <button
                   onClick={rollMap}
-                  style={{ padding: "10px 12px", borderRadius: 10, border: "1px solid #ccc", cursor: "pointer" }}
+                  style={{
+                    padding: "10px 12px",
+                    borderRadius: 10,
+                    border: "1px solid #ccc",
+                    cursor: "pointer",
+                  }}
                 >
                   Map Roulette 🎰
                 </button>
@@ -391,13 +450,27 @@ export default function App() {
               >
                 Copy teams to clipboard
               </button>
+
               {randomMap ? (
-                <div style={{ marginTop: 12, padding: 12, border: "1px solid #ddd", borderRadius: 8, textAlign: "center" }}>
+                <div
+                  style={{
+                    marginTop: 12,
+                    padding: 12,
+                    border: "1px solid #ddd",
+                    borderRadius: 8,
+                    textAlign: "center",
+                  }}
+                >
                   <div style={{ fontSize: 18, fontWeight: 700 }}>{randomMap}</div>
                   <div style={{ marginTop: 8 }}>
                     <button
                       onClick={() => setRandomMap(null)}
-                      style={{ padding: "6px 10px", borderRadius: 8, border: "1px solid #ccc", cursor: "pointer" }}
+                      style={{
+                        padding: "6px 10px",
+                        borderRadius: 8,
+                        border: "1px solid #ccc",
+                        cursor: "pointer",
+                      }}
                     >
                       Clear
                     </button>

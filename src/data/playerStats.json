@@ -11,7 +11,12 @@
     "deaths": 482,
     "assists": 172,
     "totalDamage": 66935,
-    "fireDamage": 2078
+    "fireDamage": 2078,
+    "utilityThrows": 994,
+    "knifeKills": 3,
+    "firstKills": 94,
+    "lastAliveRounds": 137,
+    "utilityDamage": 0
   },
   {
     "accountId": "1281214748",
@@ -25,7 +30,12 @@
     "deaths": 508,
     "assists": 161,
     "totalDamage": 56056,
-    "fireDamage": 4604
+    "fireDamage": 4604,
+    "utilityThrows": 1203,
+    "knifeKills": 2,
+    "firstKills": 61,
+    "lastAliveRounds": 180,
+    "utilityDamage": 0
   },
   {
     "accountId": "220179415",
@@ -39,7 +49,12 @@
     "deaths": 511,
     "assists": 154,
     "totalDamage": 52172,
-    "fireDamage": 2308
+    "fireDamage": 2308,
+    "utilityThrows": 488,
+    "knifeKills": 3,
+    "firstKills": 110,
+    "lastAliveRounds": 111,
+    "utilityDamage": 0
   },
   {
     "accountId": "1906894947",
@@ -53,7 +68,12 @@
     "deaths": 498,
     "assists": 137,
     "totalDamage": 50814,
-    "fireDamage": 2835
+    "fireDamage": 2835,
+    "utilityThrows": 722,
+    "knifeKills": 0,
+    "firstKills": 81,
+    "lastAliveRounds": 154,
+    "utilityDamage": 0
   },
   {
     "accountId": "40296679",
@@ -67,7 +87,12 @@
     "deaths": 381,
     "assists": 137,
     "totalDamage": 47527,
-    "fireDamage": 3501
+    "fireDamage": 3501,
+    "utilityThrows": 1028,
+    "knifeKills": 1,
+    "firstKills": 73,
+    "lastAliveRounds": 113,
+    "utilityDamage": 0
   },
   {
     "accountId": "876450482",
@@ -81,7 +106,12 @@
     "deaths": 501,
     "assists": 163,
     "totalDamage": 45142,
-    "fireDamage": 2097
+    "fireDamage": 2097,
+    "utilityThrows": 654,
+    "knifeKills": 1,
+    "firstKills": 52,
+    "lastAliveRounds": 140,
+    "utilityDamage": 0
   },
   {
     "accountId": "1044985494",
@@ -95,7 +125,12 @@
     "deaths": 529,
     "assists": 126,
     "totalDamage": 39487,
-    "fireDamage": 2737
+    "fireDamage": 2737,
+    "utilityThrows": 502,
+    "knifeKills": 1,
+    "firstKills": 49,
+    "lastAliveRounds": 164,
+    "utilityDamage": 0
   },
   {
     "accountId": "861271567",
@@ -109,7 +144,12 @@
     "deaths": 309,
     "assists": 115,
     "totalDamage": 37131,
-    "fireDamage": 2027
+    "fireDamage": 2027,
+    "utilityThrows": 641,
+    "knifeKills": 1,
+    "firstKills": 53,
+    "lastAliveRounds": 72,
+    "utilityDamage": 0
   },
   {
     "accountId": "175169925",
@@ -123,7 +163,12 @@
     "deaths": 522,
     "assists": 136,
     "totalDamage": 33768,
-    "fireDamage": 1358
+    "fireDamage": 1358,
+    "utilityThrows": 728,
+    "knifeKills": 1,
+    "firstKills": 46,
+    "lastAliveRounds": 95,
+    "utilityDamage": 0
   },
   {
     "accountId": "1907596731",
@@ -137,7 +182,12 @@
     "deaths": 171,
     "assists": 61,
     "totalDamage": 20960,
-    "fireDamage": 2714
+    "fireDamage": 2714,
+    "utilityThrows": 575,
+    "knifeKills": 4,
+    "firstKills": 27,
+    "lastAliveRounds": 64,
+    "utilityDamage": 0
   },
   {
     "accountId": "36898525",
@@ -151,7 +201,12 @@
     "deaths": 170,
     "assists": 75,
     "totalDamage": 20860,
-    "fireDamage": 2756
+    "fireDamage": 2756,
+    "utilityThrows": 597,
+    "knifeKills": 6,
+    "firstKills": 23,
+    "lastAliveRounds": 61,
+    "utilityDamage": 0
   },
   {
     "accountId": "806199286",
@@ -165,7 +220,12 @@
     "deaths": 108,
     "assists": 44,
     "totalDamage": 15763,
-    "fireDamage": 598
+    "fireDamage": 598,
+    "utilityThrows": 216,
+    "knifeKills": 1,
+    "firstKills": 29,
+    "lastAliveRounds": 28,
+    "utilityDamage": 0
   },
   {
     "accountId": "75945345",
@@ -179,7 +239,12 @@
     "deaths": 132,
     "assists": 33,
     "totalDamage": 13887,
-    "fireDamage": 1037
+    "fireDamage": 1037,
+    "utilityThrows": 334,
+    "knifeKills": 0,
+    "firstKills": 14,
+    "lastAliveRounds": 33,
+    "utilityDamage": 0
   },
   {
     "accountId": "1566048620",
@@ -193,7 +258,12 @@
     "deaths": 89,
     "assists": 35,
     "totalDamage": 8007,
-    "fireDamage": 595
+    "fireDamage": 595,
+    "utilityThrows": 162,
+    "knifeKills": 0,
+    "firstKills": 6,
+    "lastAliveRounds": 27,
+    "utilityDamage": 0
   },
   {
     "accountId": "1446046255",
@@ -207,7 +277,12 @@
     "deaths": 54,
     "assists": 21,
     "totalDamage": 7069,
-    "fireDamage": 372
+    "fireDamage": 372,
+    "utilityThrows": 100,
+    "knifeKills": 0,
+    "firstKills": 14,
+    "lastAliveRounds": 6,
+    "utilityDamage": 0
   },
   {
     "accountId": "1192990850",
@@ -221,6 +296,11 @@
     "deaths": 42,
     "assists": 6,
     "totalDamage": 3026,
-    "fireDamage": 154
+    "fireDamage": 154,
+    "utilityThrows": 59,
+    "knifeKills": 0,
+    "firstKills": 4,
+    "lastAliveRounds": 13,
+    "utilityDamage": 0
   }
 ]
