@@ -19,6 +19,7 @@ const DEFAULT_PLAYERS = [
   "AzureBat",
   "Q-wade",
   "Tampon",
+  "Xrang",
 ];
 
 function shuffle<T>(arr: T[]) {
