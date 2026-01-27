@@ -95,47 +95,34 @@ export default function MatchHistory() {
   }, [filtered]);
 
   return (
-    <div>
-      <h1 style={{ marginBottom: 6 }}>Match History</h1>
-      <p style={{ marginTop: 0, opacity: 0.75 }}>
-        Loaded from logs (only <b>full matches</b>).
-      </p>
+    <div className="container" style={{ maxWidth: '100%', padding: '0' }}>
+      <header style={{ marginBottom: "2rem" }}>
+        <h1>Match History</h1>
+        <p>Loaded from logs (only <b>full matches</b>).</p>
+      </header>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr",
-          gap: 10,
-          border: "1px solid #ddd",
-          borderRadius: 12,
-          padding: 12,
-          marginBottom: 14,
-          alignItems: "end",
-        }}
-      >
-        <div>
-          <label style={{ display: "block", fontSize: 12, opacity: 0.7, marginBottom: 6 }}>
-            Search (map / server / file / player)
-          </label>
-          <input
-            value={q}
-            onChange={(e) => setQ(e.target.value)}
-            placeholder="e.g. inferno, SheepClan, tomer..."
-            style={{ width: "100%", padding: 10, borderRadius: 10, border: "1px solid #ccc" }}
-          />
-        </div>
+      <div className="panel" style={{ marginBottom: "2rem" }}>
+        <label style={{ display: "block", fontSize: "0.9rem", color: "var(--text-muted)", marginBottom: "0.5rem" }}>
+          Search (map / server / file / player)
+        </label>
+        <input
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+          placeholder="e.g. inferno, SheepClan, tomer..."
+          style={{ width: "100%", maxWidth: "400px" }}
+        />
       </div>
 
-      <div style={{ opacity: 0.7, marginBottom: 10 }}>
-        Matches found: <b>{ordered.length}</b>
+      <div style={{ opacity: 0.7, marginBottom: "1rem" }}>
+        Matches found: <b style={{ color: "var(--primary)" }}>{ordered.length}</b>
       </div>
 
       {ordered.length === 0 ? (
-        <div style={{ border: "1px solid #ddd", borderRadius: 12, padding: 16, opacity: 0.8 }}>
+        <div className="panel" style={{ textAlign: "center", opacity: 0.8 }}>
           No matches found. Make sure <code>matches.json</code> is in <code>src/data</code> and your logs contain full matches.
         </div>
       ) : (
-        <div style={{ display: "grid", gap: 12 }}>
+        <div style={{ display: "grid", gap: "1.5rem" }}>
           {ordered.map((m) => {
             const teamsObj: Record<string, MatchPlayer[]> =
               m.teams ||
@@ -150,193 +137,98 @@ export default function MatchHistory() {
             const tMembers = teamsObj["T"] || [];
 
             return (
-              <div key={m.id} style={{ border: "1px solid #ddd", borderRadius: 12, padding: 14 }}>
-                <div style={{ display: "flex", justifyContent: "space-between", gap: 10, alignItems: "baseline" }}>
+              <div key={m.id} className="panel" style={{ padding: "1rem" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", gap: "1rem", alignItems: "baseline", flexWrap: "wrap", marginBottom: "1rem" }}>
                   <div>
-                    <b>{m.map || "Unknown map"}</b>{" "}
-                    <span style={{ opacity: 0.75 }}>
-                      (CT {m.scoreCT} : {m.scoreT} T) • rounds: {m.roundsPlayed}
+                    <span style={{ fontSize: "1.5rem", fontWeight: 800, textTransform: "uppercase", color: "var(--text-main)" }}>
+                      {m.map || "Unknown map"}
                     </span>
-                    <div style={{ opacity: 0.7, fontSize: 13 }}>
-                      server: {m.server || "—"} • file: {m.file}
-                      {m.startedAt ? ` • start: ${m.startedAt}` : ""}
-                      {m.endedAt ? ` • end: ${m.endedAt}` : ""}
+                    <span style={{ marginLeft: "1rem", fontSize: "1.2rem", color: "var(--primary)" }}>
+                      <span className="text-ct">CT {m.scoreCT}</span> : <span className="text-t">{m.scoreT} T</span>
+                    </span>
+                    <span style={{ marginLeft: "1rem", opacity: 0.6, fontSize: "0.9rem" }}>
+                      ({m.roundsPlayed} rounds)
+                    </span>
+
+                    <div style={{ opacity: 0.5, fontSize: "0.8rem", marginTop: "0.2rem" }}>
+                      {m.server && <span style={{ marginRight: "1rem" }}>server: {m.server}</span>}
+                      {m.startedAt && <span>{m.startedAt}</span>}
                     </div>
                   </div>
                 </div>
 
-                <div style={{ marginTop: 12, display: "flex", gap: 12, alignItems: "flex-start", flexWrap: "wrap" }}>
-                  <div style={{ display: "flex", gap: 12, width: "100%" }}>
-                    {/* CT */}
-                    <div
-                      style={{
-                        flex: 1,
-                        border: "1px solid #d7e9ff",
-                        background: "#f4fbff",
-                        borderRadius: 8,
-                        padding: 8,
-                        minWidth: 260,
-                      }}
-                    >
-                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
-                        <div style={{ fontWeight: 800 }}>CT</div>
-                        <div style={{ fontWeight: 800, fontSize: 18 }}>{m.scoreCT}</div>
-                      </div>
-
-                      <div
-                        style={{
-                          display: "flex",
-                          justifyContent: "space-between",
-                          padding: "6px 8px",
-                          fontSize: 12,
-                          opacity: 0.85,
-                          borderBottom: "1px solid rgba(0,0,0,0.06)",
-                          marginBottom: 8,
-                        }}
-                      >
-                        <div style={{ fontWeight: 700 }}>Player</div>
-                        <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
-                          <div style={{ minWidth: 48, textAlign: "right" }}>K</div>
-                          <div style={{ minWidth: 48, textAlign: "right" }}>D</div>
-                          <div style={{ minWidth: 48, textAlign: "right" }}>A</div>
-                          <div style={{ minWidth: 64, textAlign: "right" }}>DMG</div>
-                          <div style={{ minWidth: 60, textAlign: "right" }}>ADR</div>
-                          <div style={{ minWidth: 56, textAlign: "right" }}>HSP%</div>
-                        </div>
-                      </div>
-
-                      <div>
-                        {[...ctMembers]
-                          .sort((a, b) => (b.dmg || 0) - (a.dmg || 0))
-                          .map((mem, idx) => (
-                            <div
-                              key={mem.accountId}
-                              style={{
-                                display: "flex",
-                                justifyContent: "space-between",
-                                padding: "6px 8px",
-                                borderRadius: 6,
-                                background: idx === 0 ? "rgba(20,80,160,0.04)" : "transparent",
-                                marginBottom: 6,
-                                alignItems: "center",
-                              }}
-                            >
-                              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                                <div
-                                  style={{
-                                    width: 22,
-                                    height: 22,
-                                    borderRadius: 12,
-                                    background: idx === 0 ? "#144fa0" : "#e6eefc",
-                                    color: idx === 0 ? "#fff" : "#144fa0",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    fontSize: 12,
-                                    fontWeight: 800,
-                                  }}
-                                >
-                                  {idx + 1}
-                                </div>
-                                <div style={{ fontWeight: 700 }}>{mem.name}</div>
-                              </div>
-                              <div style={{ display: "flex", gap: 10, alignItems: "center", opacity: 0.9 }}>
-                                <div style={{ minWidth: 48, textAlign: "right" }}>{mem.kills}</div>
-                                <div style={{ minWidth: 48, textAlign: "right" }}>{mem.deaths}</div>
-                                <div style={{ minWidth: 48, textAlign: "right" }}>{mem.assists}</div>
-                                <div style={{ minWidth: 64, textAlign: "right" }}>{mem.dmg}</div>
-                                <div style={{ minWidth: 60, textAlign: "right" }}>{mem.adr}</div>
-                                <div style={{ minWidth: 56, textAlign: "right" }}>{mem.hsp}%</div>
-                              </div>
-                            </div>
-                          ))}
-                      </div>
+                <div className="grid-stack" style={{ gap: "1rem" }}>
+                  {/* CT */}
+                  <div className="bg-ct" style={{ borderRadius: "var(--radius-md)", padding: "1rem" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "1rem" }}>
+                      <h3 className="text-ct" style={{ margin: 0 }}>CT</h3>
+                      <span className="text-ct" style={{ fontSize: "1.5rem" }}>{m.scoreCT}</span>
                     </div>
 
-                    {/* T */}
-                    <div
-                      style={{
-                        flex: 1,
-                        border: "1px solid #ffe9d7",
-                        background: "#fff8f2",
-                        borderRadius: 8,
-                        padding: 8,
-                        minWidth: 260,
-                      }}
-                    >
-                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
-                        <div style={{ fontWeight: 800 }}>T</div>
-                        <div style={{ fontWeight: 800, fontSize: 18 }}>{m.scoreT}</div>
-                      </div>
+                    <div style={{ overflowX: "auto" }}>
+                      <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.9rem" }}>
+                        <thead>
+                          <tr style={{ color: "var(--text-muted)", borderBottom: "1px solid rgba(255,255,255,0.1)" }}>
+                            <th style={{ textAlign: "left", padding: "8px" }}>Player</th>
+                            <th style={{ textAlign: "right", padding: "8px" }}>K</th>
+                            <th style={{ textAlign: "right", padding: "8px" }}>D</th>
+                            <th style={{ textAlign: "right", padding: "8px" }}>A</th>
+                            <th style={{ textAlign: "right", padding: "8px" }}>DMG</th>
+                            <th style={{ textAlign: "right", padding: "8px" }}>ADR</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {[...ctMembers]
+                            .sort((a, b) => (b.dmg || 0) - (a.dmg || 0))
+                            .map((mem, idx) => (
+                              <tr key={mem.accountId} style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+                                <td style={{ padding: "8px", fontWeight: 600 }}>{mem.name}</td>
+                                <td style={{ padding: "8px", textAlign: "right", color: idx === 0 ? "var(--primary)" : "inherit" }}>{mem.kills}</td>
+                                <td style={{ padding: "8px", textAlign: "right", opacity: 0.7 }}>{mem.deaths}</td>
+                                <td style={{ padding: "8px", textAlign: "right", opacity: 0.7 }}>{mem.assists}</td>
+                                <td style={{ padding: "8px", textAlign: "right" }}>{mem.dmg}</td>
+                                <td style={{ padding: "8px", textAlign: "right" }}>{mem.adr}</td>
+                              </tr>
+                            ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
 
-                      <div
-                        style={{
-                          display: "flex",
-                          justifyContent: "space-between",
-                          padding: "6px 8px",
-                          fontSize: 12,
-                          opacity: 0.85,
-                          borderBottom: "1px solid rgba(0,0,0,0.06)",
-                          marginBottom: 8,
-                        }}
-                      >
-                        <div style={{ fontWeight: 700 }}>Player</div>
-                        <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
-                          <div style={{ minWidth: 48, textAlign: "right" }}>K</div>
-                          <div style={{ minWidth: 48, textAlign: "right" }}>D</div>
-                          <div style={{ minWidth: 48, textAlign: "right" }}>A</div>
-                          <div style={{ minWidth: 64, textAlign: "right" }}>DMG</div>
-                          <div style={{ minWidth: 60, textAlign: "right" }}>ADR</div>
-                          <div style={{ minWidth: 56, textAlign: "right" }}>HSP%</div>
-                        </div>
-                      </div>
+                  {/* T */}
+                  <div className="bg-t" style={{ borderRadius: "var(--radius-md)", padding: "1rem" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "1rem" }}>
+                      <h3 className="text-t" style={{ margin: 0 }}>TERROR</h3>
+                      <span className="text-t" style={{ fontSize: "1.5rem" }}>{m.scoreT}</span>
+                    </div>
 
-                      <div>
-                        {[...tMembers]
-                          .sort((a, b) => (b.dmg || 0) - (a.dmg || 0))
-                          .map((mem, idx) => (
-                            <div
-                              key={mem.accountId}
-                              style={{
-                                display: "flex",
-                                justifyContent: "space-between",
-                                padding: "6px 8px",
-                                borderRadius: 6,
-                                background: idx === 0 ? "rgba(160,60,0,0.04)" : "transparent",
-                                marginBottom: 6,
-                                alignItems: "center",
-                              }}
-                            >
-                              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                                <div
-                                  style={{
-                                    width: 22,
-                                    height: 22,
-                                    borderRadius: 12,
-                                    background: idx === 0 ? "#a03c00" : "#fff1e6",
-                                    color: idx === 0 ? "#fff" : "#a03c00",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    fontSize: 12,
-                                    fontWeight: 800,
-                                  }}
-                                >
-                                  {idx + 1}
-                                </div>
-                                <div style={{ fontWeight: 700 }}>{mem.name}</div>
-                              </div>
-                              <div style={{ display: "flex", gap: 10, alignItems: "center", opacity: 0.9 }}>
-                                <div style={{ minWidth: 48, textAlign: "right" }}>{mem.kills}</div>
-                                <div style={{ minWidth: 48, textAlign: "right" }}>{mem.deaths}</div>
-                                <div style={{ minWidth: 48, textAlign: "right" }}>{mem.assists}</div>
-                                <div style={{ minWidth: 64, textAlign: "right" }}>{mem.dmg}</div>
-                                <div style={{ minWidth: 60, textAlign: "right" }}>{mem.adr}</div>
-                                <div style={{ minWidth: 56, textAlign: "right" }}>{mem.hsp}%</div>
-                              </div>
-                            </div>
-                          ))}
-                      </div>
+                    <div style={{ overflowX: "auto" }}>
+                      <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.9rem" }}>
+                        <thead>
+                          <tr style={{ color: "var(--text-muted)", borderBottom: "1px solid rgba(255,255,255,0.1)" }}>
+                            <th style={{ textAlign: "left", padding: "8px" }}>Player</th>
+                            <th style={{ textAlign: "right", padding: "8px" }}>K</th>
+                            <th style={{ textAlign: "right", padding: "8px" }}>D</th>
+                            <th style={{ textAlign: "right", padding: "8px" }}>A</th>
+                            <th style={{ textAlign: "right", padding: "8px" }}>DMG</th>
+                            <th style={{ textAlign: "right", padding: "8px" }}>ADR</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {[...tMembers]
+                            .sort((a, b) => (b.dmg || 0) - (a.dmg || 0))
+                            .map((mem, idx) => (
+                              <tr key={mem.accountId} style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+                                <td style={{ padding: "8px", fontWeight: 600 }}>{mem.name}</td>
+                                <td style={{ padding: "8px", textAlign: "right", color: idx === 0 ? "var(--secondary)" : "inherit" }}>{mem.kills}</td>
+                                <td style={{ padding: "8px", textAlign: "right", opacity: 0.7 }}>{mem.deaths}</td>
+                                <td style={{ padding: "8px", textAlign: "right", opacity: 0.7 }}>{mem.assists}</td>
+                                <td style={{ padding: "8px", textAlign: "right" }}>{mem.dmg}</td>
+                                <td style={{ padding: "8px", textAlign: "right" }}>{mem.adr}</td>
+                              </tr>
+                            ))}
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
