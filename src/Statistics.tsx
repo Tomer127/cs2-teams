@@ -29,15 +29,7 @@ type Match = {
   killEvents?: KillEvent[];
 };
 
-function LeaderCard({ title, value, sub }: { title: string; value: string; sub?: string }) {
-  return (
-    <div style={{ border: "1px solid #ddd", borderRadius: 12, padding: 12 }}>
-      <div style={{ fontSize: 12, opacity: 0.7 }}>{title}</div>
-      <div style={{ fontSize: 18, fontWeight: 800, marginTop: 6 }}>{value}</div>
-      {sub ? <div style={{ marginTop: 6, fontSize: 12, opacity: 0.75 }}>{sub}</div> : null}
-    </div>
-  );
-}
+
 
 export default function Statistics() {
   const matches = matchesRaw as Match[];
@@ -148,170 +140,218 @@ export default function Statistics() {
   }, [matches]);
 
   return (
-    <div>
-      <h1 style={{ marginBottom: 6 }}>Statistics</h1>
-      <p style={{ marginTop: 0, opacity: 0.75 }}>
-        All stats are calculated from <b>valid matches only</b> (the same matches shown in Match History).
-      </p>
+    <div className="container" style={{ maxWidth: '100%', padding: '0' }}>
+      <header style={{ marginBottom: "2rem" }}>
+        <h1>Statistics</h1>
+        <p>All stats are calculated from <b>valid matches only</b> (the same matches shown in Match History).</p>
+      </header>
 
       {/* Sections 1-6 */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12, marginTop: 14 }}>
-        <LeaderCard
-          title="1) The player who kills the most"
-          value={computed.mostKills ? `${computed.mostKills.name} — ${computed.mostKills.kills}` : "—"}
-        />
-        <LeaderCard
-          title="2) The player who dies the most"
-          value={computed.mostDeaths ? `${computed.mostDeaths.name} — ${computed.mostDeaths.deaths}` : "—"}
-        />
-        <LeaderCard
-          title="3) The player who uses most utility (throws)"
-          value={computed.mostUtility ? `${computed.mostUtility.name} — ${computed.mostUtility.utility}` : "—"}
-          sub="Counts: smoke/flash/HE/molotov/incendiary/decoy (from 'threw ...' lines)"
-        />
-        <LeaderCard
-          title="4) The player who kills with knife the most"
-          value={computed.mostKnife ? `${computed.mostKnife.name} — ${computed.mostKnife.knife}` : "—"}
-        />
-        <LeaderCard
-          title="5) The player who stays alive last the most"
-          value={computed.mostLastAlive ? `${computed.mostLastAlive.name} — ${computed.mostLastAlive.lastAlive}` : "—"}
-          sub="Best-effort: last death on each team per round (requires Round_End markers)"
-        />
-        <LeaderCard
-          title="6) The player who makes the most first kills in a round"
-          value={computed.mostFirstKills ? `${computed.mostFirstKills.name} — ${computed.mostFirstKills.firstKills}` : "—"}
-          sub="First kill after previous Round_End"
-        />
+      <div className="grid-stack" style={{ gap: "1.5rem", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))" }}>
+        <div className="panel" style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+          <div style={{ fontSize: "0.9rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "1px" }}>KILL LEADER</div>
+          <div style={{ fontSize: "2rem", fontWeight: 800, color: "var(--primary)", textShadow: "0 0 10px var(--primary-glow)" }}>
+            {computed.mostKills ? `${computed.mostKills.name}` : "—"}
+          </div>
+          <div style={{ fontSize: "1.2rem", fontWeight: 600 }}>{computed.mostKills?.kills ?? 0} Kills</div>
+        </div>
+
+        <div className="panel" style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+          <div style={{ fontSize: "0.9rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "1px" }}>MOST DEATHS</div>
+          <div style={{ fontSize: "2rem", fontWeight: 800, color: "var(--accent)", textShadow: "0 0 10px rgba(244, 114, 182, 0.4)" }}>
+            {computed.mostDeaths ? `${computed.mostDeaths.name}` : "—"}
+          </div>
+          <div style={{ fontSize: "1.2rem", fontWeight: 600 }}>{computed.mostDeaths?.deaths ?? 0} Deaths</div>
+        </div>
+
+        <div className="panel" style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+          <div style={{ fontSize: "0.9rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "1px" }}>UTILITY USAGE</div>
+          <div style={{ fontSize: "2rem", fontWeight: 800, color: "var(--secondary)" }}>
+            {computed.mostUtility ? `${computed.mostUtility.name}` : "—"}
+          </div>
+          <div style={{ fontSize: "1.2rem", fontWeight: 600 }}>{computed.mostUtility?.utility ?? 0} Throws</div>
+          <div style={{ fontSize: "0.8rem", opacity: 0.6 }}>smoke, flash, he, molotov, decoy</div>
+        </div>
+
+        <div className="panel" style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+          <div style={{ fontSize: "0.9rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "1px" }}>KNIFE MASTER</div>
+          <div style={{ fontSize: "2rem", fontWeight: 800, color: "#ef4444" }}>
+            {computed.mostKnife ? `${computed.mostKnife.name}` : "—"}
+          </div>
+          <div style={{ fontSize: "1.2rem", fontWeight: 600 }}>{computed.mostKnife?.knife ?? 0} Knife Kills</div>
+        </div>
+
+        <div className="panel" style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+          <div style={{ fontSize: "0.9rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "1px" }}>SURVIVOR</div>
+          <div style={{ fontSize: "2rem", fontWeight: 800, color: "#10b981" }}>
+            {computed.mostLastAlive ? `${computed.mostLastAlive.name}` : "—"}
+          </div>
+          <div style={{ fontSize: "1.2rem", fontWeight: 600 }}>{computed.mostLastAlive?.lastAlive ?? 0} Rounds Last Alive</div>
+        </div>
+
+        <div className="panel" style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+          <div style={{ fontSize: "0.9rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "1px" }}>ENTRY FRAGGER</div>
+          <div style={{ fontSize: "2rem", fontWeight: 800, color: "#f59e0b" }}>
+            {computed.mostFirstKills ? `${computed.mostFirstKills.name}` : "—"}
+          </div>
+          <div style={{ fontSize: "1.2rem", fontWeight: 600 }}>{computed.mostFirstKills?.firstKills ?? 0} First Kills</div>
+        </div>
       </div>
 
       {/* NEW Section 7 */}
-      <div style={{ marginTop: 18 }}>
-        <h2 style={{ margin: "8px 0" }}>7) Most utility damage (Molotov / Incendiary / HE)</h2>
-        <div style={{ opacity: 0.7, marginBottom: 10 }}>
-          Calculated from <b>attacked ... damage</b> lines where weapon is: <b>hegrenade</b>, <b>inferno</b> (burn ticks),
-          and sometimes <b>molotov/incgrenade</b>.
+      <div style={{ marginTop: "2rem" }} className="panel">
+        <h2 style={{ marginBottom: "0.5rem", borderBottom: "none" }}>Utility Damage</h2>
+        <p style={{ marginBottom: "1rem" }}>Calculated from HE Grenade, Molotov, and Incendiary damage.</p>
+
+        <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+          <div style={{ flex: 1, background: "rgba(0,0,0,0.3)", borderRadius: "8px", height: "12px", overflow: "hidden" }}>
+            <div style={{
+              width: "100%",
+              height: "100%",
+              background: `linear-gradient(90deg, var(--primary), var(--secondary))`
+            }} />
+          </div>
+          <div style={{ fontSize: "1.5rem", fontWeight: 800, whiteSpace: "nowrap" }}>
+            {computed.mostUtilityDamage ? `${computed.mostUtilityDamage.name} — ${computed.mostUtilityDamage.utilityDamage}` : "—"}
+          </div>
         </div>
-        <LeaderCard
-          title="Top utility damage"
-          value={computed.mostUtilityDamage ? `${computed.mostUtilityDamage.name} — ${computed.mostUtilityDamage.utilityDamage}` : "—"}
-        />
       </div>
 
       {/* Section 8: full head-to-head */}
-      <div style={{ marginTop: 18 }}>
-        <h2 style={{ margin: "8px 0" }}>8) Head-to-head table (kills / deaths vs each player)</h2>
-        <div style={{ opacity: 0.7, marginBottom: 10 }}>
-          Each cell shows: <b>K / D</b> meaning: <b>row player killed column player / row player died to column player</b>.
-        </div>
+      <div style={{ marginTop: "2rem" }}>
+        <h2 style={{ marginBottom: "0.5rem" }}>Head-to-Head Table</h2>
+        <p style={{ marginBottom: "1rem" }}>
+          Row player killed Column player / Row player died to Column player (K / D).
+        </p>
 
         {!computed.hasKillEvents ? (
-          <div style={{ padding: 12, border: "1px solid #ddd", borderRadius: 12, opacity: 0.75 }}>
+          <div className="panel" style={{ textAlign: "center", opacity: 0.8 }}>
             No kill events found. Make sure <b>parseLogs.cjs</b> exports <b>killEvents</b> in matches.json.
           </div>
         ) : (
-          <div style={{ border: "1px solid #ddd", borderRadius: 12, overflow: "auto" }}>
-            <table style={{ borderCollapse: "collapse", width: "max-content", minWidth: "100%" }}>
-              <thead>
-                <tr>
-                  <th
-                    style={{
-                      position: "sticky",
-                      left: 0,
-                      background: "#fafafa",
-                      borderBottom: "1px solid #eee",
-                      borderRight: "1px solid #eee",
-                      padding: "10px 12px",
-                      textAlign: "left",
-                      zIndex: 2,
-                      whiteSpace: "nowrap",
-                    }}
-                  >
-                    Player
-                  </th>
-                  {computed.players.map((col) => (
+          <div className="panel" style={{ padding: 0, overflow: "hidden" }}>
+            <div style={{ overflowX: "auto", maxHeight: "800px" }}>
+              <table style={{ borderCollapse: "separate", borderSpacing: 0, width: "max-content", minWidth: "100%" }}>
+                <thead>
+                  <tr>
                     <th
-                      key={col.id}
-                      style={{
-                        background: "#fafafa",
-                        borderBottom: "1px solid #eee",
-                        borderRight: "1px solid #eee",
-                        padding: "10px 12px",
-                        textAlign: "center",
-                        whiteSpace: "nowrap",
-                        fontWeight: 800,
-                        fontSize: 12,
-                      }}
-                    >
-                      {col.name}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-
-              <tbody>
-                {computed.players.map((row) => (
-                  <tr key={row.id}>
-                    <td
                       style={{
                         position: "sticky",
                         left: 0,
-                        background: "white",
-                        borderBottom: "1px solid #f1f1f1",
-                        borderRight: "1px solid #eee",
-                        padding: "10px 12px",
-                        fontWeight: 800,
+                        top: 0,
+                        background: "var(--bg-panel)",
+                        color: "var(--primary)",
+                        borderBottom: "1px solid var(--border-color)",
+                        borderRight: "1px solid var(--border-color)",
+                        padding: "12px 16px",
+                        textAlign: "left",
+                        zIndex: 3,
                         whiteSpace: "nowrap",
-                        zIndex: 1,
+                        textTransform: "uppercase",
+                        letterSpacing: "1px"
                       }}
                     >
-                      {row.name}
-                    </td>
+                      Player
+                    </th>
+                    {computed.players.map((col) => (
+                      <th
+                        key={col.id}
+                        style={{
+                          position: "sticky",
+                          top: 0,
+                          background: "var(--bg-panel)",
+                          borderBottom: "1px solid var(--border-color)",
+                          borderRight: "1px solid var(--border-color)",
+                          padding: "12px 16px",
+                          textAlign: "center",
+                          whiteSpace: "nowrap",
+                          fontWeight: 700,
+                          fontSize: "0.85rem",
+                          zIndex: 2,
+                          minWidth: "80px"
+                        }}
+                      >
+                        {col.name}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
 
-                    {computed.players.map((col) => {
-                      if (row.id === col.id) {
+                <tbody>
+                  {computed.players.map((row, rowIdx) => (
+                    <tr key={row.id} style={{ background: rowIdx % 2 === 0 ? "rgba(255,255,255,0.02)" : "transparent" }}>
+                      <td
+                        style={{
+                          position: "sticky",
+                          left: 0,
+                          background: "var(--bg-panel)",
+                          borderBottom: "1px solid var(--border-color)",
+                          borderRight: "1px solid var(--border-color)",
+                          padding: "12px 16px",
+                          fontWeight: 700,
+                          color: "var(--text-main)",
+                          whiteSpace: "nowrap",
+                          zIndex: 1,
+                          boxShadow: "2px 0 5px rgba(0,0,0,0.2)"
+                        }}
+                      >
+                        {row.name}
+                      </td>
+
+                      {computed.players.map((col) => {
+                        if (row.id === col.id) {
+                          return (
+                            <td
+                              key={col.id}
+                              style={{
+                                borderBottom: "1px solid var(--border-color)",
+                                borderRight: "1px solid var(--border-color)",
+                                padding: "12px",
+                                textAlign: "center",
+                                background: "rgba(0,0,0,0.2)",
+                                color: "var(--text-muted)",
+                                fontSize: "0.8rem",
+                              }}
+                            >
+                              —
+                            </td>
+                          );
+                        }
+
+                        const { killsAB, deathsAB } = computed.cell(row.id, col.id);
+                        const isHighActivity = killsAB + deathsAB >= 10;
+
+                        let cellBg = "transparent";
+                        if (killsAB > deathsAB * 1.5 && killsAB > 5) cellBg = "rgba(34, 211, 238, 0.1)"; // Winning hard (Cyan tint)
+                        if (deathsAB > killsAB * 1.5 && deathsAB > 5) cellBg = "rgba(244, 114, 182, 0.1)"; // Losing hard (Pink tint)
+
                         return (
                           <td
                             key={col.id}
                             style={{
-                              borderBottom: "1px solid #f1f1f1",
-                              borderRight: "1px solid #f1f1f1",
-                              padding: "10px 12px",
+                              borderBottom: "1px solid var(--border-color)",
+                              borderRight: "1px solid var(--border-color)",
+                              padding: "10px",
                               textAlign: "center",
-                              opacity: 0.35,
+                              whiteSpace: "nowrap",
+                              background: cellBg,
+                              fontWeight: isHighActivity ? 700 : 400,
+                              color: isHighActivity ? "#fff" : "var(--text-muted)",
+                              transition: "background 0.2s"
                             }}
+                            title={`${row.name} vs ${col.name}: ${killsAB} kills / ${deathsAB} deaths`}
                           >
-                            —
+                            <span style={{ color: killsAB > deathsAB ? "var(--primary)" : "inherit" }}>{killsAB}</span>
+                            <span style={{ opacity: 0.4, margin: "0 4px" }}>/</span>
+                            <span style={{ color: deathsAB > killsAB ? "var(--accent)" : "inherit" }}>{deathsAB}</span>
                           </td>
                         );
-                      }
-
-                      const { killsAB, deathsAB } = computed.cell(row.id, col.id);
-
-                      const emphasized =
-                        killsAB + deathsAB >= 5 ? { fontWeight: 800 } : undefined;
-
-                      return (
-                        <td
-                          key={col.id}
-                          style={{
-                            borderBottom: "1px solid #f1f1f1",
-                            borderRight: "1px solid #f1f1f1",
-                            padding: "10px 12px",
-                            textAlign: "center",
-                            whiteSpace: "nowrap",
-                            ...emphasized,
-                          }}
-                          title={`${row.name} vs ${col.name}: ${killsAB} kills / ${deathsAB} deaths`}
-                        >
-                          {killsAB} / {deathsAB}
-                        </td>
-                      );
-                    })}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+                      })}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         )}
       </div>

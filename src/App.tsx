@@ -37,10 +37,65 @@ function chunkRoundRobin<T>(items: T[], teamCount: number) {
   return teams;
 }
 
+type NavProps = {
+  page: string;
+  setPage: (p: any) => void;
+};
+
+function NavButtons({ page, setPage }: NavProps) {
+  return (
+    <>
+      <button
+        onClick={() => setPage("teams")}
+        className={page === "teams" ? "btn-gaming" : "btn-secondary"}
+      >
+        Teams
+      </button>
+
+      <button
+        onClick={() => setPage("history")}
+        className={page === "history" ? "btn-gaming" : "btn-secondary"}
+      >
+        Match History
+      </button>
+
+      <button
+        onClick={() => setPage("mvp")}
+        className={page === "mvp" ? "btn-gaming" : "btn-secondary"}
+      >
+        MVP
+      </button>
+
+      <button
+        onClick={() => setPage("stats")}
+        className={page === "stats" ? "btn-gaming" : "btn-secondary"}
+      >
+        Statistics
+      </button>
+
+      <button
+        onClick={() => setPage("testing")}
+        className={page === "testing" ? "btn-gaming" : "btn-secondary"}
+      >
+        Testing
+      </button>
+
+      <button
+        onClick={() => setPage("server")}
+        className={page === "server" ? "btn-gaming" : "btn-secondary"}
+      >
+        Server
+      </button>
+    </>
+  );
+}
+
 export default function App() {
   const [page, setPage] = useState<
     "teams" | "history" | "mvp" | "stats" | "testing" | "server"
   >("teams");
+
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // --- Teams state
   const [players, setPlayers] = useState<string[]>(DEFAULT_PLAYERS);
@@ -144,95 +199,39 @@ export default function App() {
   }
 
   return (
-    <div
-      style={{
-        maxWidth: 1000,
-        margin: "24px auto",
-        padding: 16,
-        fontFamily: "system-ui",
-      }}
-    >
+    <div className="container">
       {/* Top nav */}
-      <div style={{ display: "flex", gap: 8, marginBottom: 14 }}>
-        <button
-          onClick={() => setPage("teams")}
-          style={{
-            padding: "10px 12px",
-            borderRadius: 10,
-            border: "1px solid #ccc",
-            cursor: "pointer",
-            fontWeight: page === "teams" ? 700 : 400,
-          }}
-        >
-          Teams
-        </button>
+      {/* Navigation */}
+      <nav className="nav-container">
+        {/* Desktop Nav */}
+        <div className="nav-desktop">
+          <NavButtons page={page} setPage={setPage} />
+        </div>
 
-        <button
-          onClick={() => setPage("history")}
-          style={{
-            padding: "10px 12px",
-            borderRadius: 10,
-            border: "1px solid #ccc",
-            cursor: "pointer",
-            fontWeight: page === "history" ? 700 : 400,
-          }}
-        >
-          Match History
-        </button>
+        {/* Mobile Nav Header */}
+        <div className="nav-mobile-header">
+          <div className="mobile-logo">CS2 TEAMS</div>
+          <button
+            className="nav-hamburger"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? "✕" : "☰"}
+          </button>
+        </div>
 
-        <button
-          onClick={() => setPage("mvp")}
-          style={{
-            padding: "10px 12px",
-            borderRadius: 10,
-            border: "1px solid #ccc",
-            cursor: "pointer",
-            fontWeight: page === "mvp" ? 700 : 400,
-          }}
-        >
-          MVP
-        </button>
-
-        {/* ✅ NEW TAB right after MVP */}
-        <button
-          onClick={() => setPage("stats")}
-          style={{
-            padding: "10px 12px",
-            borderRadius: 10,
-            border: "1px solid #ccc",
-            cursor: "pointer",
-            fontWeight: page === "stats" ? 700 : 400,
-          }}
-        >
-          Statistics
-        </button>
-
-        <button
-          onClick={() => setPage("testing")}
-          style={{
-            padding: "10px 12px",
-            borderRadius: 10,
-            border: "1px solid #ccc",
-            cursor: "pointer",
-            fontWeight: page === "testing" ? 700 : 400,
-          }}
-        >
-          Testing
-        </button>
-
-        <button
-          onClick={() => setPage("server")}
-          style={{
-            padding: "10px 12px",
-            borderRadius: 10,
-            border: "1px solid #ccc",
-            cursor: "pointer",
-            fontWeight: page === "server" ? 700 : 400,
-          }}
-        >
-          Server
-        </button>
-      </div>
+        {/* Mobile Nav Overlay */}
+        {mobileMenuOpen && (
+          <div className="nav-mobile-menu">
+            <NavButtons
+              page={page}
+              setPage={(p) => {
+                setPage(p);
+                setMobileMenuOpen(false);
+              }}
+            />
+          </div>
+        )}
+      </nav>
 
       {/* Pages */}
       {page === "history" ? (
@@ -247,63 +246,47 @@ export default function App() {
         <ServerControl />
       ) : (
         <>
-          <h1 style={{ marginBottom: 6 }}>CS2 Team Divider</h1>
-          <p style={{ marginTop: 0, opacity: 0.75 }}>
-            Select players → divide into teams → adjust if needed.
-          </p>
+          <header style={{ marginBottom: "2rem", textAlign: "center" }}>
+            <h1>CS2 Team Divider</h1>
+            <p>Select players → divide into teams → adjust if needed.</p>
+          </header>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+          <div className="grid-stack">
             {/* Players panel */}
-            <div style={{ border: "1px solid #ddd", borderRadius: 12, padding: 16 }}>
-              <h2 style={{ marginTop: 0 }}>Players</h2>
+            <div className="panel">
+              <h2>Players</h2>
 
-              <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
+              <div className="flex-gap" style={{ marginBottom: "1rem" }}>
                 <input
                   value={newPlayer}
                   onChange={(e) => setNewPlayer(e.target.value)}
-                  placeholder="Add player…"
-                  style={{ flex: 1, padding: 10, borderRadius: 10, border: "1px solid #ccc" }}
+                  placeholder="Add player..."
+                  style={{ flex: 1 }}
                   onKeyDown={(e) => e.key === "Enter" && addPlayer()}
                 />
-                <button
-                  onClick={addPlayer}
-                  style={{
-                    padding: "10px 12px",
-                    borderRadius: 10,
-                    border: "1px solid #ccc",
-                    cursor: "pointer",
-                  }}
-                >
+                <button onClick={addPlayer} className="btn-gaming">
                   Add
                 </button>
               </div>
 
-              <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
+              <div className="flex-gap" style={{ marginBottom: "1rem" }}>
                 <button
                   onClick={() => setSelected(new Set(players))}
-                  style={{
-                    padding: "8px 10px",
-                    borderRadius: 10,
-                    border: "1px solid #ccc",
-                    cursor: "pointer",
-                  }}
+                  className="btn-secondary"
+                  style={{ fontSize: "0.9rem", padding: "0.4rem 0.8rem" }}
                 >
                   Select all
                 </button>
                 <button
                   onClick={() => setSelected(new Set())}
-                  style={{
-                    padding: "8px 10px",
-                    borderRadius: 10,
-                    border: "1px solid #ccc",
-                    cursor: "pointer",
-                  }}
+                  className="btn-secondary"
+                  style={{ fontSize: "0.9rem", padding: "0.4rem 0.8rem" }}
                 >
                   Clear
                 </button>
               </div>
 
-              <div style={{ display: "grid", gap: 8 }}>
+              <div style={{ display: "grid", gap: "0.5rem", gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))" }}>
                 {players.map((p) => (
                   <label
                     key={p}
@@ -311,12 +294,19 @@ export default function App() {
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "space-between",
-                      padding: 10,
-                      borderRadius: 10,
-                      border: "1px solid #eee",
+                      padding: "0.8rem",
+                      borderRadius: "var(--radius-md)",
+                      background: selected.has(p)
+                        ? "rgba(0, 255, 157, 0.1)"
+                        : "rgba(255, 255, 255, 0.03)",
+                      border: selected.has(p)
+                        ? "1px solid var(--primary)"
+                        : "1px solid transparent",
+                      cursor: "pointer",
+                      transition: "all 0.2s",
                     }}
                   >
-                    <span style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                    <span style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                       <input
                         type="checkbox"
                         checked={selected.has(p)}
@@ -325,17 +315,20 @@ export default function App() {
                       {p}
                     </span>
                     <button
-                      onClick={() => removePlayer(p)}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        removePlayer(p);
+                      }}
                       title="Remove"
                       style={{
-                        border: "1px solid #ccc",
-                        borderRadius: 10,
-                        padding: "6px 10px",
-                        cursor: "pointer",
-                        opacity: 0.8,
+                        background: "transparent",
+                        border: "none",
+                        color: "var(--text-muted)",
+                        padding: "0 4px",
+                        fontSize: "1.2rem",
                       }}
                     >
-                      ✕
+                      &times;
                     </button>
                   </label>
                 ))}
@@ -343,89 +336,93 @@ export default function App() {
             </div>
 
             {/* Teams panel */}
-            <div style={{ border: "1px solid #ddd", borderRadius: 12, padding: 16 }}>
-              <h2 style={{ marginTop: 0 }}>Teams</h2>
+            <div className="panel">
+              <h2>Teams</h2>
 
-              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
-                <span>Teams:</span>
+              <div className="flex-gap" style={{ marginBottom: "1rem" }}>
+                <span>Count:</span>
                 <input
                   type="number"
                   min={2}
                   max={10}
                   value={teamCount}
                   onChange={(e) => setTeamCount(Number(e.target.value))}
-                  style={{ width: 80, padding: 8, borderRadius: 10, border: "1px solid #ccc" }}
+                  style={{ width: "60px", padding: "0.5rem" }}
                 />
                 <button
                   onClick={generateTeams}
                   disabled={selectedPlayers.length < 2}
-                  style={{
-                    padding: "10px 12px",
-                    borderRadius: 10,
-                    border: "1px solid #ccc",
-                    cursor: "pointer",
-                  }}
+                  className="btn-gaming"
                 >
-                  Divide 🎲
+                  Divide &#127922;
                 </button>
                 <button
                   onClick={() => setTeams(Array.from({ length: teamCount }, () => []))}
-                  style={{
-                    padding: "10px 12px",
-                    borderRadius: 10,
-                    border: "1px solid #ccc",
-                    cursor: "pointer",
-                  }}
+                  className="btn-secondary"
                 >
                   Reset
                 </button>
                 <button
                   onClick={rollMap}
-                  style={{
-                    padding: "10px 12px",
-                    borderRadius: 10,
-                    border: "1px solid #ccc",
-                    cursor: "pointer",
-                  }}
+                  className="btn-gaming"
+                  style={{ marginLeft: "auto", borderColor: "var(--accent)", color: "var(--accent)" }}
                 >
-                  Map Roulette 🎰
+                  Map &#127920;
                 </button>
               </div>
 
-              <div style={{ marginBottom: 10, opacity: 0.75 }}>
-                Selected: <b>{selectedPlayers.length}</b>
+              <div style={{ marginBottom: "1rem", color: "var(--text-muted)", fontSize: "0.9rem" }}>
+                Selected: <b style={{ color: "var(--primary)" }}>{selectedPlayers.length}</b>
               </div>
 
-              <div style={{ display: "grid", gap: 12 }}>
+              <div style={{ display: "grid", gap: "1rem" }}>
                 {teams.map((team, teamIdx) => (
-                  <div key={teamIdx} style={{ border: "1px solid #eee", borderRadius: 12, padding: 12 }}>
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
-                      <b>Team {teamIdx + 1}</b>
-                      <span style={{ opacity: 0.7 }}>{team.length} players</span>
+                  <div
+                    key={teamIdx}
+                    style={{
+                      border: "1px solid var(--border-color)",
+                      borderRadius: "var(--radius-md)",
+                      padding: "1rem",
+                      background: "rgba(255,255,255,0.02)",
+                    }}
+                  >
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "0.5rem" }}>
+                      <b style={{ color: "var(--accent)" }}>Team {teamIdx + 1}</b>
+                      <span style={{ opacity: 0.7, fontSize: "0.8rem" }}>{team.length} players</span>
                     </div>
 
                     {team.length === 0 ? (
-                      <div style={{ paddingTop: 8, opacity: 0.6 }}>Empty</div>
+                      <div style={{ opacity: 0.4, fontStyle: "italic" }}>Empty</div>
                     ) : (
-                      <ul style={{ margin: "10px 0 0", paddingLeft: 18 }}>
+                      <ul style={{ margin: 0, padding: 0, listStyle: "none" }}>
                         {team.map((p) => (
-                          <li key={p} style={{ marginBottom: 6 }}>
-                            {p}{" "}
-                            <span style={{ display: "inline-flex", gap: 6, marginLeft: 8 }}>
+                          <li
+                            key={p}
+                            style={{
+                              marginBottom: "0.5rem",
+                              display: "flex",
+                              justifyContent: "space-between",
+                              alignItems: "center",
+                              background: "rgba(0,0,0,0.2)",
+                              padding: "0.4rem 0.8rem",
+                              borderRadius: "4px",
+                            }}
+                          >
+                            <span>{p}</span>
+                            <span style={{ display: "inline-flex", gap: "0.3rem" }}>
                               {teams.map((_, toIdx) =>
                                 toIdx === teamIdx ? null : (
                                   <button
                                     key={toIdx}
                                     onClick={() => movePlayer(p, teamIdx, toIdx)}
+                                    className="btn-secondary"
                                     style={{
-                                      border: "1px solid #ccc",
-                                      borderRadius: 10,
-                                      padding: "2px 8px",
-                                      cursor: "pointer",
-                                      fontSize: 12,
+                                      padding: "2px 6px",
+                                      fontSize: "0.7rem",
+                                      border: "1px solid var(--border-color)",
                                     }}
                                   >
-                                    → Team {toIdx + 1}
+                                    &rarr; T{toIdx + 1}
                                   </button>
                                 )
                               )}
@@ -440,40 +437,33 @@ export default function App() {
 
               <button
                 onClick={copyTeams}
-                style={{
-                  marginTop: 12,
-                  padding: "10px 12px",
-                  borderRadius: 10,
-                  border: "1px solid #ccc",
-                  cursor: "pointer",
-                  width: "100%",
-                }}
+                className="btn-gaming"
+                style={{ width: "100%", marginTop: "1.5rem" }}
               >
-                Copy teams to clipboard
+                Copy Teams To Clipboard
               </button>
 
               {randomMap ? (
                 <div
+                  className="animate-pulse-fast"
                   style={{
-                    marginTop: 12,
-                    padding: 12,
-                    border: "1px solid #ddd",
-                    borderRadius: 8,
+                    marginTop: "1.5rem",
+                    padding: "1.5rem",
+                    border: "2px solid var(--accent)",
+                    borderRadius: "var(--radius-md)",
                     textAlign: "center",
+                    background: "rgba(0, 217, 255, 0.1)",
                   }}
                 >
-                  <div style={{ fontSize: 18, fontWeight: 700 }}>{randomMap}</div>
-                  <div style={{ marginTop: 8 }}>
+                  <div style={{ fontSize: "2rem", fontWeight: 800, color: "var(--accent)", textTransform: "uppercase" }}>
+                    {randomMap}
+                  </div>
+                  <div style={{ marginTop: "1rem" }}>
                     <button
                       onClick={() => setRandomMap(null)}
-                      style={{
-                        padding: "6px 10px",
-                        borderRadius: 8,
-                        border: "1px solid #ccc",
-                        cursor: "pointer",
-                      }}
+                      className="btn-secondary"
                     >
-                      Clear
+                      Close
                     </button>
                   </div>
                 </div>
@@ -484,4 +474,5 @@ export default function App() {
       )}
     </div>
   );
+
 }

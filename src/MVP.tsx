@@ -234,59 +234,6 @@ function buildMvpRows(matches: Match[], query: string): PlayerMvpRow[] {
   return filtered;
 }
 
-function Table({ rows }: { rows: PlayerMvpRow[] }) {
-  return (
-    <div style={{ border: "1px solid #ddd", borderRadius: 12, overflow: "hidden" }}>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "56px 1.6fr 140px 120px 110px 90px 90px 90px",
-          padding: "10px 12px",
-          fontWeight: 800,
-          fontSize: 13,
-          background: "#fafafa",
-          borderBottom: "1px solid #eee",
-        }}
-      >
-        <div>#</div>
-        <div>Player</div>
-        <div style={{ textAlign: "right" }}>Avg Team Place</div>
-        <div style={{ textAlign: "right" }}>Matches</div>
-        <div style={{ textAlign: "right" }}>Avg DMG</div>
-        <div style={{ textAlign: "right" }}>ADR</div>
-        <div style={{ textAlign: "right" }}>KDR</div>
-        <div style={{ textAlign: "right" }}>HSP%</div>
-      </div>
-
-      {rows.map((r, idx) => (
-        <div
-          key={r.accountId}
-          style={{
-            display: "grid",
-            gridTemplateColumns: "56px 1.6fr 140px 120px 110px 90px 90px 90px",
-            padding: "10px 12px",
-            borderBottom: "1px solid #f1f1f1",
-            alignItems: "center",
-          }}
-        >
-          <div style={{ fontWeight: 800 }}>{idx + 1}</div>
-          <div style={{ fontWeight: 700 }}>{r.name}</div>
-          <div style={{ textAlign: "right", fontWeight: 800 }}>{r.avgTeamPlacement}</div>
-          <div style={{ textAlign: "right" }}>
-            {r.matchesPlayed}{" "}
-            <span style={{ opacity: 0.6, fontSize: 12 }}>
-              (best {r.bestPlacement}, worst {r.worstPlacement})
-            </span>
-          </div>
-          <div style={{ textAlign: "right" }}>{r.avgDmg}</div>
-          <div style={{ textAlign: "right" }}>{r.avgAdr}</div>
-          <div style={{ textAlign: "right" }}>{r.avgKdr}</div>
-          <div style={{ textAlign: "right" }}>{r.avgHsp}%</div>
-        </div>
-      ))}
-    </div>
-  );
-}
 
 export default function MVP() {
   const matches = matchesRaw as Match[];
@@ -308,50 +255,88 @@ export default function MVP() {
   const last10Rows = useMemo(() => buildMvpRows(last10Matches, q), [last10Matches, q]);
 
   return (
-    <div>
-      <h1 style={{ marginBottom: 6 }}>MVP</h1>
-      <p style={{ marginTop: 0, opacity: 0.75 }}>
-        Ranking = <b>lowest average placement inside your team</b> (1 is best).
-      </p>
+    <div className="container" style={{ maxWidth: '100%', padding: '0' }}>
+      <header style={{ marginBottom: "2rem" }}>
+        <h1>MVP</h1>
+        <p>Ranking = <b>lowest average placement inside your team</b> (1 is best).</p>
+      </header>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr",
-          gap: 10,
-          border: "1px solid #ddd",
-          borderRadius: 12,
-          padding: 12,
-          marginBottom: 14,
-        }}
-      >
-        <div>
-          <label style={{ display: "block", fontSize: 12, opacity: 0.7, marginBottom: 6 }}>
-            Search player (applies to both tables)
-          </label>
-          <input
-            value={q}
-            onChange={(e) => setQ(e.target.value)}
-            placeholder="e.g. LionFr0mZion"
-            style={{ width: "100%", padding: 10, borderRadius: 10, border: "1px solid #ccc" }}
-          />
-        </div>
+      <div className="panel" style={{ marginBottom: "2rem" }}>
+        <label style={{ display: "block", fontSize: "0.9rem", color: "var(--text-muted)", marginBottom: "0.5rem" }}>
+          Search player (applies to both tables)
+        </label>
+        <input
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+          placeholder="e.g. LionFr0mZion"
+          style={{ width: "100%", maxWidth: "400px" }}
+        />
       </div>
 
-      <div style={{ marginBottom: 18 }}>
-        <h2 style={{ margin: "8px 0" }}>All Matches</h2>
-        <div style={{ opacity: 0.7, marginBottom: 10 }}>
-          Players: <b>{allTimeRows.length}</b>
+      <div style={{ marginBottom: "3rem" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "1rem" }}>
+          <h2 style={{ margin: 0, borderBottom: "none" }}>All Matches</h2>
+          <span style={{ color: "var(--primary)", fontWeight: 700 }}>{allTimeRows.length} Players</span>
         </div>
+
         <Table rows={allTimeRows} />
       </div>
 
       <div>
-        <h2 style={{ margin: "8px 0" }}>Last 10 Matches</h2>
-        <div style={{ opacity: 0.7, marginBottom: 10 }}>
-          Matches used: <b>{last10Matches.length}</b> • Players: <b>{last10Rows.length}</b>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "1rem" }}>
+          <h2 style={{ margin: 0, borderBottom: "none" }}>Last 10 Matches</h2>
+          <span style={{ color: "var(--accent)", fontWeight: 700 }}>{last10Matches.length} Matches</span>
         </div>
         <Table rows={last10Rows} />
+      </div>
+    </div>
+  );
+}
+
+function Table({ rows }: { rows: PlayerMvpRow[] }) {
+  return (
+    <div className="panel" style={{ padding: 0, overflow: "hidden" }}>
+      <div style={{ overflowX: "auto" }}>
+        <table style={{ width: "100%", borderCollapse: "collapse", minWidth: "800px" }}>
+          <thead>
+            <tr style={{ background: "rgba(0,0,0,0.2)", borderBottom: "1px solid var(--border-color)", color: "var(--text-muted)", fontSize: "0.85rem", textTransform: "uppercase" }}>
+              <th style={{ padding: "12px 16px", textAlign: "left", width: "60px" }}>#</th>
+              <th style={{ padding: "12px 16px", textAlign: "left" }}>Player</th>
+              <th style={{ padding: "12px 16px", textAlign: "right" }}>Avg Place</th>
+              <th style={{ padding: "12px 16px", textAlign: "right" }}>Matches</th>
+              <th style={{ padding: "12px 16px", textAlign: "right" }}>Avg DMG</th>
+              <th style={{ padding: "12px 16px", textAlign: "right" }}>ADR</th>
+              <th style={{ padding: "12px 16px", textAlign: "right" }}>KDR</th>
+              <th style={{ padding: "12px 16px", textAlign: "right" }}>HSP%</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((r, idx) => {
+              let rowBg = "transparent";
+              if (idx === 0) rowBg = "linear-gradient(90deg, rgba(251, 191, 36, 0.1), transparent)"; // Gold
+              else if (idx === 1) rowBg = "linear-gradient(90deg, rgba(148, 163, 184, 0.1), transparent)"; // Silver
+              else if (idx === 2) rowBg = "linear-gradient(90deg, rgba(180, 83, 9, 0.1), transparent)"; // Bronze
+
+              return (
+                <tr key={r.accountId} style={{ borderBottom: "1px solid rgba(255,255,255,0.05)", background: rowBg }}>
+                  <td style={{ padding: "12px 16px", fontWeight: 800, color: idx === 0 ? "#fbbf24" : "inherit" }}>{idx + 1}</td>
+                  <td style={{ padding: "12px 16px", fontWeight: 700, fontSize: "1.1rem" }}>{r.name}</td>
+                  <td style={{ padding: "12px 16px", textAlign: "right", fontWeight: 800, color: "var(--primary)" }}>{r.avgTeamPlacement}</td>
+                  <td style={{ padding: "12px 16px", textAlign: "right" }}>
+                    {r.matchesPlayed}{" "}
+                    <span style={{ opacity: 0.5, fontSize: "0.8rem", display: "block" }}>
+                      (best {r.bestPlacement})
+                    </span>
+                  </td>
+                  <td style={{ padding: "12px 16px", textAlign: "right", opacity: 0.8 }}>{r.avgDmg}</td>
+                  <td style={{ padding: "12px 16px", textAlign: "right", opacity: 0.8 }}>{r.avgAdr}</td>
+                  <td style={{ padding: "12px 16px", textAlign: "right", color: r.avgKdr >= 1 ? "#10b981" : "inherit" }}>{r.avgKdr}</td>
+                  <td style={{ padding: "12px 16px", textAlign: "right", opacity: 0.8 }}>{r.avgHsp}%</td>
+                </tr>
+              )
+            })}
+          </tbody>
+        </table>
       </div>
     </div>
   );
