@@ -59,48 +59,59 @@ export default function Testing() {
   const m = latest;
 
   return (
-    <div>
-      <h1 style={{ marginBottom: 6 }}>Testing — Latest Match</h1>
-      <div style={{ border: "1px solid #ddd", borderRadius: 12, padding: 14 }}>
-        <div>
-          <b>{m.map || "Unknown map"}</b>{" "}
-          <span style={{ opacity: 0.75 }}>
-            (CT {m.scoreCT} : {m.scoreT} T) • rounds: {m.roundsPlayed}
-          </span>
-          <div style={{ opacity: 0.7, fontSize: 13 }}>
-            server: {m.server || "—"} • file: {m.file}
-            {m.startedAt ? ` • start: ${m.startedAt}` : ""}
-            {m.endedAt ? ` • end: ${m.endedAt}` : ""}
+    <div className="container" style={{ maxWidth: '100%', padding: '0' }}>
+      <header style={{ marginBottom: "2rem" }}>
+        <h1>Testing — Latest Match</h1>
+      </header>
+
+      <div className="panel" style={{ padding: 0 }}>
+        <div style={{ padding: "1.5rem", borderBottom: "1px solid var(--border-color)" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap", gap: "1rem" }}>
+            <div>
+              <span style={{ fontSize: "1.5rem", fontWeight: 800, textTransform: "uppercase", color: "var(--text-main)" }}>
+                {m.map || "Unknown map"}
+              </span>
+              <span style={{ marginLeft: "1rem", fontSize: "1.2rem", color: "var(--primary)" }}>
+                <span className="text-ct">CT {m.scoreCT}</span> : <span className="text-t">{m.scoreT} T</span>
+              </span>
+              <span style={{ marginLeft: "1rem", opacity: 0.6, fontSize: "0.9rem" }}>
+                ({m.roundsPlayed} rounds)
+              </span>
+            </div>
+            <div style={{ opacity: 0.5, fontSize: "0.8rem", textAlign: "right" }}>
+              {m.server && <div style={{ marginBottom: "4px" }}>server: {m.server}</div>}
+              {m.startedAt && <div>start: {m.startedAt}</div>}
+            </div>
           </div>
         </div>
 
-        <div style={{ marginTop: 12, overflowX: "auto" }}>
-          <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 820 }}>
+        <div style={{ overflowX: "auto" }}>
+          <table style={{ width: "100%", borderCollapse: "collapse", minWidth: "820px" }}>
             <thead>
-              <tr style={{ textAlign: "left", borderBottom: "1px solid #eee" }}>
-                <th style={{ padding: "10px 8px" }}>Player</th>
-                <th style={{ padding: "10px 8px" }}>K</th>
-                <th style={{ padding: "10px 8px" }}>D</th>
-                <th style={{ padding: "10px 8px" }}>A</th>
-                <th style={{ padding: "10px 8px" }}>DMG</th>
-                <th style={{ padding: "10px 8px" }}>ADR</th>
-                <th style={{ padding: "10px 8px" }}>KDR</th>
-                <th style={{ padding: "10px 8px" }}>HSP%</th>
-                <th style={{ padding: "10px 8px" }}>FireDmg</th>
+              <tr style={{ textAlign: "left", borderBottom: "1px solid var(--border-color)", color: "var(--text-muted)", fontSize: "0.85rem", textTransform: "uppercase", background: "rgba(0,0,0,0.2)" }}>
+                <th style={{ padding: "12px 16px" }}>Player</th>
+                <th style={{ padding: "12px 16px", textAlign: "right" }}>K</th>
+                <th style={{ padding: "12px 16px", textAlign: "right" }}>D</th>
+                <th style={{ padding: "12px 16px", textAlign: "right" }}>A</th>
+                <th style={{ padding: "12px 16px", textAlign: "right" }}>DMG</th>
+                <th style={{ padding: "12px 16px", textAlign: "right" }}>ADR</th>
+                <th style={{ padding: "12px 16px", textAlign: "right" }}>KDR</th>
+                <th style={{ padding: "12px 16px", textAlign: "right" }}>HSP%</th>
+                <th style={{ padding: "12px 16px", textAlign: "right" }}>FireDmg</th>
               </tr>
             </thead>
             <tbody>
-              {m.players.map((p) => (
-                <tr key={p.accountId} style={{ borderBottom: "1px solid #f3f3f3" }}>
-                  <td style={{ padding: "10px 8px", fontWeight: 700 }}>{p.name}</td>
-                  <td style={{ padding: "10px 8px" }}>{p.kills}</td>
-                  <td style={{ padding: "10px 8px" }}>{p.deaths}</td>
-                  <td style={{ padding: "10px 8px" }}>{p.assists}</td>
-                  <td style={{ padding: "10px 8px" }}>{p.dmg}</td>
-                  <td style={{ padding: "10px 8px" }}>{p.adr}</td>
-                  <td style={{ padding: "10px 8px" }}>{p.kdr}</td>
-                  <td style={{ padding: "10px 8px" }}>{p.hsp}</td>
-                  <td style={{ padding: "10px 8px" }}>{p.fireDamage}</td>
+              {m.players.map((p, idx) => (
+                <tr key={p.accountId} style={{ borderBottom: "1px solid rgba(255,255,255,0.05)", background: idx % 2 === 0 ? "rgba(255,255,255,0.01)" : "transparent" }}>
+                  <td style={{ padding: "12px 16px", fontWeight: 700, fontSize: "1.1rem" }}>{p.name}</td>
+                  <td style={{ padding: "12px 16px", textAlign: "right", color: "var(--primary)", fontWeight: 700 }}>{p.kills}</td>
+                  <td style={{ padding: "12px 16px", textAlign: "right", opacity: 0.7 }}>{p.deaths}</td>
+                  <td style={{ padding: "12px 16px", textAlign: "right", opacity: 0.7 }}>{p.assists}</td>
+                  <td style={{ padding: "12px 16px", textAlign: "right" }}>{p.dmg}</td>
+                  <td style={{ padding: "12px 16px", textAlign: "right" }}>{p.adr}</td>
+                  <td style={{ padding: "12px 16px", textAlign: "right", color: p.kdr >= 1 ? "#10b981" : "inherit" }}>{p.kdr}</td>
+                  <td style={{ padding: "12px 16px", textAlign: "right", opacity: 0.8 }}>{p.hsp}</td>
+                  <td style={{ padding: "12px 16px", textAlign: "right", color: p.fireDamage > 0 ? "#f97316" : "inherit" }}>{p.fireDamage}</td>
                 </tr>
               ))}
             </tbody>
