@@ -18,16 +18,64 @@ type MatchPlayer = {
   utilityDamage?: number;
 };
 
-type KillEvent = { killerId: string; victimId: string };
-
-type Match = {
+type PlayerStat = {
   id: string;
-  map: string | null;
-  startedAt: string | null;
-  endedAt: string | null;
-  players: MatchPlayer[];
-  killEvents?: KillEvent[];
+  name: string;
+  kills: number;
+  deaths: number;
+  utility: number;
+  knife: number;
+  lastAlive: number;
+  firstKills: number;
+  utilityDamage: number;
+  matchesPlayed: number;
 };
+
+function TopPlayersDisplay({ 
+  players, 
+  title, 
+  valueKey, 
+  valueLabel, 
+  color, 
+  glow 
+}: { 
+  players: PlayerStat[]; 
+  title: string; 
+  valueKey: keyof PlayerStat; 
+  valueLabel: string; 
+  color: string; 
+  glow?: string; 
+}) {
+  return (
+    <div className="panel" style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+      <div style={{ fontSize: "0.9rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "1px" }}>{title}</div>
+      
+      {players.length > 0 ? (
+        <>
+          {/* #1 Player - Large */}
+          <div style={{ fontSize: "2rem", fontWeight: 800, color, textShadow: glow ? `0 0 10px ${glow}` : undefined }}>
+            {players[0].name}
+          </div>
+          <div style={{ fontSize: "1.2rem", fontWeight: 600 }}>{players[0][valueKey]} {valueLabel}</div>
+          
+          {/* #2-5 Players - Smaller */}
+          {players.slice(1, 5).map((player, index) => (
+            <div key={player.id} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "0.25rem" }}>
+              <div style={{ fontSize: "0.9rem", fontWeight: 600, color: "var(--text-main)", opacity: 0.8 }}>
+                #{index + 2} {player.name}
+              </div>
+              <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", fontWeight: 500 }}>
+                {player[valueKey]} {valueLabel}
+              </div>
+            </div>
+          ))}
+        </>
+      ) : (
+        <div style={{ fontSize: "2rem", fontWeight: 800, color: "var(--text-muted)" }}>—</div>
+      )}
+    </div>
+  );
+}
 
 
 
@@ -47,6 +95,7 @@ export default function Statistics() {
         lastAlive: number;
         firstKills: number;
         utilityDamage: number;
+        matchesPlayed: number;
       }
     >();
 
@@ -64,6 +113,7 @@ export default function Statistics() {
           lastAlive: 0,
           firstKills: 0,
           utilityDamage: 0,
+          matchesPlayed: 0,
         });
       } else {
         const cur = byPlayer.get(p.accountId)!;
@@ -81,6 +131,8 @@ export default function Statistics() {
     };
 
     for (const m of matches) {
+      const playersInMatch = new Set<string>();
+      
       for (const p of m.players) {
         const row = ensure(p);
         row.kills += Number(p.kills) || 0;
@@ -91,7 +143,14 @@ export default function Statistics() {
         row.firstKills += Number(p.firstKills) || 0;
         row.utilityDamage += Number(p.utilityDamage) || 0;
 
+        playersInMatch.add(p.accountId);
         nameById.set(p.accountId, p.name);
+      }
+
+      // Increment matchesPlayed for each player in this match
+      for (const playerId of playersInMatch) {
+        const row = byPlayer.get(playerId)!;
+        row.matchesPlayed += 1;
       }
 
       for (const ev of m.killEvents || []) {
@@ -99,18 +158,22 @@ export default function Statistics() {
       }
     }
 
-    const players = Array.from(byPlayer.values()).sort((a, b) => a.name.localeCompare(b.name));
+    const players = Array.from(byPlayer.values())
+      .filter(p => p.matchesPlayed >= 10)
+      .sort((a, b) => a.name.localeCompare(b.name));
 
-    const topBy = (key: keyof typeof players[number]) =>
-      players.reduce((best, cur) => (cur[key] > best[key] ? cur : best), players[0]);
+    const topBy = (key: keyof typeof players[number], count: number = 1) =>
+      players
+        .sort((a, b) => (b[key] as number) - (a[key] as number))
+        .slice(0, count);
 
-    const mostKills = players.length ? topBy("kills") : null;
-    const mostDeaths = players.length ? topBy("deaths") : null;
-    const mostUtility = players.length ? topBy("utility") : null;
-    const mostKnife = players.length ? topBy("knife") : null;
-    const mostLastAlive = players.length ? topBy("lastAlive") : null;
-    const mostFirstKills = players.length ? topBy("firstKills") : null;
-    const mostUtilityDamage = players.length ? topBy("utilityDamage") : null;
+    const mostKills = players.length ? topBy("kills", 5) : [];
+    const mostDeaths = players.length ? topBy("deaths", 5) : [];
+    const mostUtility = players.length ? topBy("utility", 5) : [];
+    const mostKnife = players.length ? topBy("knife", 5) : [];
+    const mostLastAlive = players.length ? topBy("lastAlive", 5) : [];
+    const mostFirstKills = players.length ? topBy("firstKills", 5) : [];
+    const mostUtilityDamage = players.length ? topBy("utilityDamage", 5) : [];
 
     // Build full head-to-head grid: for each row player A, each col player B:
     // killsAB = A killed B
@@ -148,54 +211,55 @@ export default function Statistics() {
 
       {/* Sections 1-6 */}
       <div className="grid-stack" style={{ gap: "1.5rem", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))" }}>
-        <div className="panel" style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-          <div style={{ fontSize: "0.9rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "1px" }}>KILL LEADER</div>
-          <div style={{ fontSize: "2rem", fontWeight: 800, color: "var(--primary)", textShadow: "0 0 10px var(--primary-glow)" }}>
-            {computed.mostKills ? `${computed.mostKills.name}` : "—"}
-          </div>
-          <div style={{ fontSize: "1.2rem", fontWeight: 600 }}>{computed.mostKills?.kills ?? 0} Kills</div>
-        </div>
+        <TopPlayersDisplay 
+          players={computed.mostKills} 
+          title="KILL LEADER" 
+          valueKey="kills" 
+          valueLabel="Kills" 
+          color="var(--primary)" 
+          glow="var(--primary-glow)" 
+        />
 
-        <div className="panel" style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-          <div style={{ fontSize: "0.9rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "1px" }}>MOST DEATHS</div>
-          <div style={{ fontSize: "2rem", fontWeight: 800, color: "var(--accent)", textShadow: "0 0 10px rgba(244, 114, 182, 0.4)" }}>
-            {computed.mostDeaths ? `${computed.mostDeaths.name}` : "—"}
-          </div>
-          <div style={{ fontSize: "1.2rem", fontWeight: 600 }}>{computed.mostDeaths?.deaths ?? 0} Deaths</div>
-        </div>
+        <TopPlayersDisplay 
+          players={computed.mostDeaths} 
+          title="MOST DEATHS" 
+          valueKey="deaths" 
+          valueLabel="Deaths" 
+          color="var(--accent)" 
+          glow="rgba(244, 114, 182, 0.4)" 
+        />
 
-        <div className="panel" style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-          <div style={{ fontSize: "0.9rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "1px" }}>UTILITY USAGE</div>
-          <div style={{ fontSize: "2rem", fontWeight: 800, color: "var(--secondary)" }}>
-            {computed.mostUtility ? `${computed.mostUtility.name}` : "—"}
-          </div>
-          <div style={{ fontSize: "1.2rem", fontWeight: 600 }}>{computed.mostUtility?.utility ?? 0} Throws</div>
-          <div style={{ fontSize: "0.8rem", opacity: 0.6 }}>smoke, flash, he, molotov, decoy</div>
-        </div>
+        <TopPlayersDisplay 
+          players={computed.mostUtility} 
+          title="UTILITY USAGE" 
+          valueKey="utility" 
+          valueLabel="Throws" 
+          color="var(--secondary)" 
+        />
 
-        <div className="panel" style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-          <div style={{ fontSize: "0.9rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "1px" }}>KNIFE MASTER</div>
-          <div style={{ fontSize: "2rem", fontWeight: 800, color: "#ef4444" }}>
-            {computed.mostKnife ? `${computed.mostKnife.name}` : "—"}
-          </div>
-          <div style={{ fontSize: "1.2rem", fontWeight: 600 }}>{computed.mostKnife?.knife ?? 0} Knife Kills</div>
-        </div>
+        <TopPlayersDisplay 
+          players={computed.mostKnife} 
+          title="KNIFE MASTER" 
+          valueKey="knife" 
+          valueLabel="Knife Kills" 
+          color="#ef4444" 
+        />
 
-        <div className="panel" style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-          <div style={{ fontSize: "0.9rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "1px" }}>SURVIVOR</div>
-          <div style={{ fontSize: "2rem", fontWeight: 800, color: "#10b981" }}>
-            {computed.mostLastAlive ? `${computed.mostLastAlive.name}` : "—"}
-          </div>
-          <div style={{ fontSize: "1.2rem", fontWeight: 600 }}>{computed.mostLastAlive?.lastAlive ?? 0} Rounds Last Alive</div>
-        </div>
+        <TopPlayersDisplay 
+          players={computed.mostLastAlive} 
+          title="SURVIVOR" 
+          valueKey="lastAlive" 
+          valueLabel="Rounds Last Alive" 
+          color="#10b981" 
+        />
 
-        <div className="panel" style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-          <div style={{ fontSize: "0.9rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "1px" }}>ENTRY FRAGGER</div>
-          <div style={{ fontSize: "2rem", fontWeight: 800, color: "#f59e0b" }}>
-            {computed.mostFirstKills ? `${computed.mostFirstKills.name}` : "—"}
-          </div>
-          <div style={{ fontSize: "1.2rem", fontWeight: 600 }}>{computed.mostFirstKills?.firstKills ?? 0} First Kills</div>
-        </div>
+        <TopPlayersDisplay 
+          players={computed.mostFirstKills} 
+          title="ENTRY FRAGGER" 
+          valueKey="firstKills" 
+          valueLabel="First Kills" 
+          color="#f59e0b" 
+        />
       </div>
 
       {/* NEW Section 7 */}
@@ -203,18 +267,37 @@ export default function Statistics() {
         <h2 style={{ marginBottom: "0.5rem", borderBottom: "none" }}>Utility Damage</h2>
         <p style={{ marginBottom: "1rem" }}>Calculated from HE Grenade, Molotov, and Incendiary damage.</p>
 
-        <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-          <div style={{ flex: 1, background: "rgba(0,0,0,0.3)", borderRadius: "8px", height: "12px", overflow: "hidden" }}>
-            <div style={{
-              width: "100%",
-              height: "100%",
-              background: `linear-gradient(90deg, var(--primary), var(--secondary))`
-            }} />
+        {computed.mostUtilityDamage.length > 0 ? (
+          <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+            {/* #1 Player - Large */}
+            <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+              <div style={{ flex: 1, background: "rgba(0,0,0,0.3)", borderRadius: "8px", height: "12px", overflow: "hidden" }}>
+                <div style={{
+                  width: "100%",
+                  height: "100%",
+                  background: `linear-gradient(90deg, var(--primary), var(--secondary))`
+                }} />
+              </div>
+              <div style={{ fontSize: "1.5rem", fontWeight: 800, whiteSpace: "nowrap" }}>
+                {computed.mostUtilityDamage[0].name} — {computed.mostUtilityDamage[0].utilityDamage}
+              </div>
+            </div>
+            
+            {/* #2-5 Players - Smaller */}
+            {computed.mostUtilityDamage.slice(1, 5).map((player, index) => (
+              <div key={player.id} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "0.25rem" }}>
+                <div style={{ fontSize: "0.9rem", fontWeight: 600, color: "var(--text-main)", opacity: 0.8 }}>
+                  #{index + 2} {player.name}
+                </div>
+                <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", fontWeight: 500 }}>
+                  {player.utilityDamage} Damage
+                </div>
+              </div>
+            ))}
           </div>
-          <div style={{ fontSize: "1.5rem", fontWeight: 800, whiteSpace: "nowrap" }}>
-            {computed.mostUtilityDamage ? `${computed.mostUtilityDamage.name} — ${computed.mostUtilityDamage.utilityDamage}` : "—"}
-          </div>
-        </div>
+        ) : (
+          <div style={{ fontSize: "1.5rem", fontWeight: 800, color: "var(--text-muted)" }}>—</div>
+        )}
       </div>
 
       {/* Section 8: full head-to-head */}

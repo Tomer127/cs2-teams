@@ -221,8 +221,10 @@ function buildMvpRows(matches: Match[], query: string): PlayerMvpRow[] {
     };
   });
 
+  const filteredByMatches = out.filter(r => r.matchesPlayed >= 10);
+
   const q = query.trim().toLowerCase();
-  const filtered = q ? out.filter((r) => r.name.toLowerCase().includes(q)) : out;
+  const filtered = q ? filteredByMatches.filter((r) => r.name.toLowerCase().includes(q)) : filteredByMatches;
 
   filtered.sort((a, b) => {
     if (a.avgTeamPlacement !== b.avgTeamPlacement) return a.avgTeamPlacement - b.avgTeamPlacement;
