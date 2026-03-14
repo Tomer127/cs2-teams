@@ -1,4 +1,4 @@
-# CS2 Teams — Server Control setup
+# CS2 Teams — Server Control setup *****IDINAHOI DELBAYOV*****
 
 This project includes a simple admin UI (`Server` tab) and a serverless proxy at `api/dathost/proxy` to send control actions (change map, pause, restart) to your Dathost control endpoint.
 

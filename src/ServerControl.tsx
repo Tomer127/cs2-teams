@@ -4,7 +4,7 @@ import { MAPS } from "./maps";
 
 type BusyAction = "map" | "pause" | "unpause" | "restart" | null;
 
-function Button({
+const Button = ({
   children,
   onClick,
   disabled,
@@ -14,25 +14,26 @@ function Button({
   onClick: () => void;
   disabled?: boolean;
   danger?: boolean;
-}) {
+}) => {
   return (
     <button
       onClick={onClick}
       disabled={disabled}
+      className={danger ? "btn-gaming" : "btn-secondary"}
       style={{
-        padding: "10px 12px",
-        borderRadius: 10,
-        border: "1px solid #ccc",
+        padding: "0.6rem 1rem",
+        opacity: disabled ? 0.5 : 1,
+        borderColor: danger ? "var(--accent)" : undefined,
+        color: danger ? "var(--accent)" : undefined,
+        textShadow: danger ? "0 0 10px rgba(244, 114, 182, 0.4)" : undefined,
         cursor: disabled ? "not-allowed" : "pointer",
-        opacity: disabled ? 0.6 : 1,
-        fontWeight: 600,
-        background: danger ? "#ffecec" : undefined,
+        minWidth: "140px"
       }}
     >
       {children}
     </button>
   );
-}
+};
 
 export default function ServerControl() {
   const [serverId, setServerId] = useState<string>(import.meta.env.VITE_DATHOST_SERVER_ID ?? "");
@@ -109,77 +110,93 @@ export default function ServerControl() {
   }
 
   return (
-    <div style={{ border: "1px solid #ddd", borderRadius: 12, padding: 16 }}>
-      <h2 style={{ marginTop: 0 }}>DatHost Server Controls</h2>
+    <div className="container" style={{ maxWidth: '100%', padding: '0' }}>
+      <div className="panel">
+        <h2 style={{ marginBottom: "1.5rem" }}>DatHost Server Controls</h2>
 
-      <div style={{ display: "grid", gap: 10, maxWidth: 620 }}>
-        <label style={{ display: "grid", gap: 6 }}>
-          <span style={{ fontWeight: 600 }}>Server ID</span>
-          <input
-            value={serverId}
-            onChange={(e) => setServerId(e.target.value)}
-            placeholder="e.g. 54f55784ced9b10646653aa9"
-            style={{ padding: 10, borderRadius: 10, border: "1px solid #ccc" }}
-          />
-          <span style={{ opacity: 0.75, fontSize: 12 }}>
-            Tip: you can usually grab this from the DatHost control panel URL.
-          </span>
-        </label>
+        <div style={{ display: "grid", gap: "1rem", maxWidth: "600px" }}>
+          <label style={{ display: "grid", gap: "0.5rem" }}>
+            <span style={{ fontWeight: 600, color: "var(--primary)" }}>Server ID</span>
+            <input
+              value={serverId}
+              onChange={(e) => setServerId(e.target.value)}
+              placeholder="e.g. 54f55784ced9b10646653aa9"
+              style={{ width: "100%" }}
+            />
+            <span style={{ opacity: 0.6, fontSize: "0.8rem" }}>
+              Tip: you can usually grab this from the DatHost control panel URL.
+            </span>
+          </label>
 
-        <label style={{ display: "grid", gap: 6 }}>
-          <span style={{ fontWeight: 600 }}>Admin secret (optional)</span>
-          <input
-            value={adminSecret}
-            onChange={(e) => setAdminSecret(e.target.value)}
-            placeholder="Only needed if you set ADMIN_SECRET on Vercel"
-            style={{ padding: 10, borderRadius: 10, border: "1px solid #ccc" }}
-          />
-        </label>
+          <label style={{ display: "grid", gap: "0.5rem" }}>
+            <span style={{ fontWeight: 600, color: "var(--secondary)" }}>Admin secret (optional)</span>
+            <input
+              value={adminSecret}
+              onChange={(e) => setAdminSecret(e.target.value)}
+              placeholder="Only needed if you set ADMIN_SECRET on Vercel"
+              style={{ width: "100%" }}
+            />
+          </label>
 
-        <div style={{ display: "grid", gap: 8, paddingTop: 8 }}>
-          <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
-            <select
-              value={selectedMap}
-              onChange={(e) => setSelectedMap(e.target.value)}
-              style={{ padding: 10, borderRadius: 10, border: "1px solid #ccc", minWidth: 220 }}
+          <div style={{ display: "grid", gap: "1rem", paddingTop: "1rem", borderTop: "1px solid var(--border-color)" }}>
+            <div style={{ display: "flex", gap: "1rem", alignItems: "center", flexWrap: "wrap" }}>
+              <select
+                value={selectedMap}
+                onChange={(e) => setSelectedMap(e.target.value)}
+                style={{
+                  padding: "0.8rem 1rem",
+                  borderRadius: "4px",
+                  border: "1px solid var(--border-color)",
+                  background: "rgba(15, 23, 42, 0.6)",
+                  color: "#fff",
+                  fontFamily: "var(--font-main)",
+                  minWidth: "220px",
+                  cursor: "pointer"
+                }}
+              >
+                {maps.map((m) => (
+                  <option key={m} value={m}>
+                    {m}
+                  </option>
+                ))}
+              </select>
+              <div style={{ width: "150px" }}>
+                <Button onClick={onChangeMap} disabled={busy !== null || !serverId.trim()}>
+                  {busy === "map" ? "Changing…" : "Change map"}
+                </Button>
+              </div>
+            </div>
+
+            <div style={{ display: "flex", gap: "1rem", alignItems: "center", flexWrap: "wrap" }}>
+              <Button onClick={onPauseToggle} disabled={busy !== null || !serverId.trim()}>
+                {busy === "pause" || busy === "unpause" ? "Working…" : paused ? "Unpause game" : "Pause game"}
+              </Button>
+              <Button onClick={onRestart} disabled={busy !== null || !serverId.trim()} danger>
+                {busy === "restart" ? "Restarting…" : "Restart server"}
+              </Button>
+            </div>
+          </div>
+
+          {log ? (
+            <pre
+              style={{
+                margin: "1rem 0 0",
+                padding: "1rem",
+                borderRadius: "var(--radius-md)",
+                border: "1px solid var(--border-color)",
+                background: "rgba(0,0,0,0.3)",
+                color: "#10b981",
+                fontFamily: "monospace",
+                whiteSpace: "pre-wrap",
+                maxHeight: "260px",
+                overflow: "auto",
+                fontSize: "0.85rem"
+              }}
             >
-              {maps.map((m) => (
-                <option key={m} value={m}>
-                  {m}
-                </option>
-              ))}
-            </select>
-            <Button onClick={onChangeMap} disabled={busy !== null || !serverId.trim()}>
-              {busy === "map" ? "Changing…" : "Change map"}
-            </Button>
-          </div>
-
-          <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
-            <Button onClick={onPauseToggle} disabled={busy !== null || !serverId.trim()}>
-              {busy === "pause" || busy === "unpause" ? "Working…" : paused ? "Unpause game" : "Pause game"}
-            </Button>
-            <Button onClick={onRestart} disabled={busy !== null || !serverId.trim()} danger>
-              {busy === "restart" ? "Restarting…" : "Restart server"}
-            </Button>
-          </div>
+              {log}
+            </pre>
+          ) : null}
         </div>
-
-        {log ? (
-          <pre
-            style={{
-              margin: 0,
-              padding: 12,
-              borderRadius: 10,
-              border: "1px solid #eee",
-              background: "#fafafa",
-              whiteSpace: "pre-wrap",
-              maxHeight: 260,
-              overflow: "auto",
-            }}
-          >
-            {log}
-          </pre>
-        ) : null}
       </div>
     </div>
   );
