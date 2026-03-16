@@ -18,6 +18,25 @@ type MatchPlayer = {
   utilityDamage?: number;
 };
 
+type Match = {
+  id: string;
+  file: string;
+  map: string | null;
+  server: string | null;
+  roundsPlayed: number;
+  scoreT: number;
+  scoreCT: number;
+  startedAt: string | null;
+  endedAt: string | null;
+  players: MatchPlayer[];
+  killEvents?: Array<{
+    killerId: string;
+    victimId: string;
+    weapon?: string;
+    timestamp?: string;
+  }>;
+};
+
 type PlayerStat = {
   id: string;
   name: string;
@@ -402,12 +421,7 @@ export default function Statistics() {
                         }
 
                         const { killsAB, deathsAB } = computed.cell(row.id, col.id);
-                        
-                        // Add 75 kills to Lemon when facing kAyA
-                        let displayKillsAB = killsAB;
-                        if (row.name === "Lemon" && col.name === "kAyA") {
-                          displayKillsAB = killsAB + 75;
-                        }
+                        const displayKillsAB = killsAB;
                         
                         const isHighActivity = displayKillsAB + deathsAB >= 10;
 
