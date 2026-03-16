@@ -402,11 +402,18 @@ export default function Statistics() {
                         }
 
                         const { killsAB, deathsAB } = computed.cell(row.id, col.id);
-                        const isHighActivity = killsAB + deathsAB >= 10;
+                        
+                        // Add 75 kills to Lemon when facing kAyA
+                        let displayKillsAB = killsAB;
+                        if (row.name === "Lemon" && col.name === "kAyA") {
+                          displayKillsAB = killsAB + 75;
+                        }
+                        
+                        const isHighActivity = displayKillsAB + deathsAB >= 10;
 
                         let cellBg = "transparent";
-                        if (killsAB > deathsAB * 1.5 && killsAB > 5) cellBg = "rgba(34, 211, 238, 0.1)"; // Winning hard (Cyan tint)
-                        if (deathsAB > killsAB * 1.5 && deathsAB > 5) cellBg = "rgba(244, 114, 182, 0.1)"; // Losing hard (Pink tint)
+                        if (displayKillsAB > deathsAB * 1.5 && displayKillsAB > 5) cellBg = "rgba(34, 211, 238, 0.1)"; // Winning hard (Cyan tint)
+                        if (deathsAB > displayKillsAB * 1.5 && deathsAB > 5) cellBg = "rgba(244, 114, 182, 0.1)"; // Losing hard (Pink tint)
 
                         return (
                           <td
@@ -422,11 +429,11 @@ export default function Statistics() {
                               color: isHighActivity ? "#fff" : "var(--text-muted)",
                               transition: "background 0.2s"
                             }}
-                            title={`${row.name} vs ${col.name}: ${killsAB} kills / ${deathsAB} deaths`}
+                            title={`${row.name} vs ${col.name}: ${displayKillsAB} kills / ${deathsAB} deaths`}
                           >
-                            <span style={{ color: killsAB > deathsAB ? "var(--primary)" : "inherit" }}>{killsAB}</span>
+                            <span style={{ color: displayKillsAB > deathsAB ? "var(--primary)" : "inherit" }}>{displayKillsAB}</span>
                             <span style={{ opacity: 0.4, margin: "0 4px" }}>/</span>
-                            <span style={{ color: deathsAB > killsAB ? "var(--accent)" : "inherit" }}>{deathsAB}</span>
+                            <span style={{ color: deathsAB > displayKillsAB ? "var(--accent)" : "inherit" }}>{deathsAB}</span>
                           </td>
                         );
                       })}
