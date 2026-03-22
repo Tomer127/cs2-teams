@@ -9568,6 +9568,7136 @@
     ]
   },
   {
+    "id": "2026_03_21_214300_001.log-de_nuke-13-9-1c47a0d680f3",
+    "file": "2026_03_21_214300_001.log",
+    "map": "de_nuke",
+    "server": null,
+    "roundsPlayed": 22,
+    "scoreT": 13,
+    "scoreCT": 9,
+    "startedAt": "03/22/2026 19:25:31",
+    "endedAt": "03/22/2026 19:58:25",
+    "players": [
+      {
+        "accountId": "1906894947",
+        "name": "Lemon",
+        "team": "T",
+        "kills": 14,
+        "deaths": 16,
+        "assists": 3,
+        "dmg": 1600,
+        "adr": 76,
+        "fireDamage": 0,
+        "hsp": 35.7,
+        "kdr": 0.88,
+        "utilityThrows": 12,
+        "knifeKills": 0,
+        "firstKills": 2,
+        "lastAliveRounds": 4,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "1192990850",
+        "name": "MaGiC",
+        "team": "CT",
+        "kills": 14,
+        "deaths": 17,
+        "assists": 2,
+        "dmg": 1418,
+        "adr": 68,
+        "fireDamage": 0,
+        "hsp": 42.9,
+        "kdr": 0.82,
+        "utilityThrows": 15,
+        "knifeKills": 0,
+        "firstKills": 1,
+        "lastAliveRounds": 7,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "75945345",
+        "name": "Qwad3",
+        "team": "CT",
+        "kills": 17,
+        "deaths": 17,
+        "assists": 3,
+        "dmg": 1840,
+        "adr": 88,
+        "fireDamage": 76,
+        "hsp": 29.4,
+        "kdr": 1,
+        "utilityThrows": 39,
+        "knifeKills": 0,
+        "firstKills": 1,
+        "lastAliveRounds": 5,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "861271567",
+        "name": "kAyA",
+        "team": "T",
+        "kills": 21,
+        "deaths": 17,
+        "assists": 2,
+        "dmg": 1765,
+        "adr": 84,
+        "fireDamage": 79,
+        "hsp": 33.3,
+        "kdr": 1.24,
+        "utilityThrows": 31,
+        "knifeKills": 0,
+        "firstKills": 4,
+        "lastAliveRounds": 4,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "1281214748",
+        "name": "eliyahudanel",
+        "team": "T",
+        "kills": 17,
+        "deaths": 18,
+        "assists": 5,
+        "dmg": 1704,
+        "adr": 81,
+        "fireDamage": 67,
+        "hsp": 58.8,
+        "kdr": 0.94,
+        "utilityThrows": 29,
+        "knifeKills": 0,
+        "firstKills": 0,
+        "lastAliveRounds": 8,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "220179415",
+        "name": "VisherRR",
+        "team": "CT",
+        "kills": 19,
+        "deaths": 21,
+        "assists": 5,
+        "dmg": 1890,
+        "adr": 90,
+        "fireDamage": 56,
+        "hsp": 31.6,
+        "kdr": 0.9,
+        "utilityThrows": 15,
+        "knifeKills": 0,
+        "firstKills": 3,
+        "lastAliveRounds": 3,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "131318498",
+        "name": "RAMP",
+        "team": "T",
+        "kills": 25,
+        "deaths": 17,
+        "assists": 4,
+        "dmg": 2548,
+        "adr": 121,
+        "fireDamage": 92,
+        "hsp": 60,
+        "kdr": 1.47,
+        "utilityThrows": 39,
+        "knifeKills": 0,
+        "firstKills": 3,
+        "lastAliveRounds": 2,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "1044985494",
+        "name": "AlonRaz9",
+        "team": "CT",
+        "kills": 10,
+        "deaths": 20,
+        "assists": 5,
+        "dmg": 1233,
+        "adr": 59,
+        "fireDamage": 141,
+        "hsp": 60,
+        "kdr": 0.5,
+        "utilityThrows": 11,
+        "knifeKills": 0,
+        "firstKills": 2,
+        "lastAliveRounds": 4,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "40296679",
+        "name": "OutOfControl",
+        "team": "CT",
+        "kills": 22,
+        "deaths": 16,
+        "assists": 6,
+        "dmg": 2479,
+        "adr": 118,
+        "fireDamage": 326,
+        "hsp": 54.5,
+        "kdr": 1.38,
+        "utilityThrows": 39,
+        "knifeKills": 1,
+        "firstKills": 5,
+        "lastAliveRounds": 3,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "876450482",
+        "name": "slavaKra",
+        "team": "T",
+        "kills": 12,
+        "deaths": 16,
+        "assists": 5,
+        "dmg": 1272,
+        "adr": 61,
+        "fireDamage": 20,
+        "hsp": 50,
+        "kdr": 0.75,
+        "utilityThrows": 19,
+        "knifeKills": 0,
+        "firstKills": 1,
+        "lastAliveRounds": 3,
+        "utilityDamage": 0
+      }
+    ],
+    "teams": {
+      "T": [
+        {
+          "accountId": "1906894947",
+          "name": "Lemon",
+          "team": "T",
+          "kills": 14,
+          "deaths": 16,
+          "assists": 3,
+          "dmg": 1600,
+          "adr": 76,
+          "fireDamage": 0,
+          "hsp": 35.7,
+          "kdr": 0.88,
+          "utilityThrows": 12,
+          "knifeKills": 0,
+          "firstKills": 2,
+          "lastAliveRounds": 4,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "861271567",
+          "name": "kAyA",
+          "team": "T",
+          "kills": 21,
+          "deaths": 17,
+          "assists": 2,
+          "dmg": 1765,
+          "adr": 84,
+          "fireDamage": 79,
+          "hsp": 33.3,
+          "kdr": 1.24,
+          "utilityThrows": 31,
+          "knifeKills": 0,
+          "firstKills": 4,
+          "lastAliveRounds": 4,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "1281214748",
+          "name": "eliyahudanel",
+          "team": "T",
+          "kills": 17,
+          "deaths": 18,
+          "assists": 5,
+          "dmg": 1704,
+          "adr": 81,
+          "fireDamage": 67,
+          "hsp": 58.8,
+          "kdr": 0.94,
+          "utilityThrows": 29,
+          "knifeKills": 0,
+          "firstKills": 0,
+          "lastAliveRounds": 8,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "131318498",
+          "name": "RAMP",
+          "team": "T",
+          "kills": 25,
+          "deaths": 17,
+          "assists": 4,
+          "dmg": 2548,
+          "adr": 121,
+          "fireDamage": 92,
+          "hsp": 60,
+          "kdr": 1.47,
+          "utilityThrows": 39,
+          "knifeKills": 0,
+          "firstKills": 3,
+          "lastAliveRounds": 2,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "876450482",
+          "name": "slavaKra",
+          "team": "T",
+          "kills": 12,
+          "deaths": 16,
+          "assists": 5,
+          "dmg": 1272,
+          "adr": 61,
+          "fireDamage": 20,
+          "hsp": 50,
+          "kdr": 0.75,
+          "utilityThrows": 19,
+          "knifeKills": 0,
+          "firstKills": 1,
+          "lastAliveRounds": 3,
+          "utilityDamage": 0
+        }
+      ],
+      "CT": [
+        {
+          "accountId": "1192990850",
+          "name": "MaGiC",
+          "team": "CT",
+          "kills": 14,
+          "deaths": 17,
+          "assists": 2,
+          "dmg": 1418,
+          "adr": 68,
+          "fireDamage": 0,
+          "hsp": 42.9,
+          "kdr": 0.82,
+          "utilityThrows": 15,
+          "knifeKills": 0,
+          "firstKills": 1,
+          "lastAliveRounds": 7,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "75945345",
+          "name": "Qwad3",
+          "team": "CT",
+          "kills": 17,
+          "deaths": 17,
+          "assists": 3,
+          "dmg": 1840,
+          "adr": 88,
+          "fireDamage": 76,
+          "hsp": 29.4,
+          "kdr": 1,
+          "utilityThrows": 39,
+          "knifeKills": 0,
+          "firstKills": 1,
+          "lastAliveRounds": 5,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "220179415",
+          "name": "VisherRR",
+          "team": "CT",
+          "kills": 19,
+          "deaths": 21,
+          "assists": 5,
+          "dmg": 1890,
+          "adr": 90,
+          "fireDamage": 56,
+          "hsp": 31.6,
+          "kdr": 0.9,
+          "utilityThrows": 15,
+          "knifeKills": 0,
+          "firstKills": 3,
+          "lastAliveRounds": 3,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "1044985494",
+          "name": "AlonRaz9",
+          "team": "CT",
+          "kills": 10,
+          "deaths": 20,
+          "assists": 5,
+          "dmg": 1233,
+          "adr": 59,
+          "fireDamage": 141,
+          "hsp": 60,
+          "kdr": 0.5,
+          "utilityThrows": 11,
+          "knifeKills": 0,
+          "firstKills": 2,
+          "lastAliveRounds": 4,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "40296679",
+          "name": "OutOfControl",
+          "team": "CT",
+          "kills": 22,
+          "deaths": 16,
+          "assists": 6,
+          "dmg": 2479,
+          "adr": 118,
+          "fireDamage": 326,
+          "hsp": 54.5,
+          "kdr": 1.38,
+          "utilityThrows": 39,
+          "knifeKills": 1,
+          "firstKills": 5,
+          "lastAliveRounds": 3,
+          "utilityDamage": 0
+        }
+      ],
+      "Unassigned": []
+    },
+    "killEvents": [
+      {
+        "killerId": "1192990850",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1192990850",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1192990850",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1192990850"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1192990850"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1192990850"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1192990850",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "1192990850"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1192990850",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1192990850"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1192990850"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1192990850",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1192990850"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1192990850",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1192990850",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "1192990850"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1192990850",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "1192990850"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1192990850",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1192990850",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1192990850"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1192990850"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "1192990850"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1192990850",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1192990850"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1192990850",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1192990850"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1192990850",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1192990850"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1192990850"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "40296679"
+      }
+    ]
+  },
+  {
+    "id": "2026_03_21_214300_001.log-de_nuke-10-13-ad11f0f25037",
+    "file": "2026_03_21_214300_001.log",
+    "map": "de_nuke",
+    "server": null,
+    "roundsPlayed": 23,
+    "scoreT": 10,
+    "scoreCT": 13,
+    "startedAt": "03/21/2026 21:47:38",
+    "endedAt": "03/21/2026 22:23:45",
+    "players": [
+      {
+        "accountId": "175169925",
+        "name": "BachduT",
+        "team": "T",
+        "kills": 9,
+        "deaths": 20,
+        "assists": 4,
+        "dmg": 947,
+        "adr": 43,
+        "fireDamage": 53,
+        "hsp": 33.3,
+        "kdr": 0.45,
+        "utilityThrows": 29,
+        "knifeKills": 0,
+        "firstKills": 0,
+        "lastAliveRounds": 0,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "75945345",
+        "name": "Qwad3",
+        "team": "T",
+        "kills": 16,
+        "deaths": 19,
+        "assists": 3,
+        "dmg": 1679,
+        "adr": 76,
+        "fireDamage": 92,
+        "hsp": 25,
+        "kdr": 0.84,
+        "utilityThrows": 28,
+        "knifeKills": 0,
+        "firstKills": 0,
+        "lastAliveRounds": 7,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "1281214748",
+        "name": "eliyahudanel",
+        "team": "T",
+        "kills": 23,
+        "deaths": 18,
+        "assists": 6,
+        "dmg": 2117,
+        "adr": 96,
+        "fireDamage": 35,
+        "hsp": 47.8,
+        "kdr": 1.28,
+        "utilityThrows": 31,
+        "knifeKills": 0,
+        "firstKills": 3,
+        "lastAliveRounds": 6,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "876450482",
+        "name": "slavaKra",
+        "team": "CT",
+        "kills": 11,
+        "deaths": 18,
+        "assists": 10,
+        "dmg": 1776,
+        "adr": 81,
+        "fireDamage": 90,
+        "hsp": 54.5,
+        "kdr": 0.61,
+        "utilityThrows": 20,
+        "knifeKills": 0,
+        "firstKills": 2,
+        "lastAliveRounds": 5,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "1906894947",
+        "name": "Lemon",
+        "team": "T",
+        "kills": 21,
+        "deaths": 21,
+        "assists": 4,
+        "dmg": 1569,
+        "adr": 71,
+        "fireDamage": 9,
+        "hsp": 33.3,
+        "kdr": 1,
+        "utilityThrows": 26,
+        "knifeKills": 0,
+        "firstKills": 2,
+        "lastAliveRounds": 7,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "40296679",
+        "name": "OutOfControl",
+        "team": "CT",
+        "kills": 15,
+        "deaths": 18,
+        "assists": 5,
+        "dmg": 1478,
+        "adr": 67,
+        "fireDamage": 73,
+        "hsp": 40,
+        "kdr": 0.83,
+        "utilityThrows": 45,
+        "knifeKills": 1,
+        "firstKills": 2,
+        "lastAliveRounds": 5,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "220179415",
+        "name": "VisherRR",
+        "team": "CT",
+        "kills": 27,
+        "deaths": 16,
+        "assists": 6,
+        "dmg": 2673,
+        "adr": 122,
+        "fireDamage": 190,
+        "hsp": 44.4,
+        "kdr": 1.69,
+        "utilityThrows": 19,
+        "knifeKills": 0,
+        "firstKills": 4,
+        "lastAliveRounds": 4,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "36898525",
+        "name": "ehey",
+        "team": "CT",
+        "kills": 28,
+        "deaths": 14,
+        "assists": 2,
+        "dmg": 2211,
+        "adr": 100,
+        "fireDamage": 264,
+        "hsp": 32.1,
+        "kdr": 2,
+        "utilityThrows": 31,
+        "knifeKills": 1,
+        "firstKills": 5,
+        "lastAliveRounds": 4,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "1044985494",
+        "name": "AlonRaz9",
+        "team": "CT",
+        "kills": 16,
+        "deaths": 15,
+        "assists": 5,
+        "dmg": 1456,
+        "adr": 66,
+        "fireDamage": 94,
+        "hsp": 37.5,
+        "kdr": 1.07,
+        "utilityThrows": 21,
+        "knifeKills": 0,
+        "firstKills": 3,
+        "lastAliveRounds": 5,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "1566048620",
+        "name": "Xrang",
+        "team": "T",
+        "kills": 12,
+        "deaths": 20,
+        "assists": 9,
+        "dmg": 1544,
+        "adr": 70,
+        "fireDamage": 173,
+        "hsp": 8.3,
+        "kdr": 0.6,
+        "utilityThrows": 10,
+        "knifeKills": 0,
+        "firstKills": 2,
+        "lastAliveRounds": 3,
+        "utilityDamage": 0
+      }
+    ],
+    "teams": {
+      "T": [
+        {
+          "accountId": "175169925",
+          "name": "BachduT",
+          "team": "T",
+          "kills": 9,
+          "deaths": 20,
+          "assists": 4,
+          "dmg": 947,
+          "adr": 43,
+          "fireDamage": 53,
+          "hsp": 33.3,
+          "kdr": 0.45,
+          "utilityThrows": 29,
+          "knifeKills": 0,
+          "firstKills": 0,
+          "lastAliveRounds": 0,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "75945345",
+          "name": "Qwad3",
+          "team": "T",
+          "kills": 16,
+          "deaths": 19,
+          "assists": 3,
+          "dmg": 1679,
+          "adr": 76,
+          "fireDamage": 92,
+          "hsp": 25,
+          "kdr": 0.84,
+          "utilityThrows": 28,
+          "knifeKills": 0,
+          "firstKills": 0,
+          "lastAliveRounds": 7,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "1281214748",
+          "name": "eliyahudanel",
+          "team": "T",
+          "kills": 23,
+          "deaths": 18,
+          "assists": 6,
+          "dmg": 2117,
+          "adr": 96,
+          "fireDamage": 35,
+          "hsp": 47.8,
+          "kdr": 1.28,
+          "utilityThrows": 31,
+          "knifeKills": 0,
+          "firstKills": 3,
+          "lastAliveRounds": 6,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "1906894947",
+          "name": "Lemon",
+          "team": "T",
+          "kills": 21,
+          "deaths": 21,
+          "assists": 4,
+          "dmg": 1569,
+          "adr": 71,
+          "fireDamage": 9,
+          "hsp": 33.3,
+          "kdr": 1,
+          "utilityThrows": 26,
+          "knifeKills": 0,
+          "firstKills": 2,
+          "lastAliveRounds": 7,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "1566048620",
+          "name": "Xrang",
+          "team": "T",
+          "kills": 12,
+          "deaths": 20,
+          "assists": 9,
+          "dmg": 1544,
+          "adr": 70,
+          "fireDamage": 173,
+          "hsp": 8.3,
+          "kdr": 0.6,
+          "utilityThrows": 10,
+          "knifeKills": 0,
+          "firstKills": 2,
+          "lastAliveRounds": 3,
+          "utilityDamage": 0
+        }
+      ],
+      "CT": [
+        {
+          "accountId": "876450482",
+          "name": "slavaKra",
+          "team": "CT",
+          "kills": 11,
+          "deaths": 18,
+          "assists": 10,
+          "dmg": 1776,
+          "adr": 81,
+          "fireDamage": 90,
+          "hsp": 54.5,
+          "kdr": 0.61,
+          "utilityThrows": 20,
+          "knifeKills": 0,
+          "firstKills": 2,
+          "lastAliveRounds": 5,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "40296679",
+          "name": "OutOfControl",
+          "team": "CT",
+          "kills": 15,
+          "deaths": 18,
+          "assists": 5,
+          "dmg": 1478,
+          "adr": 67,
+          "fireDamage": 73,
+          "hsp": 40,
+          "kdr": 0.83,
+          "utilityThrows": 45,
+          "knifeKills": 1,
+          "firstKills": 2,
+          "lastAliveRounds": 5,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "220179415",
+          "name": "VisherRR",
+          "team": "CT",
+          "kills": 27,
+          "deaths": 16,
+          "assists": 6,
+          "dmg": 2673,
+          "adr": 122,
+          "fireDamage": 190,
+          "hsp": 44.4,
+          "kdr": 1.69,
+          "utilityThrows": 19,
+          "knifeKills": 0,
+          "firstKills": 4,
+          "lastAliveRounds": 4,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "36898525",
+          "name": "ehey",
+          "team": "CT",
+          "kills": 28,
+          "deaths": 14,
+          "assists": 2,
+          "dmg": 2211,
+          "adr": 100,
+          "fireDamage": 264,
+          "hsp": 32.1,
+          "kdr": 2,
+          "utilityThrows": 31,
+          "knifeKills": 1,
+          "firstKills": 5,
+          "lastAliveRounds": 4,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "1044985494",
+          "name": "AlonRaz9",
+          "team": "CT",
+          "kills": 16,
+          "deaths": 15,
+          "assists": 5,
+          "dmg": 1456,
+          "adr": 66,
+          "fireDamage": 94,
+          "hsp": 37.5,
+          "kdr": 1.07,
+          "utilityThrows": 21,
+          "knifeKills": 0,
+          "firstKills": 3,
+          "lastAliveRounds": 5,
+          "utilityDamage": 0
+        }
+      ],
+      "Unassigned": []
+    },
+    "killEvents": [
+      {
+        "killerId": "1044985494",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "40296679",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "40296679"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "876450482"
+      }
+    ]
+  },
+  {
+    "id": "2026_03_18_201013_001.log-de_dust2-13-5-d59f5226a6fd",
+    "file": "2026_03_18_201013_001.log",
+    "map": "de_dust2",
+    "server": null,
+    "roundsPlayed": 18,
+    "scoreT": 13,
+    "scoreCT": 5,
+    "startedAt": "03/18/2026 20:15:39",
+    "endedAt": "03/18/2026 20:42:48",
+    "players": [
+      {
+        "accountId": "175169925",
+        "name": "BachduT",
+        "team": "T",
+        "kills": 10,
+        "deaths": 13,
+        "assists": 7,
+        "dmg": 1272,
+        "adr": 75,
+        "fireDamage": 134,
+        "hsp": 30,
+        "kdr": 0.77,
+        "utilityThrows": 30,
+        "knifeKills": 0,
+        "firstKills": 3,
+        "lastAliveRounds": 3,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "131318498",
+        "name": "RAMP",
+        "team": "CT",
+        "kills": 14,
+        "deaths": 15,
+        "assists": 4,
+        "dmg": 1537,
+        "adr": 90,
+        "fireDamage": 3,
+        "hsp": 50,
+        "kdr": 0.93,
+        "utilityThrows": 19,
+        "knifeKills": 0,
+        "firstKills": 2,
+        "lastAliveRounds": 3,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "861271567",
+        "name": "kAyA",
+        "team": "T",
+        "kills": 19,
+        "deaths": 10,
+        "assists": 4,
+        "dmg": 1469,
+        "adr": 86,
+        "fireDamage": 125,
+        "hsp": 31.6,
+        "kdr": 1.9,
+        "utilityThrows": 47,
+        "knifeKills": 0,
+        "firstKills": 2,
+        "lastAliveRounds": 3,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "36898525",
+        "name": "ehey",
+        "team": "T",
+        "kills": 22,
+        "deaths": 8,
+        "assists": 7,
+        "dmg": 2266,
+        "adr": 133,
+        "fireDamage": 315,
+        "hsp": 54.5,
+        "kdr": 2.75,
+        "utilityThrows": 50,
+        "knifeKills": 2,
+        "firstKills": 1,
+        "lastAliveRounds": 3,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "1281214748",
+        "name": "eliyahudanel",
+        "team": "T",
+        "kills": 18,
+        "deaths": 11,
+        "assists": 4,
+        "dmg": 1719,
+        "adr": 101,
+        "fireDamage": 123,
+        "hsp": 61.1,
+        "kdr": 1.64,
+        "utilityThrows": 38,
+        "knifeKills": 0,
+        "firstKills": 0,
+        "lastAliveRounds": 6,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "220179415",
+        "name": "VisherRR",
+        "team": "CT",
+        "kills": 15,
+        "deaths": 15,
+        "assists": 2,
+        "dmg": 1463,
+        "adr": 86,
+        "fireDamage": 25,
+        "hsp": 60,
+        "kdr": 1,
+        "utilityThrows": 17,
+        "knifeKills": 0,
+        "firstKills": 3,
+        "lastAliveRounds": 2,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "1906894947",
+        "name": "Lemon",
+        "team": "CT",
+        "kills": 8,
+        "deaths": 15,
+        "assists": 1,
+        "dmg": 835,
+        "adr": 49,
+        "fireDamage": 0,
+        "hsp": 37.5,
+        "kdr": 0.53,
+        "utilityThrows": 13,
+        "knifeKills": 0,
+        "firstKills": 2,
+        "lastAliveRounds": 5,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "278056918",
+        "name": "MyInverTeR",
+        "team": "CT",
+        "kills": 4,
+        "deaths": 18,
+        "assists": 6,
+        "dmg": 826,
+        "adr": 49,
+        "fireDamage": 9,
+        "hsp": 25,
+        "kdr": 0.22,
+        "utilityThrows": 17,
+        "knifeKills": 0,
+        "firstKills": 1,
+        "lastAliveRounds": 4,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "1566048620",
+        "name": "Xrang",
+        "team": "CT",
+        "kills": 11,
+        "deaths": 16,
+        "assists": 4,
+        "dmg": 1141,
+        "adr": 67,
+        "fireDamage": 26,
+        "hsp": 36.4,
+        "kdr": 0.69,
+        "utilityThrows": 22,
+        "knifeKills": 1,
+        "firstKills": 0,
+        "lastAliveRounds": 4,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "1044985494",
+        "name": "AlonRaz9",
+        "team": "T",
+        "kills": 10,
+        "deaths": 10,
+        "assists": 5,
+        "dmg": 1039,
+        "adr": 61,
+        "fireDamage": 33,
+        "hsp": 10,
+        "kdr": 1,
+        "utilityThrows": 17,
+        "knifeKills": 0,
+        "firstKills": 4,
+        "lastAliveRounds": 2,
+        "utilityDamage": 0
+      }
+    ],
+    "teams": {
+      "T": [
+        {
+          "accountId": "175169925",
+          "name": "BachduT",
+          "team": "T",
+          "kills": 10,
+          "deaths": 13,
+          "assists": 7,
+          "dmg": 1272,
+          "adr": 75,
+          "fireDamage": 134,
+          "hsp": 30,
+          "kdr": 0.77,
+          "utilityThrows": 30,
+          "knifeKills": 0,
+          "firstKills": 3,
+          "lastAliveRounds": 3,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "861271567",
+          "name": "kAyA",
+          "team": "T",
+          "kills": 19,
+          "deaths": 10,
+          "assists": 4,
+          "dmg": 1469,
+          "adr": 86,
+          "fireDamage": 125,
+          "hsp": 31.6,
+          "kdr": 1.9,
+          "utilityThrows": 47,
+          "knifeKills": 0,
+          "firstKills": 2,
+          "lastAliveRounds": 3,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "36898525",
+          "name": "ehey",
+          "team": "T",
+          "kills": 22,
+          "deaths": 8,
+          "assists": 7,
+          "dmg": 2266,
+          "adr": 133,
+          "fireDamage": 315,
+          "hsp": 54.5,
+          "kdr": 2.75,
+          "utilityThrows": 50,
+          "knifeKills": 2,
+          "firstKills": 1,
+          "lastAliveRounds": 3,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "1281214748",
+          "name": "eliyahudanel",
+          "team": "T",
+          "kills": 18,
+          "deaths": 11,
+          "assists": 4,
+          "dmg": 1719,
+          "adr": 101,
+          "fireDamage": 123,
+          "hsp": 61.1,
+          "kdr": 1.64,
+          "utilityThrows": 38,
+          "knifeKills": 0,
+          "firstKills": 0,
+          "lastAliveRounds": 6,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "1044985494",
+          "name": "AlonRaz9",
+          "team": "T",
+          "kills": 10,
+          "deaths": 10,
+          "assists": 5,
+          "dmg": 1039,
+          "adr": 61,
+          "fireDamage": 33,
+          "hsp": 10,
+          "kdr": 1,
+          "utilityThrows": 17,
+          "knifeKills": 0,
+          "firstKills": 4,
+          "lastAliveRounds": 2,
+          "utilityDamage": 0
+        }
+      ],
+      "CT": [
+        {
+          "accountId": "131318498",
+          "name": "RAMP",
+          "team": "CT",
+          "kills": 14,
+          "deaths": 15,
+          "assists": 4,
+          "dmg": 1537,
+          "adr": 90,
+          "fireDamage": 3,
+          "hsp": 50,
+          "kdr": 0.93,
+          "utilityThrows": 19,
+          "knifeKills": 0,
+          "firstKills": 2,
+          "lastAliveRounds": 3,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "220179415",
+          "name": "VisherRR",
+          "team": "CT",
+          "kills": 15,
+          "deaths": 15,
+          "assists": 2,
+          "dmg": 1463,
+          "adr": 86,
+          "fireDamage": 25,
+          "hsp": 60,
+          "kdr": 1,
+          "utilityThrows": 17,
+          "knifeKills": 0,
+          "firstKills": 3,
+          "lastAliveRounds": 2,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "1906894947",
+          "name": "Lemon",
+          "team": "CT",
+          "kills": 8,
+          "deaths": 15,
+          "assists": 1,
+          "dmg": 835,
+          "adr": 49,
+          "fireDamage": 0,
+          "hsp": 37.5,
+          "kdr": 0.53,
+          "utilityThrows": 13,
+          "knifeKills": 0,
+          "firstKills": 2,
+          "lastAliveRounds": 5,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "278056918",
+          "name": "MyInverTeR",
+          "team": "CT",
+          "kills": 4,
+          "deaths": 18,
+          "assists": 6,
+          "dmg": 826,
+          "adr": 49,
+          "fireDamage": 9,
+          "hsp": 25,
+          "kdr": 0.22,
+          "utilityThrows": 17,
+          "knifeKills": 0,
+          "firstKills": 1,
+          "lastAliveRounds": 4,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "1566048620",
+          "name": "Xrang",
+          "team": "CT",
+          "kills": 11,
+          "deaths": 16,
+          "assists": 4,
+          "dmg": 1141,
+          "adr": 67,
+          "fireDamage": 26,
+          "hsp": 36.4,
+          "kdr": 0.69,
+          "utilityThrows": 22,
+          "knifeKills": 1,
+          "firstKills": 0,
+          "lastAliveRounds": 4,
+          "utilityDamage": 0
+        }
+      ],
+      "Unassigned": []
+    },
+    "killEvents": [
+      {
+        "killerId": "220179415",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "278056918",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "278056918",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "278056918",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "278056918",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "131318498"
+      }
+    ]
+  },
+  {
+    "id": "2026_03_18_193026_001.log-de_nuke-13-8-f2fb5584b152",
+    "file": "2026_03_18_193026_001.log",
+    "map": "de_nuke",
+    "server": null,
+    "roundsPlayed": 21,
+    "scoreT": 13,
+    "scoreCT": 8,
+    "startedAt": "03/18/2026 19:34:21",
+    "endedAt": "03/18/2026 20:07:45",
+    "players": [
+      {
+        "accountId": "131318498",
+        "name": "RAMP",
+        "team": "T",
+        "kills": 22,
+        "deaths": 21,
+        "assists": 6,
+        "dmg": 2218,
+        "adr": 111,
+        "fireDamage": 19,
+        "hsp": 45.5,
+        "kdr": 1.05,
+        "utilityThrows": 19,
+        "knifeKills": 0,
+        "firstKills": 5,
+        "lastAliveRounds": 7,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "1281214748",
+        "name": "eliyahudanel",
+        "team": "CT",
+        "kills": 19,
+        "deaths": 17,
+        "assists": 5,
+        "dmg": 2179,
+        "adr": 109,
+        "fireDamage": 83,
+        "hsp": 47.4,
+        "kdr": 1.12,
+        "utilityThrows": 30,
+        "knifeKills": 0,
+        "firstKills": 1,
+        "lastAliveRounds": 6,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "278056918",
+        "name": "MyInverTeR",
+        "team": "T",
+        "kills": 13,
+        "deaths": 16,
+        "assists": 1,
+        "dmg": 970,
+        "adr": 48,
+        "fireDamage": 0,
+        "hsp": 38.5,
+        "kdr": 0.81,
+        "utilityThrows": 26,
+        "knifeKills": 0,
+        "firstKills": 0,
+        "lastAliveRounds": 4,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "220179415",
+        "name": "VisherRR",
+        "team": "T",
+        "kills": 16,
+        "deaths": 17,
+        "assists": 2,
+        "dmg": 1353,
+        "adr": 68,
+        "fireDamage": 60,
+        "hsp": 31.3,
+        "kdr": 0.94,
+        "utilityThrows": 12,
+        "knifeKills": 0,
+        "firstKills": 1,
+        "lastAliveRounds": 2,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "876450482",
+        "name": "slavaKra",
+        "team": "CT",
+        "kills": 6,
+        "deaths": 18,
+        "assists": 6,
+        "dmg": 752,
+        "adr": 38,
+        "fireDamage": 0,
+        "hsp": 50,
+        "kdr": 0.33,
+        "utilityThrows": 9,
+        "knifeKills": 0,
+        "firstKills": 2,
+        "lastAliveRounds": 2,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "36898525",
+        "name": "ehey",
+        "team": "CT",
+        "kills": 17,
+        "deaths": 16,
+        "assists": 10,
+        "dmg": 1981,
+        "adr": 99,
+        "fireDamage": 293,
+        "hsp": 35.3,
+        "kdr": 1.06,
+        "utilityThrows": 30,
+        "knifeKills": 1,
+        "firstKills": 1,
+        "lastAliveRounds": 5,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "1906894947",
+        "name": "Lemon",
+        "team": "T",
+        "kills": 23,
+        "deaths": 12,
+        "assists": 9,
+        "dmg": 2544,
+        "adr": 127,
+        "fireDamage": 112,
+        "hsp": 21.7,
+        "kdr": 1.92,
+        "utilityThrows": 21,
+        "knifeKills": 0,
+        "firstKills": 3,
+        "lastAliveRounds": 4,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "861271567",
+        "name": "kAyA",
+        "team": "CT",
+        "kills": 21,
+        "deaths": 17,
+        "assists": 10,
+        "dmg": 2143,
+        "adr": 107,
+        "fireDamage": 68,
+        "hsp": 57.1,
+        "kdr": 1.24,
+        "utilityThrows": 30,
+        "knifeKills": 0,
+        "firstKills": 4,
+        "lastAliveRounds": 3,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "1044985494",
+        "name": "AlonRaz9",
+        "team": "CT",
+        "kills": 17,
+        "deaths": 16,
+        "assists": 2,
+        "dmg": 1170,
+        "adr": 58,
+        "fireDamage": 92,
+        "hsp": 11.8,
+        "kdr": 1.06,
+        "utilityThrows": 13,
+        "knifeKills": 0,
+        "firstKills": 3,
+        "lastAliveRounds": 4,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "1566048620",
+        "name": "Xrang",
+        "team": "T",
+        "kills": 9,
+        "deaths": 17,
+        "assists": 4,
+        "dmg": 1110,
+        "adr": 56,
+        "fireDamage": 95,
+        "hsp": 55.6,
+        "kdr": 0.53,
+        "utilityThrows": 8,
+        "knifeKills": 0,
+        "firstKills": 1,
+        "lastAliveRounds": 4,
+        "utilityDamage": 0
+      }
+    ],
+    "teams": {
+      "T": [
+        {
+          "accountId": "131318498",
+          "name": "RAMP",
+          "team": "T",
+          "kills": 22,
+          "deaths": 21,
+          "assists": 6,
+          "dmg": 2218,
+          "adr": 111,
+          "fireDamage": 19,
+          "hsp": 45.5,
+          "kdr": 1.05,
+          "utilityThrows": 19,
+          "knifeKills": 0,
+          "firstKills": 5,
+          "lastAliveRounds": 7,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "278056918",
+          "name": "MyInverTeR",
+          "team": "T",
+          "kills": 13,
+          "deaths": 16,
+          "assists": 1,
+          "dmg": 970,
+          "adr": 48,
+          "fireDamage": 0,
+          "hsp": 38.5,
+          "kdr": 0.81,
+          "utilityThrows": 26,
+          "knifeKills": 0,
+          "firstKills": 0,
+          "lastAliveRounds": 4,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "220179415",
+          "name": "VisherRR",
+          "team": "T",
+          "kills": 16,
+          "deaths": 17,
+          "assists": 2,
+          "dmg": 1353,
+          "adr": 68,
+          "fireDamage": 60,
+          "hsp": 31.3,
+          "kdr": 0.94,
+          "utilityThrows": 12,
+          "knifeKills": 0,
+          "firstKills": 1,
+          "lastAliveRounds": 2,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "1906894947",
+          "name": "Lemon",
+          "team": "T",
+          "kills": 23,
+          "deaths": 12,
+          "assists": 9,
+          "dmg": 2544,
+          "adr": 127,
+          "fireDamage": 112,
+          "hsp": 21.7,
+          "kdr": 1.92,
+          "utilityThrows": 21,
+          "knifeKills": 0,
+          "firstKills": 3,
+          "lastAliveRounds": 4,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "1566048620",
+          "name": "Xrang",
+          "team": "T",
+          "kills": 9,
+          "deaths": 17,
+          "assists": 4,
+          "dmg": 1110,
+          "adr": 56,
+          "fireDamage": 95,
+          "hsp": 55.6,
+          "kdr": 0.53,
+          "utilityThrows": 8,
+          "knifeKills": 0,
+          "firstKills": 1,
+          "lastAliveRounds": 4,
+          "utilityDamage": 0
+        }
+      ],
+      "CT": [
+        {
+          "accountId": "1281214748",
+          "name": "eliyahudanel",
+          "team": "CT",
+          "kills": 19,
+          "deaths": 17,
+          "assists": 5,
+          "dmg": 2179,
+          "adr": 109,
+          "fireDamage": 83,
+          "hsp": 47.4,
+          "kdr": 1.12,
+          "utilityThrows": 30,
+          "knifeKills": 0,
+          "firstKills": 1,
+          "lastAliveRounds": 6,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "876450482",
+          "name": "slavaKra",
+          "team": "CT",
+          "kills": 6,
+          "deaths": 18,
+          "assists": 6,
+          "dmg": 752,
+          "adr": 38,
+          "fireDamage": 0,
+          "hsp": 50,
+          "kdr": 0.33,
+          "utilityThrows": 9,
+          "knifeKills": 0,
+          "firstKills": 2,
+          "lastAliveRounds": 2,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "36898525",
+          "name": "ehey",
+          "team": "CT",
+          "kills": 17,
+          "deaths": 16,
+          "assists": 10,
+          "dmg": 1981,
+          "adr": 99,
+          "fireDamage": 293,
+          "hsp": 35.3,
+          "kdr": 1.06,
+          "utilityThrows": 30,
+          "knifeKills": 1,
+          "firstKills": 1,
+          "lastAliveRounds": 5,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "861271567",
+          "name": "kAyA",
+          "team": "CT",
+          "kills": 21,
+          "deaths": 17,
+          "assists": 10,
+          "dmg": 2143,
+          "adr": 107,
+          "fireDamage": 68,
+          "hsp": 57.1,
+          "kdr": 1.24,
+          "utilityThrows": 30,
+          "knifeKills": 0,
+          "firstKills": 4,
+          "lastAliveRounds": 3,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "1044985494",
+          "name": "AlonRaz9",
+          "team": "CT",
+          "kills": 17,
+          "deaths": 16,
+          "assists": 2,
+          "dmg": 1170,
+          "adr": 58,
+          "fireDamage": 92,
+          "hsp": 11.8,
+          "kdr": 1.06,
+          "utilityThrows": 13,
+          "knifeKills": 0,
+          "firstKills": 3,
+          "lastAliveRounds": 4,
+          "utilityDamage": 0
+        }
+      ],
+      "Unassigned": []
+    },
+    "killEvents": [
+      {
+        "killerId": "861271567",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "278056918",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "278056918",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "278056918",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "278056918",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "278056918",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "278056918",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "278056918",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "278056918",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "278056918",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "278056918",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "278056918",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "278056918",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "278056918",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "278056918"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "876450482"
+      }
+    ]
+  },
+  {
+    "id": "2026_03_16_210750_001.log-de_mirage-8-13-322e12ba3fe6",
+    "file": "2026_03_16_210750_001.log",
+    "map": "de_mirage",
+    "server": null,
+    "roundsPlayed": 21,
+    "scoreT": 8,
+    "scoreCT": 13,
+    "startedAt": "03/16/2026 21:12:25",
+    "endedAt": "03/16/2026 21:47:08",
+    "players": [
+      {
+        "accountId": "1044985494",
+        "name": "AlonRaz9",
+        "team": "T",
+        "kills": 13,
+        "deaths": 18,
+        "assists": 2,
+        "dmg": 1303,
+        "adr": 65,
+        "fireDamage": 37,
+        "hsp": 7.7,
+        "kdr": 0.72,
+        "utilityThrows": 6,
+        "knifeKills": 0,
+        "firstKills": 2,
+        "lastAliveRounds": 5,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "131318498",
+        "name": "RAMP",
+        "team": "T",
+        "kills": 14,
+        "deaths": 18,
+        "assists": 5,
+        "dmg": 1659,
+        "adr": 83,
+        "fireDamage": 13,
+        "hsp": 92.9,
+        "kdr": 0.78,
+        "utilityThrows": 23,
+        "knifeKills": 0,
+        "firstKills": 3,
+        "lastAliveRounds": 3,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "1281214748",
+        "name": "eliyahudanel",
+        "team": "T",
+        "kills": 21,
+        "deaths": 14,
+        "assists": 2,
+        "dmg": 1871,
+        "adr": 94,
+        "fireDamage": 88,
+        "hsp": 52.4,
+        "kdr": 1.5,
+        "utilityThrows": 27,
+        "knifeKills": 0,
+        "firstKills": 1,
+        "lastAliveRounds": 4,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "220179415",
+        "name": "VisherRR",
+        "team": "CT",
+        "kills": 18,
+        "deaths": 17,
+        "assists": 9,
+        "dmg": 2227,
+        "adr": 111,
+        "fireDamage": 272,
+        "hsp": 77.8,
+        "kdr": 1.06,
+        "utilityThrows": 28,
+        "knifeKills": 0,
+        "firstKills": 4,
+        "lastAliveRounds": 2,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "876450482",
+        "name": "slavaKra",
+        "team": "CT",
+        "kills": 18,
+        "deaths": 18,
+        "assists": 6,
+        "dmg": 1908,
+        "adr": 95,
+        "fireDamage": 135,
+        "hsp": 38.9,
+        "kdr": 1,
+        "utilityThrows": 18,
+        "knifeKills": 0,
+        "firstKills": 5,
+        "lastAliveRounds": 6,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "36898525",
+        "name": "ehey",
+        "team": "CT",
+        "kills": 22,
+        "deaths": 11,
+        "assists": 7,
+        "dmg": 1623,
+        "adr": 81,
+        "fireDamage": 77,
+        "hsp": 45.5,
+        "kdr": 2,
+        "utilityThrows": 48,
+        "knifeKills": 0,
+        "firstKills": 0,
+        "lastAliveRounds": 6,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "175169925",
+        "name": "BachduT",
+        "team": "CT",
+        "kills": 7,
+        "deaths": 16,
+        "assists": 4,
+        "dmg": 902,
+        "adr": 45,
+        "fireDamage": 20,
+        "hsp": 14.3,
+        "kdr": 0.44,
+        "utilityThrows": 36,
+        "knifeKills": 0,
+        "firstKills": 1,
+        "lastAliveRounds": 2,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "861271567",
+        "name": "kAyA",
+        "team": "CT",
+        "kills": 20,
+        "deaths": 14,
+        "assists": 5,
+        "dmg": 1905,
+        "adr": 95,
+        "fireDamage": 153,
+        "hsp": 45,
+        "kdr": 1.43,
+        "utilityThrows": 28,
+        "knifeKills": 0,
+        "firstKills": 2,
+        "lastAliveRounds": 4,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "1566048620",
+        "name": "Xrang",
+        "team": "T",
+        "kills": 20,
+        "deaths": 18,
+        "assists": 4,
+        "dmg": 2198,
+        "adr": 110,
+        "fireDamage": 211,
+        "hsp": 55,
+        "kdr": 1.11,
+        "utilityThrows": 20,
+        "knifeKills": 0,
+        "firstKills": 3,
+        "lastAliveRounds": 4,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "1906894947",
+        "name": "Lemon",
+        "team": "T",
+        "kills": 8,
+        "deaths": 17,
+        "assists": 5,
+        "dmg": 1191,
+        "adr": 60,
+        "fireDamage": 0,
+        "hsp": 12.5,
+        "kdr": 0.47,
+        "utilityThrows": 18,
+        "knifeKills": 0,
+        "firstKills": 0,
+        "lastAliveRounds": 4,
+        "utilityDamage": 0
+      }
+    ],
+    "teams": {
+      "T": [
+        {
+          "accountId": "1044985494",
+          "name": "AlonRaz9",
+          "team": "T",
+          "kills": 13,
+          "deaths": 18,
+          "assists": 2,
+          "dmg": 1303,
+          "adr": 65,
+          "fireDamage": 37,
+          "hsp": 7.7,
+          "kdr": 0.72,
+          "utilityThrows": 6,
+          "knifeKills": 0,
+          "firstKills": 2,
+          "lastAliveRounds": 5,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "131318498",
+          "name": "RAMP",
+          "team": "T",
+          "kills": 14,
+          "deaths": 18,
+          "assists": 5,
+          "dmg": 1659,
+          "adr": 83,
+          "fireDamage": 13,
+          "hsp": 92.9,
+          "kdr": 0.78,
+          "utilityThrows": 23,
+          "knifeKills": 0,
+          "firstKills": 3,
+          "lastAliveRounds": 3,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "1281214748",
+          "name": "eliyahudanel",
+          "team": "T",
+          "kills": 21,
+          "deaths": 14,
+          "assists": 2,
+          "dmg": 1871,
+          "adr": 94,
+          "fireDamage": 88,
+          "hsp": 52.4,
+          "kdr": 1.5,
+          "utilityThrows": 27,
+          "knifeKills": 0,
+          "firstKills": 1,
+          "lastAliveRounds": 4,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "1566048620",
+          "name": "Xrang",
+          "team": "T",
+          "kills": 20,
+          "deaths": 18,
+          "assists": 4,
+          "dmg": 2198,
+          "adr": 110,
+          "fireDamage": 211,
+          "hsp": 55,
+          "kdr": 1.11,
+          "utilityThrows": 20,
+          "knifeKills": 0,
+          "firstKills": 3,
+          "lastAliveRounds": 4,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "1906894947",
+          "name": "Lemon",
+          "team": "T",
+          "kills": 8,
+          "deaths": 17,
+          "assists": 5,
+          "dmg": 1191,
+          "adr": 60,
+          "fireDamage": 0,
+          "hsp": 12.5,
+          "kdr": 0.47,
+          "utilityThrows": 18,
+          "knifeKills": 0,
+          "firstKills": 0,
+          "lastAliveRounds": 4,
+          "utilityDamage": 0
+        }
+      ],
+      "CT": [
+        {
+          "accountId": "220179415",
+          "name": "VisherRR",
+          "team": "CT",
+          "kills": 18,
+          "deaths": 17,
+          "assists": 9,
+          "dmg": 2227,
+          "adr": 111,
+          "fireDamage": 272,
+          "hsp": 77.8,
+          "kdr": 1.06,
+          "utilityThrows": 28,
+          "knifeKills": 0,
+          "firstKills": 4,
+          "lastAliveRounds": 2,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "876450482",
+          "name": "slavaKra",
+          "team": "CT",
+          "kills": 18,
+          "deaths": 18,
+          "assists": 6,
+          "dmg": 1908,
+          "adr": 95,
+          "fireDamage": 135,
+          "hsp": 38.9,
+          "kdr": 1,
+          "utilityThrows": 18,
+          "knifeKills": 0,
+          "firstKills": 5,
+          "lastAliveRounds": 6,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "36898525",
+          "name": "ehey",
+          "team": "CT",
+          "kills": 22,
+          "deaths": 11,
+          "assists": 7,
+          "dmg": 1623,
+          "adr": 81,
+          "fireDamage": 77,
+          "hsp": 45.5,
+          "kdr": 2,
+          "utilityThrows": 48,
+          "knifeKills": 0,
+          "firstKills": 0,
+          "lastAliveRounds": 6,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "175169925",
+          "name": "BachduT",
+          "team": "CT",
+          "kills": 7,
+          "deaths": 16,
+          "assists": 4,
+          "dmg": 902,
+          "adr": 45,
+          "fireDamage": 20,
+          "hsp": 14.3,
+          "kdr": 0.44,
+          "utilityThrows": 36,
+          "knifeKills": 0,
+          "firstKills": 1,
+          "lastAliveRounds": 2,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "861271567",
+          "name": "kAyA",
+          "team": "CT",
+          "kills": 20,
+          "deaths": 14,
+          "assists": 5,
+          "dmg": 1905,
+          "adr": 95,
+          "fireDamage": 153,
+          "hsp": 45,
+          "kdr": 1.43,
+          "utilityThrows": 28,
+          "knifeKills": 0,
+          "firstKills": 2,
+          "lastAliveRounds": 4,
+          "utilityDamage": 0
+        }
+      ],
+      "Unassigned": []
+    },
+    "killEvents": [
+      {
+        "killerId": "220179415",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "131318498",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "131318498"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1906894947"
+      }
+    ]
+  },
+  {
+    "id": "2026_03_16_201102_001.log-de_inferno-8-13-f0c5a45520d0",
+    "file": "2026_03_16_201102_001.log",
+    "map": "de_inferno",
+    "server": null,
+    "roundsPlayed": 21,
+    "scoreT": 8,
+    "scoreCT": 13,
+    "startedAt": "03/16/2026 20:14:07",
+    "endedAt": "03/16/2026 21:07:30",
+    "players": [
+      {
+        "accountId": "861271567",
+        "name": "kAyA",
+        "team": "T",
+        "kills": 13,
+        "deaths": 17,
+        "assists": 4,
+        "dmg": 1721,
+        "adr": 86,
+        "fireDamage": 204,
+        "hsp": 38.5,
+        "kdr": 0.76,
+        "utilityThrows": 35,
+        "knifeKills": 0,
+        "firstKills": 1,
+        "lastAliveRounds": 5,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "1281214748",
+        "name": "eliyahudanel",
+        "team": "CT",
+        "kills": 13,
+        "deaths": 15,
+        "assists": 10,
+        "dmg": 1554,
+        "adr": 78,
+        "fireDamage": 196,
+        "hsp": 61.5,
+        "kdr": 0.87,
+        "utilityThrows": 37,
+        "knifeKills": 0,
+        "firstKills": 2,
+        "lastAliveRounds": 1,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "75945345",
+        "name": "Qwad3",
+        "team": "CT",
+        "kills": 24,
+        "deaths": 15,
+        "assists": 3,
+        "dmg": 2090,
+        "adr": 104,
+        "fireDamage": 61,
+        "hsp": 33.3,
+        "kdr": 1.6,
+        "utilityThrows": 39,
+        "knifeKills": 0,
+        "firstKills": 1,
+        "lastAliveRounds": 10,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "175169925",
+        "name": "BachduT",
+        "team": "T",
+        "kills": 13,
+        "deaths": 17,
+        "assists": 3,
+        "dmg": 1298,
+        "adr": 65,
+        "fireDamage": 73,
+        "hsp": 23.1,
+        "kdr": 0.76,
+        "utilityThrows": 37,
+        "knifeKills": 0,
+        "firstKills": 0,
+        "lastAliveRounds": 5,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "876450482",
+        "name": "slavaKra",
+        "team": "T",
+        "kills": 13,
+        "deaths": 17,
+        "assists": 8,
+        "dmg": 1528,
+        "adr": 76,
+        "fireDamage": 133,
+        "hsp": 38.5,
+        "kdr": 0.76,
+        "utilityThrows": 7,
+        "knifeKills": 0,
+        "firstKills": 1,
+        "lastAliveRounds": 4,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "1906894947",
+        "name": "Lemon",
+        "team": "CT",
+        "kills": 15,
+        "deaths": 11,
+        "assists": 2,
+        "dmg": 1629,
+        "adr": 81,
+        "fireDamage": 71,
+        "hsp": 6.7,
+        "kdr": 1.36,
+        "utilityThrows": 16,
+        "knifeKills": 0,
+        "firstKills": 5,
+        "lastAliveRounds": 2,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "220179415",
+        "name": "VisherRR",
+        "team": "T",
+        "kills": 17,
+        "deaths": 15,
+        "assists": 3,
+        "dmg": 1738,
+        "adr": 87,
+        "fireDamage": 197,
+        "hsp": 41.2,
+        "kdr": 1.13,
+        "utilityThrows": 21,
+        "knifeKills": 0,
+        "firstKills": 3,
+        "lastAliveRounds": 0,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "1044985494",
+        "name": "AlonRaz9",
+        "team": "CT",
+        "kills": 18,
+        "deaths": 13,
+        "assists": 5,
+        "dmg": 1852,
+        "adr": 93,
+        "fireDamage": 171,
+        "hsp": 16.7,
+        "kdr": 1.38,
+        "utilityThrows": 20,
+        "knifeKills": 0,
+        "firstKills": 2,
+        "lastAliveRounds": 4,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "1566048620",
+        "name": "Xrang",
+        "team": "CT",
+        "kills": 13,
+        "deaths": 16,
+        "assists": 7,
+        "dmg": 1380,
+        "adr": 69,
+        "fireDamage": 221,
+        "hsp": 30.8,
+        "kdr": 0.81,
+        "utilityThrows": 20,
+        "knifeKills": 0,
+        "firstKills": 4,
+        "lastAliveRounds": 4,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "36898525",
+        "name": "ehey",
+        "team": "T",
+        "kills": 13,
+        "deaths": 18,
+        "assists": 2,
+        "dmg": 1334,
+        "adr": 67,
+        "fireDamage": 383,
+        "hsp": 30.8,
+        "kdr": 0.72,
+        "utilityThrows": 53,
+        "knifeKills": 0,
+        "firstKills": 2,
+        "lastAliveRounds": 6,
+        "utilityDamage": 0
+      }
+    ],
+    "teams": {
+      "T": [
+        {
+          "accountId": "861271567",
+          "name": "kAyA",
+          "team": "T",
+          "kills": 13,
+          "deaths": 17,
+          "assists": 4,
+          "dmg": 1721,
+          "adr": 86,
+          "fireDamage": 204,
+          "hsp": 38.5,
+          "kdr": 0.76,
+          "utilityThrows": 35,
+          "knifeKills": 0,
+          "firstKills": 1,
+          "lastAliveRounds": 5,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "175169925",
+          "name": "BachduT",
+          "team": "T",
+          "kills": 13,
+          "deaths": 17,
+          "assists": 3,
+          "dmg": 1298,
+          "adr": 65,
+          "fireDamage": 73,
+          "hsp": 23.1,
+          "kdr": 0.76,
+          "utilityThrows": 37,
+          "knifeKills": 0,
+          "firstKills": 0,
+          "lastAliveRounds": 5,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "876450482",
+          "name": "slavaKra",
+          "team": "T",
+          "kills": 13,
+          "deaths": 17,
+          "assists": 8,
+          "dmg": 1528,
+          "adr": 76,
+          "fireDamage": 133,
+          "hsp": 38.5,
+          "kdr": 0.76,
+          "utilityThrows": 7,
+          "knifeKills": 0,
+          "firstKills": 1,
+          "lastAliveRounds": 4,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "220179415",
+          "name": "VisherRR",
+          "team": "T",
+          "kills": 17,
+          "deaths": 15,
+          "assists": 3,
+          "dmg": 1738,
+          "adr": 87,
+          "fireDamage": 197,
+          "hsp": 41.2,
+          "kdr": 1.13,
+          "utilityThrows": 21,
+          "knifeKills": 0,
+          "firstKills": 3,
+          "lastAliveRounds": 0,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "36898525",
+          "name": "ehey",
+          "team": "T",
+          "kills": 13,
+          "deaths": 18,
+          "assists": 2,
+          "dmg": 1334,
+          "adr": 67,
+          "fireDamage": 383,
+          "hsp": 30.8,
+          "kdr": 0.72,
+          "utilityThrows": 53,
+          "knifeKills": 0,
+          "firstKills": 2,
+          "lastAliveRounds": 6,
+          "utilityDamage": 0
+        }
+      ],
+      "CT": [
+        {
+          "accountId": "1281214748",
+          "name": "eliyahudanel",
+          "team": "CT",
+          "kills": 13,
+          "deaths": 15,
+          "assists": 10,
+          "dmg": 1554,
+          "adr": 78,
+          "fireDamage": 196,
+          "hsp": 61.5,
+          "kdr": 0.87,
+          "utilityThrows": 37,
+          "knifeKills": 0,
+          "firstKills": 2,
+          "lastAliveRounds": 1,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "75945345",
+          "name": "Qwad3",
+          "team": "CT",
+          "kills": 24,
+          "deaths": 15,
+          "assists": 3,
+          "dmg": 2090,
+          "adr": 104,
+          "fireDamage": 61,
+          "hsp": 33.3,
+          "kdr": 1.6,
+          "utilityThrows": 39,
+          "knifeKills": 0,
+          "firstKills": 1,
+          "lastAliveRounds": 10,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "1906894947",
+          "name": "Lemon",
+          "team": "CT",
+          "kills": 15,
+          "deaths": 11,
+          "assists": 2,
+          "dmg": 1629,
+          "adr": 81,
+          "fireDamage": 71,
+          "hsp": 6.7,
+          "kdr": 1.36,
+          "utilityThrows": 16,
+          "knifeKills": 0,
+          "firstKills": 5,
+          "lastAliveRounds": 2,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "1044985494",
+          "name": "AlonRaz9",
+          "team": "CT",
+          "kills": 18,
+          "deaths": 13,
+          "assists": 5,
+          "dmg": 1852,
+          "adr": 93,
+          "fireDamage": 171,
+          "hsp": 16.7,
+          "kdr": 1.38,
+          "utilityThrows": 20,
+          "knifeKills": 0,
+          "firstKills": 2,
+          "lastAliveRounds": 4,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "1566048620",
+          "name": "Xrang",
+          "team": "CT",
+          "kills": 13,
+          "deaths": 16,
+          "assists": 7,
+          "dmg": 1380,
+          "adr": 69,
+          "fireDamage": 221,
+          "hsp": 30.8,
+          "kdr": 0.81,
+          "utilityThrows": 20,
+          "knifeKills": 0,
+          "firstKills": 4,
+          "lastAliveRounds": 4,
+          "utilityDamage": 0
+        }
+      ],
+      "Unassigned": []
+    },
+    "killEvents": [
+      {
+        "killerId": "1044985494",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1906894947"
+      }
+    ]
+  },
+  {
+    "id": "2026_03_16_193028_001.log-de_dust2-8-13-511bc259e535",
+    "file": "2026_03_16_193028_001.log",
+    "map": "de_dust2",
+    "server": null,
+    "roundsPlayed": 21,
+    "scoreT": 8,
+    "scoreCT": 13,
+    "startedAt": "03/16/2026 19:35:54",
+    "endedAt": "03/16/2026 20:10:12",
+    "players": [
+      {
+        "accountId": "175169925",
+        "name": "BachduT",
+        "team": "T",
+        "kills": 11,
+        "deaths": 17,
+        "assists": 4,
+        "dmg": 957,
+        "adr": 48,
+        "fireDamage": 29,
+        "hsp": 27.3,
+        "kdr": 0.65,
+        "utilityThrows": 25,
+        "knifeKills": 0,
+        "firstKills": 1,
+        "lastAliveRounds": 2,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "1906894947",
+        "name": "Lemon",
+        "team": "CT",
+        "kills": 11,
+        "deaths": 16,
+        "assists": 7,
+        "dmg": 1313,
+        "adr": 66,
+        "fireDamage": 78,
+        "hsp": 27.3,
+        "kdr": 0.69,
+        "utilityThrows": 18,
+        "knifeKills": 0,
+        "firstKills": 1,
+        "lastAliveRounds": 4,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "876450482",
+        "name": "slavaKra",
+        "team": "T",
+        "kills": 20,
+        "deaths": 16,
+        "assists": 4,
+        "dmg": 1915,
+        "adr": 96,
+        "fireDamage": 9,
+        "hsp": 60,
+        "kdr": 1.25,
+        "utilityThrows": 28,
+        "knifeKills": 0,
+        "firstKills": 4,
+        "lastAliveRounds": 3,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "1044985494",
+        "name": "AlonRaz9",
+        "team": "CT",
+        "kills": 15,
+        "deaths": 16,
+        "assists": 5,
+        "dmg": 1756,
+        "adr": 88,
+        "fireDamage": 145,
+        "hsp": 13.3,
+        "kdr": 0.94,
+        "utilityThrows": 13,
+        "knifeKills": 0,
+        "firstKills": 3,
+        "lastAliveRounds": 2,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "75945345",
+        "name": "Qwad3",
+        "team": "CT",
+        "kills": 29,
+        "deaths": 13,
+        "assists": 3,
+        "dmg": 2298,
+        "adr": 115,
+        "fireDamage": 182,
+        "hsp": 48.3,
+        "kdr": 2.23,
+        "utilityThrows": 39,
+        "knifeKills": 0,
+        "firstKills": 1,
+        "lastAliveRounds": 9,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "1281214748",
+        "name": "eliyahudanel",
+        "team": "CT",
+        "kills": 15,
+        "deaths": 14,
+        "assists": 5,
+        "dmg": 1659,
+        "adr": 83,
+        "fireDamage": 89,
+        "hsp": 66.7,
+        "kdr": 1.07,
+        "utilityThrows": 40,
+        "knifeKills": 0,
+        "firstKills": 1,
+        "lastAliveRounds": 3,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "36898525",
+        "name": "ehey",
+        "team": "T",
+        "kills": 16,
+        "deaths": 16,
+        "assists": 6,
+        "dmg": 1622,
+        "adr": 81,
+        "fireDamage": 129,
+        "hsp": 56.3,
+        "kdr": 1,
+        "utilityThrows": 39,
+        "knifeKills": 0,
+        "firstKills": 3,
+        "lastAliveRounds": 8,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "220179415",
+        "name": "VisherRR",
+        "team": "T",
+        "kills": 17,
+        "deaths": 17,
+        "assists": 5,
+        "dmg": 1929,
+        "adr": 96,
+        "fireDamage": 57,
+        "hsp": 47.1,
+        "kdr": 1,
+        "utilityThrows": 22,
+        "knifeKills": 0,
+        "firstKills": 4,
+        "lastAliveRounds": 3,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "861271567",
+        "name": "kAyA",
+        "team": "T",
+        "kills": 10,
+        "deaths": 18,
+        "assists": 10,
+        "dmg": 1572,
+        "adr": 79,
+        "fireDamage": 8,
+        "hsp": 70,
+        "kdr": 0.56,
+        "utilityThrows": 31,
+        "knifeKills": 0,
+        "firstKills": 2,
+        "lastAliveRounds": 5,
+        "utilityDamage": 0
+      },
+      {
+        "accountId": "1566048620",
+        "name": "Xrang",
+        "team": "CT",
+        "kills": 14,
+        "deaths": 15,
+        "assists": 5,
+        "dmg": 1587,
+        "adr": 79,
+        "fireDamage": 7,
+        "hsp": 35.7,
+        "kdr": 0.93,
+        "utilityThrows": 26,
+        "knifeKills": 0,
+        "firstKills": 1,
+        "lastAliveRounds": 2,
+        "utilityDamage": 0
+      }
+    ],
+    "teams": {
+      "T": [
+        {
+          "accountId": "175169925",
+          "name": "BachduT",
+          "team": "T",
+          "kills": 11,
+          "deaths": 17,
+          "assists": 4,
+          "dmg": 957,
+          "adr": 48,
+          "fireDamage": 29,
+          "hsp": 27.3,
+          "kdr": 0.65,
+          "utilityThrows": 25,
+          "knifeKills": 0,
+          "firstKills": 1,
+          "lastAliveRounds": 2,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "876450482",
+          "name": "slavaKra",
+          "team": "T",
+          "kills": 20,
+          "deaths": 16,
+          "assists": 4,
+          "dmg": 1915,
+          "adr": 96,
+          "fireDamage": 9,
+          "hsp": 60,
+          "kdr": 1.25,
+          "utilityThrows": 28,
+          "knifeKills": 0,
+          "firstKills": 4,
+          "lastAliveRounds": 3,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "36898525",
+          "name": "ehey",
+          "team": "T",
+          "kills": 16,
+          "deaths": 16,
+          "assists": 6,
+          "dmg": 1622,
+          "adr": 81,
+          "fireDamage": 129,
+          "hsp": 56.3,
+          "kdr": 1,
+          "utilityThrows": 39,
+          "knifeKills": 0,
+          "firstKills": 3,
+          "lastAliveRounds": 8,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "220179415",
+          "name": "VisherRR",
+          "team": "T",
+          "kills": 17,
+          "deaths": 17,
+          "assists": 5,
+          "dmg": 1929,
+          "adr": 96,
+          "fireDamage": 57,
+          "hsp": 47.1,
+          "kdr": 1,
+          "utilityThrows": 22,
+          "knifeKills": 0,
+          "firstKills": 4,
+          "lastAliveRounds": 3,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "861271567",
+          "name": "kAyA",
+          "team": "T",
+          "kills": 10,
+          "deaths": 18,
+          "assists": 10,
+          "dmg": 1572,
+          "adr": 79,
+          "fireDamage": 8,
+          "hsp": 70,
+          "kdr": 0.56,
+          "utilityThrows": 31,
+          "knifeKills": 0,
+          "firstKills": 2,
+          "lastAliveRounds": 5,
+          "utilityDamage": 0
+        }
+      ],
+      "CT": [
+        {
+          "accountId": "1906894947",
+          "name": "Lemon",
+          "team": "CT",
+          "kills": 11,
+          "deaths": 16,
+          "assists": 7,
+          "dmg": 1313,
+          "adr": 66,
+          "fireDamage": 78,
+          "hsp": 27.3,
+          "kdr": 0.69,
+          "utilityThrows": 18,
+          "knifeKills": 0,
+          "firstKills": 1,
+          "lastAliveRounds": 4,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "1044985494",
+          "name": "AlonRaz9",
+          "team": "CT",
+          "kills": 15,
+          "deaths": 16,
+          "assists": 5,
+          "dmg": 1756,
+          "adr": 88,
+          "fireDamage": 145,
+          "hsp": 13.3,
+          "kdr": 0.94,
+          "utilityThrows": 13,
+          "knifeKills": 0,
+          "firstKills": 3,
+          "lastAliveRounds": 2,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "75945345",
+          "name": "Qwad3",
+          "team": "CT",
+          "kills": 29,
+          "deaths": 13,
+          "assists": 3,
+          "dmg": 2298,
+          "adr": 115,
+          "fireDamage": 182,
+          "hsp": 48.3,
+          "kdr": 2.23,
+          "utilityThrows": 39,
+          "knifeKills": 0,
+          "firstKills": 1,
+          "lastAliveRounds": 9,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "1281214748",
+          "name": "eliyahudanel",
+          "team": "CT",
+          "kills": 15,
+          "deaths": 14,
+          "assists": 5,
+          "dmg": 1659,
+          "adr": 83,
+          "fireDamage": 89,
+          "hsp": 66.7,
+          "kdr": 1.07,
+          "utilityThrows": 40,
+          "knifeKills": 0,
+          "firstKills": 1,
+          "lastAliveRounds": 3,
+          "utilityDamage": 0
+        },
+        {
+          "accountId": "1566048620",
+          "name": "Xrang",
+          "team": "CT",
+          "kills": 14,
+          "deaths": 15,
+          "assists": 5,
+          "dmg": 1587,
+          "adr": 79,
+          "fireDamage": 7,
+          "hsp": 35.7,
+          "kdr": 0.93,
+          "utilityThrows": 26,
+          "knifeKills": 0,
+          "firstKills": 1,
+          "lastAliveRounds": 2,
+          "utilityDamage": 0
+        }
+      ],
+      "Unassigned": []
+    },
+    "killEvents": [
+      {
+        "killerId": "36898525",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "1566048620",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "1044985494",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "175169925",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "1281214748",
+        "victimId": "861271567"
+      },
+      {
+        "killerId": "36898525",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1906894947"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "75945345"
+      },
+      {
+        "killerId": "876450482",
+        "victimId": "1044985494"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "175169925"
+      },
+      {
+        "killerId": "1906894947",
+        "victimId": "876450482"
+      },
+      {
+        "killerId": "220179415",
+        "victimId": "1566048620"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "220179415"
+      },
+      {
+        "killerId": "861271567",
+        "victimId": "1281214748"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "36898525"
+      },
+      {
+        "killerId": "75945345",
+        "victimId": "861271567"
+      }
+    ]
+  },
+  {
     "id": "2026_03_15_203758_001.log-de_nuke-13-10-1a51069da09e",
     "file": "2026_03_15_203758_001.log",
     "map": "de_nuke",
@@ -31804,460 +38934,6 @@
     ]
   },
   {
-    "id": "2026_02_25_204917_001.log-de_mirage-12-16-df3afc8c5306",
-    "file": "2026_02_25_204917_001.log",
-    "map": "de_mirage",
-    "server": null,
-    "roundsPlayed": 28,
-    "scoreT": 12,
-    "scoreCT": 16,
-    "startedAt": "02/25/2026 21:31:23",
-    "endedAt": "02/25/2026 21:51:52",
-    "players": [
-      {
-        "accountId": "1192990850",
-        "name": "MaGiC",
-        "team": "CT",
-        "kills": 11,
-        "deaths": 17,
-        "assists": 0,
-        "dmg": 1717,
-        "adr": 64,
-        "fireDamage": 51,
-        "hsp": 36.4,
-        "kdr": 0.65,
-        "utilityThrows": 10,
-        "knifeKills": 0,
-        "firstKills": 11,
-        "lastAliveRounds": 17,
-        "utilityDamage": 0
-      },
-      {
-        "accountId": "876450482",
-        "name": "slavaKra",
-        "team": "T",
-        "kills": 16,
-        "deaths": 11,
-        "assists": 0,
-        "dmg": 1904,
-        "adr": 71,
-        "fireDamage": 62,
-        "hsp": 25,
-        "kdr": 1.45,
-        "utilityThrows": 14,
-        "knifeKills": 0,
-        "firstKills": 16,
-        "lastAliveRounds": 11,
-        "utilityDamage": 0
-      },
-      {
-        "accountId": "1906894947",
-        "name": "Lemon",
-        "team": "T",
-        "kills": 0,
-        "deaths": 0,
-        "assists": 0,
-        "dmg": 0,
-        "adr": 0,
-        "fireDamage": 0,
-        "hsp": 0,
-        "kdr": 0,
-        "utilityThrows": 0,
-        "knifeKills": 0,
-        "firstKills": 0,
-        "lastAliveRounds": 0,
-        "utilityDamage": 0
-      },
-      {
-        "accountId": "1044985494",
-        "name": "AlonRaz9",
-        "team": "CT",
-        "kills": 0,
-        "deaths": 0,
-        "assists": 0,
-        "dmg": 0,
-        "adr": 0,
-        "fireDamage": 0,
-        "hsp": 0,
-        "kdr": 0,
-        "utilityThrows": 0,
-        "knifeKills": 0,
-        "firstKills": 0,
-        "lastAliveRounds": 0,
-        "utilityDamage": 0
-      },
-      {
-        "accountId": "131318498",
-        "name": "RAMP",
-        "team": "T",
-        "kills": 0,
-        "deaths": 0,
-        "assists": 0,
-        "dmg": 0,
-        "adr": 0,
-        "fireDamage": 0,
-        "hsp": 0,
-        "kdr": 0,
-        "utilityThrows": 0,
-        "knifeKills": 0,
-        "firstKills": 0,
-        "lastAliveRounds": 0,
-        "utilityDamage": 0
-      },
-      {
-        "accountId": "175169925",
-        "name": "BachduT",
-        "team": "CT",
-        "kills": 0,
-        "deaths": 0,
-        "assists": 0,
-        "dmg": 0,
-        "adr": 0,
-        "fireDamage": 0,
-        "hsp": 0,
-        "kdr": 0,
-        "utilityThrows": 0,
-        "knifeKills": 0,
-        "firstKills": 0,
-        "lastAliveRounds": 0,
-        "utilityDamage": 0
-      },
-      {
-        "accountId": "795462810",
-        "name": "r00t",
-        "team": "T",
-        "kills": 0,
-        "deaths": 0,
-        "assists": 0,
-        "dmg": 0,
-        "adr": 0,
-        "fireDamage": 0,
-        "hsp": 0,
-        "kdr": 0,
-        "utilityThrows": 0,
-        "knifeKills": 0,
-        "firstKills": 0,
-        "lastAliveRounds": 0,
-        "utilityDamage": 0
-      },
-      {
-        "accountId": "1281214748",
-        "name": "eliyahudanel",
-        "team": "CT",
-        "kills": 0,
-        "deaths": 0,
-        "assists": 0,
-        "dmg": 0,
-        "adr": 0,
-        "fireDamage": 0,
-        "hsp": 0,
-        "kdr": 0,
-        "utilityThrows": 0,
-        "knifeKills": 0,
-        "firstKills": 0,
-        "lastAliveRounds": 0,
-        "utilityDamage": 0
-      },
-      {
-        "accountId": "1907596731",
-        "name": "agaynadav",
-        "team": "T",
-        "kills": 0,
-        "deaths": 0,
-        "assists": 0,
-        "dmg": 0,
-        "adr": 0,
-        "fireDamage": 0,
-        "hsp": 0,
-        "kdr": 0,
-        "utilityThrows": 0,
-        "knifeKills": 0,
-        "firstKills": 0,
-        "lastAliveRounds": 0,
-        "utilityDamage": 0
-      }
-    ],
-    "teams": {
-      "T": [
-        {
-          "accountId": "876450482",
-          "name": "slavaKra",
-          "team": "T",
-          "kills": 16,
-          "deaths": 11,
-          "assists": 0,
-          "dmg": 1904,
-          "adr": 71,
-          "fireDamage": 62,
-          "hsp": 25,
-          "kdr": 1.45,
-          "utilityThrows": 14,
-          "knifeKills": 0,
-          "firstKills": 16,
-          "lastAliveRounds": 11,
-          "utilityDamage": 0
-        },
-        {
-          "accountId": "1906894947",
-          "name": "Lemon",
-          "team": "T",
-          "kills": 0,
-          "deaths": 0,
-          "assists": 0,
-          "dmg": 0,
-          "adr": 0,
-          "fireDamage": 0,
-          "hsp": 0,
-          "kdr": 0,
-          "utilityThrows": 0,
-          "knifeKills": 0,
-          "firstKills": 0,
-          "lastAliveRounds": 0,
-          "utilityDamage": 0
-        },
-        {
-          "accountId": "131318498",
-          "name": "RAMP",
-          "team": "T",
-          "kills": 0,
-          "deaths": 0,
-          "assists": 0,
-          "dmg": 0,
-          "adr": 0,
-          "fireDamage": 0,
-          "hsp": 0,
-          "kdr": 0,
-          "utilityThrows": 0,
-          "knifeKills": 0,
-          "firstKills": 0,
-          "lastAliveRounds": 0,
-          "utilityDamage": 0
-        },
-        {
-          "accountId": "795462810",
-          "name": "r00t",
-          "team": "T",
-          "kills": 0,
-          "deaths": 0,
-          "assists": 0,
-          "dmg": 0,
-          "adr": 0,
-          "fireDamage": 0,
-          "hsp": 0,
-          "kdr": 0,
-          "utilityThrows": 0,
-          "knifeKills": 0,
-          "firstKills": 0,
-          "lastAliveRounds": 0,
-          "utilityDamage": 0
-        },
-        {
-          "accountId": "1907596731",
-          "name": "agaynadav",
-          "team": "T",
-          "kills": 0,
-          "deaths": 0,
-          "assists": 0,
-          "dmg": 0,
-          "adr": 0,
-          "fireDamage": 0,
-          "hsp": 0,
-          "kdr": 0,
-          "utilityThrows": 0,
-          "knifeKills": 0,
-          "firstKills": 0,
-          "lastAliveRounds": 0,
-          "utilityDamage": 0
-        }
-      ],
-      "CT": [
-        {
-          "accountId": "1192990850",
-          "name": "MaGiC",
-          "team": "CT",
-          "kills": 11,
-          "deaths": 17,
-          "assists": 0,
-          "dmg": 1717,
-          "adr": 64,
-          "fireDamage": 51,
-          "hsp": 36.4,
-          "kdr": 0.65,
-          "utilityThrows": 10,
-          "knifeKills": 0,
-          "firstKills": 11,
-          "lastAliveRounds": 17,
-          "utilityDamage": 0
-        },
-        {
-          "accountId": "1044985494",
-          "name": "AlonRaz9",
-          "team": "CT",
-          "kills": 0,
-          "deaths": 0,
-          "assists": 0,
-          "dmg": 0,
-          "adr": 0,
-          "fireDamage": 0,
-          "hsp": 0,
-          "kdr": 0,
-          "utilityThrows": 0,
-          "knifeKills": 0,
-          "firstKills": 0,
-          "lastAliveRounds": 0,
-          "utilityDamage": 0
-        },
-        {
-          "accountId": "175169925",
-          "name": "BachduT",
-          "team": "CT",
-          "kills": 0,
-          "deaths": 0,
-          "assists": 0,
-          "dmg": 0,
-          "adr": 0,
-          "fireDamage": 0,
-          "hsp": 0,
-          "kdr": 0,
-          "utilityThrows": 0,
-          "knifeKills": 0,
-          "firstKills": 0,
-          "lastAliveRounds": 0,
-          "utilityDamage": 0
-        },
-        {
-          "accountId": "1281214748",
-          "name": "eliyahudanel",
-          "team": "CT",
-          "kills": 0,
-          "deaths": 0,
-          "assists": 0,
-          "dmg": 0,
-          "adr": 0,
-          "fireDamage": 0,
-          "hsp": 0,
-          "kdr": 0,
-          "utilityThrows": 0,
-          "knifeKills": 0,
-          "firstKills": 0,
-          "lastAliveRounds": 0,
-          "utilityDamage": 0
-        }
-      ],
-      "Unassigned": []
-    },
-    "killEvents": [
-      {
-        "killerId": "1192990850",
-        "victimId": "876450482"
-      },
-      {
-        "killerId": "1192990850",
-        "victimId": "876450482"
-      },
-      {
-        "killerId": "876450482",
-        "victimId": "1192990850"
-      },
-      {
-        "killerId": "1192990850",
-        "victimId": "876450482"
-      },
-      {
-        "killerId": "876450482",
-        "victimId": "1192990850"
-      },
-      {
-        "killerId": "1192990850",
-        "victimId": "876450482"
-      },
-      {
-        "killerId": "1192990850",
-        "victimId": "876450482"
-      },
-      {
-        "killerId": "1192990850",
-        "victimId": "876450482"
-      },
-      {
-        "killerId": "876450482",
-        "victimId": "1192990850"
-      },
-      {
-        "killerId": "876450482",
-        "victimId": "1192990850"
-      },
-      {
-        "killerId": "1192990850",
-        "victimId": "876450482"
-      },
-      {
-        "killerId": "1192990850",
-        "victimId": "876450482"
-      },
-      {
-        "killerId": "876450482",
-        "victimId": "1192990850"
-      },
-      {
-        "killerId": "876450482",
-        "victimId": "1192990850"
-      },
-      {
-        "killerId": "876450482",
-        "victimId": "1192990850"
-      },
-      {
-        "killerId": "1192990850",
-        "victimId": "876450482"
-      },
-      {
-        "killerId": "1192990850",
-        "victimId": "876450482"
-      },
-      {
-        "killerId": "876450482",
-        "victimId": "1192990850"
-      },
-      {
-        "killerId": "1192990850",
-        "victimId": "876450482"
-      },
-      {
-        "killerId": "876450482",
-        "victimId": "1192990850"
-      },
-      {
-        "killerId": "876450482",
-        "victimId": "1192990850"
-      },
-      {
-        "killerId": "876450482",
-        "victimId": "1192990850"
-      },
-      {
-        "killerId": "876450482",
-        "victimId": "1192990850"
-      },
-      {
-        "killerId": "876450482",
-        "victimId": "1192990850"
-      },
-      {
-        "killerId": "876450482",
-        "victimId": "1192990850"
-      },
-      {
-        "killerId": "876450482",
-        "victimId": "1192990850"
-      },
-      {
-        "killerId": "876450482",
-        "victimId": "1192990850"
-      }
-    ]
-  },
-  {
     "id": "2026_02_25_204917_001.log-de_mirage-13-10-39dd587cc2ce",
     "file": "2026_02_25_204917_001.log",
     "map": "de_mirage",
@@ -46811,24 +53487,6 @@
         "firstKills": 2,
         "lastAliveRounds": 1,
         "utilityDamage": 0
-      },
-      {
-        "accountId": "220179415",
-        "name": "VisherRR",
-        "team": "T",
-        "kills": 0,
-        "deaths": 0,
-        "assists": 0,
-        "dmg": 0,
-        "adr": 0,
-        "fireDamage": 0,
-        "hsp": 0,
-        "kdr": 0,
-        "utilityThrows": 0,
-        "knifeKills": 0,
-        "firstKills": 0,
-        "lastAliveRounds": 0,
-        "utilityDamage": 0
       }
     ],
     "teams": {
@@ -46921,24 +53579,6 @@
           "knifeKills": 0,
           "firstKills": 2,
           "lastAliveRounds": 1,
-          "utilityDamage": 0
-        },
-        {
-          "accountId": "220179415",
-          "name": "VisherRR",
-          "team": "T",
-          "kills": 0,
-          "deaths": 0,
-          "assists": 0,
-          "dmg": 0,
-          "adr": 0,
-          "fireDamage": 0,
-          "hsp": 0,
-          "kdr": 0,
-          "utilityThrows": 0,
-          "knifeKills": 0,
-          "firstKills": 0,
-          "lastAliveRounds": 0,
           "utilityDamage": 0
         }
       ],
@@ -47668,484 +54308,6 @@
       {
         "killerId": "175169925",
         "victimId": "1906894947"
-      }
-    ]
-  },
-  {
-    "id": "2026_01_16_213238_001.log-de_dust2-13-10-6dd48fae8b1b",
-    "file": "2026_01_16_213238_001.log",
-    "map": "de_dust2",
-    "server": null,
-    "roundsPlayed": 23,
-    "scoreT": 13,
-    "scoreCT": 10,
-    "startedAt": "01/17/2026 19:41:56",
-    "endedAt": "01/17/2026 19:59:43",
-    "players": [
-      {
-        "accountId": "1044985494",
-        "name": "AlonRaz9",
-        "team": "CT",
-        "kills": 12,
-        "deaths": 15,
-        "assists": 0,
-        "dmg": 1218,
-        "adr": 55,
-        "fireDamage": 1,
-        "hsp": 50,
-        "kdr": 0.8,
-        "utilityThrows": 7,
-        "knifeKills": 0,
-        "firstKills": 8,
-        "lastAliveRounds": 12,
-        "utilityDamage": 0
-      },
-      {
-        "accountId": "876450482",
-        "name": "slavaKra",
-        "team": "T",
-        "kills": 8,
-        "deaths": 11,
-        "assists": 2,
-        "dmg": 963,
-        "adr": 44,
-        "fireDamage": 0,
-        "hsp": 25,
-        "kdr": 0.73,
-        "utilityThrows": 0,
-        "knifeKills": 0,
-        "firstKills": 5,
-        "lastAliveRounds": 4,
-        "utilityDamage": 0
-      },
-      {
-        "accountId": "1281214748",
-        "name": "eliyahudanel",
-        "team": "T",
-        "kills": 15,
-        "deaths": 9,
-        "assists": 1,
-        "dmg": 1474,
-        "adr": 67,
-        "fireDamage": 0,
-        "hsp": 80,
-        "kdr": 1.67,
-        "utilityThrows": 20,
-        "knifeKills": 0,
-        "firstKills": 7,
-        "lastAliveRounds": 8,
-        "utilityDamage": 0
-      },
-      {
-        "accountId": "40296679",
-        "name": "OutOfControl",
-        "team": "CT",
-        "kills": 7,
-        "deaths": 8,
-        "assists": 2,
-        "dmg": 920,
-        "adr": 42,
-        "fireDamage": 38,
-        "hsp": 85.7,
-        "kdr": 0.88,
-        "utilityThrows": 9,
-        "knifeKills": 0,
-        "firstKills": 2,
-        "lastAliveRounds": 5,
-        "utilityDamage": 0
-      },
-      {
-        "accountId": "220179415",
-        "name": "VisherRR",
-        "team": "T",
-        "kills": 0,
-        "deaths": 0,
-        "assists": 0,
-        "dmg": 0,
-        "adr": 0,
-        "fireDamage": 0,
-        "hsp": 0,
-        "kdr": 0,
-        "utilityThrows": 0,
-        "knifeKills": 0,
-        "firstKills": 0,
-        "lastAliveRounds": 0,
-        "utilityDamage": 0
-      },
-      {
-        "accountId": "175169925",
-        "name": "BachduT",
-        "team": "CT",
-        "kills": 0,
-        "deaths": 0,
-        "assists": 0,
-        "dmg": 0,
-        "adr": 0,
-        "fireDamage": 0,
-        "hsp": 0,
-        "kdr": 0,
-        "utilityThrows": 0,
-        "knifeKills": 0,
-        "firstKills": 0,
-        "lastAliveRounds": 0,
-        "utilityDamage": 0
-      },
-      {
-        "accountId": "1907596731",
-        "name": "agaynadav",
-        "team": "T",
-        "kills": 0,
-        "deaths": 0,
-        "assists": 0,
-        "dmg": 0,
-        "adr": 0,
-        "fireDamage": 0,
-        "hsp": 0,
-        "kdr": 0,
-        "utilityThrows": 0,
-        "knifeKills": 0,
-        "firstKills": 0,
-        "lastAliveRounds": 0,
-        "utilityDamage": 0
-      },
-      {
-        "accountId": "1906894947",
-        "name": "Lemon",
-        "team": "CT",
-        "kills": 0,
-        "deaths": 0,
-        "assists": 0,
-        "dmg": 0,
-        "adr": 0,
-        "fireDamage": 0,
-        "hsp": 0,
-        "kdr": 0,
-        "utilityThrows": 0,
-        "knifeKills": 0,
-        "firstKills": 0,
-        "lastAliveRounds": 0,
-        "utilityDamage": 0
-      }
-    ],
-    "teams": {
-      "T": [
-        {
-          "accountId": "876450482",
-          "name": "slavaKra",
-          "team": "T",
-          "kills": 8,
-          "deaths": 11,
-          "assists": 2,
-          "dmg": 963,
-          "adr": 44,
-          "fireDamage": 0,
-          "hsp": 25,
-          "kdr": 0.73,
-          "utilityThrows": 0,
-          "knifeKills": 0,
-          "firstKills": 5,
-          "lastAliveRounds": 4,
-          "utilityDamage": 0
-        },
-        {
-          "accountId": "1281214748",
-          "name": "eliyahudanel",
-          "team": "T",
-          "kills": 15,
-          "deaths": 9,
-          "assists": 1,
-          "dmg": 1474,
-          "adr": 67,
-          "fireDamage": 0,
-          "hsp": 80,
-          "kdr": 1.67,
-          "utilityThrows": 20,
-          "knifeKills": 0,
-          "firstKills": 7,
-          "lastAliveRounds": 8,
-          "utilityDamage": 0
-        },
-        {
-          "accountId": "220179415",
-          "name": "VisherRR",
-          "team": "T",
-          "kills": 0,
-          "deaths": 0,
-          "assists": 0,
-          "dmg": 0,
-          "adr": 0,
-          "fireDamage": 0,
-          "hsp": 0,
-          "kdr": 0,
-          "utilityThrows": 0,
-          "knifeKills": 0,
-          "firstKills": 0,
-          "lastAliveRounds": 0,
-          "utilityDamage": 0
-        },
-        {
-          "accountId": "1907596731",
-          "name": "agaynadav",
-          "team": "T",
-          "kills": 0,
-          "deaths": 0,
-          "assists": 0,
-          "dmg": 0,
-          "adr": 0,
-          "fireDamage": 0,
-          "hsp": 0,
-          "kdr": 0,
-          "utilityThrows": 0,
-          "knifeKills": 0,
-          "firstKills": 0,
-          "lastAliveRounds": 0,
-          "utilityDamage": 0
-        }
-      ],
-      "CT": [
-        {
-          "accountId": "1044985494",
-          "name": "AlonRaz9",
-          "team": "CT",
-          "kills": 12,
-          "deaths": 15,
-          "assists": 0,
-          "dmg": 1218,
-          "adr": 55,
-          "fireDamage": 1,
-          "hsp": 50,
-          "kdr": 0.8,
-          "utilityThrows": 7,
-          "knifeKills": 0,
-          "firstKills": 8,
-          "lastAliveRounds": 12,
-          "utilityDamage": 0
-        },
-        {
-          "accountId": "40296679",
-          "name": "OutOfControl",
-          "team": "CT",
-          "kills": 7,
-          "deaths": 8,
-          "assists": 2,
-          "dmg": 920,
-          "adr": 42,
-          "fireDamage": 38,
-          "hsp": 85.7,
-          "kdr": 0.88,
-          "utilityThrows": 9,
-          "knifeKills": 0,
-          "firstKills": 2,
-          "lastAliveRounds": 5,
-          "utilityDamage": 0
-        },
-        {
-          "accountId": "175169925",
-          "name": "BachduT",
-          "team": "CT",
-          "kills": 0,
-          "deaths": 0,
-          "assists": 0,
-          "dmg": 0,
-          "adr": 0,
-          "fireDamage": 0,
-          "hsp": 0,
-          "kdr": 0,
-          "utilityThrows": 0,
-          "knifeKills": 0,
-          "firstKills": 0,
-          "lastAliveRounds": 0,
-          "utilityDamage": 0
-        },
-        {
-          "accountId": "1906894947",
-          "name": "Lemon",
-          "team": "CT",
-          "kills": 0,
-          "deaths": 0,
-          "assists": 0,
-          "dmg": 0,
-          "adr": 0,
-          "fireDamage": 0,
-          "hsp": 0,
-          "kdr": 0,
-          "utilityThrows": 0,
-          "knifeKills": 0,
-          "firstKills": 0,
-          "lastAliveRounds": 0,
-          "utilityDamage": 0
-        }
-      ],
-      "Unassigned": []
-    },
-    "killEvents": [
-      {
-        "killerId": "1044985494",
-        "victimId": "876450482"
-      },
-      {
-        "killerId": "876450482",
-        "victimId": "1044985494"
-      },
-      {
-        "killerId": "1044985494",
-        "victimId": "876450482"
-      },
-      {
-        "killerId": "1044985494",
-        "victimId": "1281214748"
-      },
-      {
-        "killerId": "876450482",
-        "victimId": "1044985494"
-      },
-      {
-        "killerId": "1281214748",
-        "victimId": "1044985494"
-      },
-      {
-        "killerId": "1044985494",
-        "victimId": "1281214748"
-      },
-      {
-        "killerId": "876450482",
-        "victimId": "1044985494"
-      },
-      {
-        "killerId": "876450482",
-        "victimId": "1044985494"
-      },
-      {
-        "killerId": "1044985494",
-        "victimId": "876450482"
-      },
-      {
-        "killerId": "1281214748",
-        "victimId": "1044985494"
-      },
-      {
-        "killerId": "1044985494",
-        "victimId": "876450482"
-      },
-      {
-        "killerId": "1281214748",
-        "victimId": "1044985494"
-      },
-      {
-        "killerId": "1281214748",
-        "victimId": "1044985494"
-      },
-      {
-        "killerId": "876450482",
-        "victimId": "40296679"
-      },
-      {
-        "killerId": "1044985494",
-        "victimId": "1281214748"
-      },
-      {
-        "killerId": "1044985494",
-        "victimId": "876450482"
-      },
-      {
-        "killerId": "1281214748",
-        "victimId": "40296679"
-      },
-      {
-        "killerId": "1044985494",
-        "victimId": "1281214748"
-      },
-      {
-        "killerId": "1044985494",
-        "victimId": "876450482"
-      },
-      {
-        "killerId": "1281214748",
-        "victimId": "40296679"
-      },
-      {
-        "killerId": "1044985494",
-        "victimId": "1281214748"
-      },
-      {
-        "killerId": "1281214748",
-        "victimId": "40296679"
-      },
-      {
-        "killerId": "1281214748",
-        "victimId": "1044985494"
-      },
-      {
-        "killerId": "1281214748",
-        "victimId": "1044985494"
-      },
-      {
-        "killerId": "1281214748",
-        "victimId": "40296679"
-      },
-      {
-        "killerId": "1281214748",
-        "victimId": "1044985494"
-      },
-      {
-        "killerId": "40296679",
-        "victimId": "876450482"
-      },
-      {
-        "killerId": "40296679",
-        "victimId": "1281214748"
-      },
-      {
-        "killerId": "40296679",
-        "victimId": "876450482"
-      },
-      {
-        "killerId": "40296679",
-        "victimId": "1281214748"
-      },
-      {
-        "killerId": "1044985494",
-        "victimId": "876450482"
-      },
-      {
-        "killerId": "1281214748",
-        "victimId": "1044985494"
-      },
-      {
-        "killerId": "40296679",
-        "victimId": "1281214748"
-      },
-      {
-        "killerId": "1281214748",
-        "victimId": "40296679"
-      },
-      {
-        "killerId": "1281214748",
-        "victimId": "1044985494"
-      },
-      {
-        "killerId": "40296679",
-        "victimId": "876450482"
-      },
-      {
-        "killerId": "40296679",
-        "victimId": "1281214748"
-      },
-      {
-        "killerId": "876450482",
-        "victimId": "1044985494"
-      },
-      {
-        "killerId": "1281214748",
-        "victimId": "40296679"
-      },
-      {
-        "killerId": "876450482",
-        "victimId": "40296679"
-      },
-      {
-        "killerId": "876450482",
-        "victimId": "1044985494"
       }
     ]
   },
@@ -56927,60 +63089,6 @@
         "firstKills": 2,
         "lastAliveRounds": 8,
         "utilityDamage": 0
-      },
-      {
-        "accountId": "36898525",
-        "name": "ehey",
-        "team": "T",
-        "kills": 0,
-        "deaths": 0,
-        "assists": 0,
-        "dmg": 0,
-        "adr": 0,
-        "fireDamage": 0,
-        "hsp": 0,
-        "kdr": 0,
-        "utilityThrows": 0,
-        "knifeKills": 0,
-        "firstKills": 0,
-        "lastAliveRounds": 0,
-        "utilityDamage": 0
-      },
-      {
-        "accountId": "40296679",
-        "name": "OutOfControl",
-        "team": "T",
-        "kills": 0,
-        "deaths": 0,
-        "assists": 0,
-        "dmg": 0,
-        "adr": 0,
-        "fireDamage": 0,
-        "hsp": 0,
-        "kdr": 0,
-        "utilityThrows": 0,
-        "knifeKills": 0,
-        "firstKills": 0,
-        "lastAliveRounds": 0,
-        "utilityDamage": 0
-      },
-      {
-        "accountId": "806199286",
-        "name": "Tampon",
-        "team": "CT",
-        "kills": 0,
-        "deaths": 0,
-        "assists": 0,
-        "dmg": 0,
-        "adr": 0,
-        "fireDamage": 0,
-        "hsp": 0,
-        "kdr": 0,
-        "utilityThrows": 0,
-        "knifeKills": 0,
-        "firstKills": 0,
-        "lastAliveRounds": 0,
-        "utilityDamage": 0
       }
     ],
     "teams": {
@@ -57056,42 +63164,6 @@
           "firstKills": 2,
           "lastAliveRounds": 8,
           "utilityDamage": 0
-        },
-        {
-          "accountId": "36898525",
-          "name": "ehey",
-          "team": "T",
-          "kills": 0,
-          "deaths": 0,
-          "assists": 0,
-          "dmg": 0,
-          "adr": 0,
-          "fireDamage": 0,
-          "hsp": 0,
-          "kdr": 0,
-          "utilityThrows": 0,
-          "knifeKills": 0,
-          "firstKills": 0,
-          "lastAliveRounds": 0,
-          "utilityDamage": 0
-        },
-        {
-          "accountId": "40296679",
-          "name": "OutOfControl",
-          "team": "T",
-          "kills": 0,
-          "deaths": 0,
-          "assists": 0,
-          "dmg": 0,
-          "adr": 0,
-          "fireDamage": 0,
-          "hsp": 0,
-          "kdr": 0,
-          "utilityThrows": 0,
-          "knifeKills": 0,
-          "firstKills": 0,
-          "lastAliveRounds": 0,
-          "utilityDamage": 0
         }
       ],
       "CT": [
@@ -57165,24 +63237,6 @@
           "knifeKills": 0,
           "firstKills": 2,
           "lastAliveRounds": 3,
-          "utilityDamage": 0
-        },
-        {
-          "accountId": "806199286",
-          "name": "Tampon",
-          "team": "CT",
-          "kills": 0,
-          "deaths": 0,
-          "assists": 0,
-          "dmg": 0,
-          "adr": 0,
-          "fireDamage": 0,
-          "hsp": 0,
-          "kdr": 0,
-          "utilityThrows": 0,
-          "knifeKills": 0,
-          "firstKills": 0,
-          "lastAliveRounds": 0,
           "utilityDamage": 0
         }
       ],

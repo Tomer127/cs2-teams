@@ -52,8 +52,9 @@ function teamNorm(t) {
 // ---------------- Regex ----------------
 
 // Game Over: competitive  de_inferno score 13:11 after 39 min
+// OR: Game Over: competitive de_mirage de_nuke score 13:10 (two maps - use second)
 const RE_GAME_OVER =
-  /Game Over:\s*competitive\s+(?<map>\S+)\s+score\s+(?<a>\d+):(?<b>\d+)\s+after\s+(?<mins>\d+)\s+min/i;
+  /Game Over:\s*competitive\s+(?:\S+\s+)?(?<map>\S+)\s+score\s+(?<a>\d+):(?<b>\d+)\s+after\s+(?<mins>\d+)\s+min/i;
 
 // MatchStatus: Score: 0:0 on map "de_inferno" RoundsPlayed: 0
 const RE_MATCHSTATUS_ZERO =
@@ -488,6 +489,9 @@ for (const file of files) {
         // NEW
         utilityDamage: safeNum(pl.utilityDamage),
       };
+    }).filter((pl) => {
+      // Skip players with 0 kills, 0 deaths, 0 assists, and 0 dmg
+      return !(pl.kills === 0 && pl.deaths === 0 && pl.assists === 0 && pl.dmg === 0);
     });
 
     // sanity: competitive should have 10 players; keep >= 8 like your original logic
