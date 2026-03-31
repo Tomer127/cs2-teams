@@ -241,20 +241,7 @@ export default function MVP() {
   const matches = matchesRaw as Match[];
   const [q, setQ] = useState("");
 
-  // Sort matches newest -> oldest and take last 10 (most recent 10)
-  const last10Matches = useMemo(() => {
-    return [...matches]
-      .sort((a, b) => {
-        const aT = toEpoch(a.endedAt) || toEpoch(a.startedAt);
-        const bT = toEpoch(b.endedAt) || toEpoch(b.startedAt);
-        if (aT !== bT) return bT - aT;
-        return (b.id || "").localeCompare(a.id || "");
-      })
-      .slice(0, 10);
-  }, [matches]);
-
   const allTimeRows = useMemo(() => buildMvpRows(matches, q), [matches, q]);
-  const last10Rows = useMemo(() => buildMvpRows(last10Matches, q), [last10Matches, q]);
 
   return (
     <div className="container" style={{ maxWidth: '100%', padding: '0' }}>
@@ -284,13 +271,7 @@ export default function MVP() {
         <Table rows={allTimeRows} />
       </div>
 
-      <div>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "1rem" }}>
-          <h2 style={{ margin: 0, borderBottom: "none" }}>Last 10 Matches</h2>
-          <span style={{ color: "var(--accent)", fontWeight: 700 }}>{last10Matches.length} Matches</span>
-        </div>
-        <Table rows={last10Rows} />
-      </div>
+
     </div>
   );
 }
