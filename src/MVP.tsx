@@ -48,24 +48,6 @@ function round2(n: number) {
   return Math.round(n * 100) / 100;
 }
 
-function toEpoch(s?: string | null): number {
-  if (!s) return 0;
-  // Expect: "MM/DD/YYYY HH:MM:SS"
-  const m = s.match(/^(\d{2})\/(\d{2})\/(\d{4})\s+(\d{2}):(\d{2}):(\d{2})$/);
-  if (!m) return 0;
-
-  const mm = Number(m[1]);
-  const dd = Number(m[2]);
-  const yyyy = Number(m[3]);
-  const HH = Number(m[4]);
-  const MI = Number(m[5]);
-  const SS = Number(m[6]);
-
-  const dt = new Date(yyyy, mm - 1, dd, HH, MI, SS);
-  const t = dt.getTime();
-  return Number.isFinite(t) ? t : 0;
-}
-
 /**
  * Rank a list of players best->worst using your performance tuple,
  * then return placement (1..N) with tie handling:
