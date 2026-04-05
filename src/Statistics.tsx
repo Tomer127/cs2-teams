@@ -48,6 +48,8 @@ type PlayerStat = {
   firstKills: number;
   utilityDamage: number;
   matchesPlayed: number;
+  wins: number;
+  losses: number;
 };
 
 function TopPlayersDisplay({ 
@@ -115,6 +117,8 @@ export default function Statistics() {
         firstKills: number;
         utilityDamage: number;
         matchesPlayed: number;
+        wins: number;
+        losses: number;
       }
     >();
 
@@ -133,6 +137,8 @@ export default function Statistics() {
           firstKills: 0,
           utilityDamage: 0,
           matchesPlayed: 0,
+          wins: 0,
+          losses: 0,
         });
       } else {
         const cur = byPlayer.get(p.accountId)!;
@@ -152,6 +158,10 @@ export default function Statistics() {
     for (const m of matches) {
       const playersInMatch = new Set<string>();
       
+      // Determine winning team
+      const tWon = m.scoreT > m.scoreCT;
+      const ctWon = m.scoreCT > m.scoreT;
+      
       for (const p of m.players) {
         const row = ensure(p);
         row.kills += Number(p.kills) || 0;
@@ -161,6 +171,12 @@ export default function Statistics() {
         row.lastAlive += Number(p.lastAliveRounds) || 0;
         row.firstKills += Number(p.firstKills) || 0;
         row.utilityDamage += Number(p.utilityDamage) || 0;
+
+        // Track wins/losses
+        if (p.team === "T" && tWon) row.wins += 1;
+        else if (p.team === "T" && !tWon) row.losses += 1;
+        else if (p.team === "CT" && ctWon) row.wins += 1;
+        else if (p.team === "CT" && !ctWon) row.losses += 1;
 
         playersInMatch.add(p.accountId);
         nameById.set(p.accountId, p.name);
@@ -193,6 +209,8 @@ export default function Statistics() {
     const mostLastAlive = players.length ? topBy("lastAlive", 5) : [];
     const mostFirstKills = players.length ? topBy("firstKills", 5) : [];
     const mostUtilityDamage = players.length ? topBy("utilityDamage", 5) : [];
+    const mostWins = players.length ? topBy("wins", 3) : [];
+    const mostLosses = players.length ? topBy("losses", 3) : [];
 
     // Build full head-to-head grid: for each row player A, each col player B:
     // killsAB = A killed B
@@ -217,6 +235,8 @@ export default function Statistics() {
       mostLastAlive,
       mostFirstKills,
       mostUtilityDamage,
+      mostWins,
+      mostLosses,
       hasKillEvents: [...killMatrix.keys()].length > 0,
     };
   }, [matches]);
@@ -278,6 +298,23 @@ export default function Statistics() {
           valueKey="firstKills" 
           valueLabel="First Kills" 
           color="#f59e0b" 
+        />
+
+        <TopPlayersDisplay 
+          players={computed.mostWins} 
+          title="MATCH WINS" 
+          valueKey="wins" 
+          valueLabel="Wins" 
+          color="#22c55e" 
+          glow="rgba(34, 197, 94, 0.4)" 
+        />
+
+        <TopPlayersDisplay 
+          players={computed.mostLosses} 
+          title="MOST LOSSES" 
+          valueKey="losses" 
+          valueLabel="Losses" 
+          color="#64748b"
         />
       </div>
 

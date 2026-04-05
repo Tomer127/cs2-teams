@@ -280,7 +280,14 @@ for (const file of files) {
 
   // Find all Game Over markers (can be multiple per file)
   for (let i = 0; i < rawLines.length; i++) {
-    const payload = stripPrefix(rawLines[i]);
+    let payload = stripPrefix(rawLines[i]);
+    
+    // Handle multi-line Game Over events (e.g., "Game Over:" on one line, rest on next)
+    if (payload.match(/^Game Over:\s*$/i) && i + 1 < rawLines.length) {
+      payload = payload + " " + stripPrefix(rawLines[i + 1]);
+      i += 1;
+    }
+    
     const go = payload.match(RE_GAME_OVER);
     if (!go?.groups) continue;
 
@@ -571,12 +578,18 @@ function getTotal(accountId) {
 
       // NEW
       totalUtilityDamage: 0,
+      totalWins: 0,
+      totalLosses: 0,
     });
   }
   return totals.get(id);
 }
 
 for (const m of matches) {
+  // Determine winning team (higher score)
+  const tWon = m.scoreT > m.scoreCT;
+  const ctWon = m.scoreCT > m.scoreT;
+
   for (const p of m.players) {
     const t = getTotal(p.accountId);
     t.matchesPlayed += 1;
@@ -595,6 +608,12 @@ for (const m of matches) {
 
     // NEW
     t.totalUtilityDamage += safeNum(p.utilityDamage);
+
+    // Track wins/losses based on team
+    if (p.team === "T" && tWon) t.totalWins += 1;
+    else if (p.team === "T" && !tWon) t.totalLosses += 1;
+    else if (p.team === "CT" && ctWon) t.totalWins += 1;
+    else if (p.team === "CT" && !ctWon) t.totalLosses += 1;
   }
 }
 
@@ -605,6 +624,8 @@ const playerStats = Array.from(totals.values())
       accountId: t.accountId,
       name,
       matchesPlayed: t.matchesPlayed,
+      wins: t.totalWins,
+      losses: t.totalLosses,
       avgMatchDamage: t.matchesPlayed ? Math.round(t.totalDamage / t.matchesPlayed) : 0,
       adr: t.matchesPlayed ? Math.round(t.totalAdrSum / t.matchesPlayed) : 0,
       kdr: +(t.totalKills / Math.max(1, t.totalDeaths)).toFixed(2),
